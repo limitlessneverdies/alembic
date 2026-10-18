@@ -1,0 +1,352 @@
+== tick_arcs  0x1400ff397..0x140100d27 ==
+  0x000140356D4E   1x  "tick_arcselectrolysistick_nuclear_tracesradioactive_decaytree_su"
+  0x0001402DFADC   1x  <f32 100.0>
+  0x0001402DF07C   1x  <f32 0.5>
+  0x0001402DF484   1x  <f32 3.0>
+  0x0001402F6850   1x  "o"
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x0001402DFE90   1x  <f32 0.0>
+  0x000140643E10  11x  "P`d@"
+  0x0001402F5444   1x  <f32 0.25>
+  0x0001402DF274   1x  "o"
+  0x0001402DFAD0   1x  "333?"
+  0x0001402F6864   1x  "o"
+  0x0001402F685C   1x  <f32 0.006000000052154064>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== electrolysis  0x140100d27..0x140100f36 ==
+  0x000140356D57   1x  "electrolysistick_nuclear_tracesradioactive_decaytree_support_che"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== tick_nuclear_traces  0x140100f36..0x140102206 ==
+  0x000140356D63   1x  "tick_nuclear_tracesradioactive_decaytree_support_checkthermitema"
+  0x0001402DF4E0   1x  <f32 24.0>
+  0x0001402F6D30   1x  <f32 7.999999979801942e-06>
+  0x0001402F5CBC   5x  <f32 0.003000000026077032>
+  0x000140643E10   6x  "P`d@"
+  0x0001402DF5D0   1x  <f32 8.0>
+  0x0001402F6B24   1x  <f32 0.029999999329447746>
+  0x0001402F6848   2x  <f32 0.02454369328916073>
+  0x0001402DF07C   1x  <f32 0.5>
+  0x0001402DF264   1x  <f32 255.0>
+  0x0001402DF008   1x  <f32 1.0>
+  0x0001402DFA64   1x  "ff"
+  0x0001402DFC48   2x  <f32 4.5>
+  0x0001403649C0   1x  "@"
+  0x0001402DFAB0   1x  <f32 3.5>
+  0x0001402DFA60   1x  <f32 7.0>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== radioactive_decay  0x140102206..0x1401022d6 ==
+  0x000140356D76   1x  "radioactive_decaytree_support_checkthermitemagnesium_burnorganic"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== thermite  0x140102da2..0x140103f46 ==
+  0x000140356D99   1x  "thermitemagnesium_burnorganic_maturationglass_etchingfluorine_hy"
+  0x000140643E10   7x  "P`d@"
+  0x0001402DF31C   1x  <f32 0.800000011920929>
+  0x0001402F6D70   1x  <f32 0.9750000238418579>
+  0x0001402DF090   2x  <f32 0.05000000074505806>
+  0x0001402DF23C   1x  <f32 0.20000000298023224>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== magnesium_burn  0x140103f46..0x140104be9 ==
+  0x000140356DA1   1x  "magnesium_burnorganic_maturationglass_etchingfluorine_hydrolysis"
+  0x0001402F6D90   1x  <f32 3.9999998989515007e-05>
+  0x0001402DF070   1x  <f32 12.0>
+  0x0001402DF008   1x  <f32 1.0>
+  0x0001402DF0B4   1x  <f32 40.0>
+  0x0001402DF300   1x  <f32 1.0>
+  0x0001402DF484   1x  <f32 3.0>
+  0x0001402F6D08   1x  <f32 9.999999747378752e-05>
+  0x000140643E10   2x  "P`d@"
+  0x0001402F5CC8   1x  <f32 0.15000000596046448>
+  0x0001402F5A2C   1x  <f32 2.5>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== organic_maturation  0x140104be9..0x140104cec ==
+  0x000140356DAF   1x  "organic_maturationglass_etchingfluorine_hydrolysisanhydride_hydr"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== glass_etching  0x140104cec..0x140104de1 ==
+  0x000140356DC1   1x  "glass_etchingfluorine_hydrolysisanhydride_hydrationslakingdry_ca"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== fluorine_hydrolysis  0x140104de1..0x1401070c4 ==
+  0x000140356DCE   1x  "fluorine_hydrolysisanhydride_hydrationslakingdry_carbonationneat"
+  0x00014034C6DB   1x  "SO₃Sulfur trioxide fumes on contact with damp air, grabbing wa"
+  0x00014034CA14   1x  "N₂O₅Dinitrogen PentoxideSulfur DioxideSulfur TrioxideP₂O"
+  0x00014034CA4D   1x  "P₂O₅Phosphorus PentoxideCONTROLSTools (number row picks, let"
+  0x0001402DF07C   1x  <f32 0.5>
+  0x000140643E10  13x  "P`d@"
+  0x0001402DF23C   1x  <f32 0.20000000298023224>
+  0x0001402F5444   1x  <f32 0.25>
+  0x0001402F6A40   1x  <f32 0.019999999552965164>
+  0x0001402F5CD8   1x  <f32 0.05999999865889549>
+  0x0001403456E1   1x  "H₂CO₃Carbonic Acid"
+  0x0001402DF090   1x  <f32 0.05000000074505806>
+  0x0001403456A8   1x  "H₂SO₄Sulfuric AcidNitric AcidH₃PO₄Phosphoric AcidH₂CO"
+  0x000140344B5C   1x  "HNO₃"
+  0x0001403456C9   1x  "H₃PO₄Phosphoric AcidH₂CO₃Carbonic Acid"
+  0x000140364B10   1x  "Q""
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== anhydride_hydration  0x1401070c4..0x1401077d0 ==
+  0x000140356DE1   1x  "anhydride_hydrationslakingdry_carbonationneat_acid_meets_waterni"
+  0x0001402F5444   1x  <f32 0.25>
+  0x000140364B50   1x  "D)"
+  0x000140643E10   5x  "P`d@"
+  0x0001403573B0   1x  "d{/@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== slaking  0x1401077d0..0x140107f34 ==
+  0x000140356DF4   1x  "slakingdry_carbonationneat_acid_meets_waternitrogen_oxide_chemis"
+  0x000140643E10   6x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== dry_carbonation  0x140107f34..0x140108811 ==
+  0x000140356DFB   1x  "dry_carbonationneat_acid_meets_waternitrogen_oxide_chemistrymeta"
+  0x000140364B80   1x  "T7"
+  0x000140364BA0   1x  "d7"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== neat_acid_meets_water  0x140108811..0x14010a6b9 ==
+  0x000140356E0A   1x  "neat_acid_meets_waternitrogen_oxide_chemistrymetal_hydrogen_abso"
+  0x0001403453A4   2x  "NO"
+  0x00014034B651   2x  "NO₂"
+  0x00014034CA4D   1x  "P₂O₅Phosphorus PentoxideCONTROLSTools (number row picks, let"
+  0x0001402F6C00   1x  <f32 0.0>
+  0x0001402F6DB8   1x  <f32 -580.0>
+  0x0001402DF008   1x  <f32 1.0>
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x000140364BE0   1x  "XI"
+  0x000140364BF0   1x  ",?"
+  0x000140344B5C   2x  "HNO₃"
+  0x0001403456C9   1x  "H₃PO₄Phosphoric AcidH₂CO₃Carbonic Acid"
+  0x000140643E10   2x  "P`d@"
+  0x000140364C00   1x  "rJ"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== nitrogen_oxide_chemistry  0x14010a6b9..0x14010b28c ==
+  0x000140356E1F   1x  "nitrogen_oxide_chemistrymetal_hydrogen_absorptioncerium_sparkssp"
+  0x0001402DF480   1x  <f32 0.18000000715255737>
+  0x000140643E10   7x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== metal_hydrogen_absorption  0x14010b28c..0x14010b555 ==
+  0x000140356E37   1x  "metal_hydrogen_absorptioncerium_sparksspark_motionneutron_motion"
+  0x0001402DF270   1x  "fff?o"
+  0x000140643E10   3x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== cerium_sparks  0x14010b555..0x14010b7ba ==
+  0x000140356E50   1x  "cerium_sparksspark_motionneutron_motionhalogen_displacementhg_am"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== spark_motion  0x14010b7ba..0x14010c6ae ==
+  0x000140356E5D   1x  "spark_motionneutron_motionhalogen_displacementhg_amalgamationfla"
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001403547F0   1x  "d{/@"
+  0x0001402DF070   1x  <f32 12.0>
+  0x000140643E10   1x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== neutron_motion  0x14010c6ae..0x14010d23b ==
+  0x000140356E69   1x  "neutron_motionhalogen_displacementhg_amalgamationflame_test_emis"
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x0001402F6A40   1x  <f32 0.019999999552965164>
+  0x0001402E059C   1x  <f32 0.11999999731779099>
+  0x0001402DF23C   1x  <f32 0.20000000298023224>
+  0x000140643E10   4x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== halogen_displacement  0x14010d23b..0x14010e3cb ==
+  0x000140356E77   1x  "halogen_displacementhg_amalgamationflame_test_emissioncolor_fire"
+  0x000140364DB0   3x  """
+  0x000140643E10   8x  "P`d@"
+  0x0001402DF240   1x  <f32 250.0>
+  0x0001402DF008   1x  <f32 1.0>
+  0x0001402DF09C   1x  <f32 0.10000000149011612>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== hg_amalgamation  0x14010e3cb..0x14010ef93 ==
+  0x000140356E8B   1x  "hg_amalgamationflame_test_emissioncolor_firesthermalrefiningreso"
+  0x0001402DF008   1x  <f32 1.0>
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x0001402DF09C   1x  <f32 0.10000000149011612>
+  0x0001402DF334   1x  <f32 0.4000000059604645>
+  0x000140643E10   4x  "P`d@"
+  0x0001402F6510   1x  <f32 0.009999999776482582>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== flame_test_emission  0x14010ef93..0x14010f44d ==
+  0x000140356E9A   1x  "flame_test_emissioncolor_firesthermalrefiningresolve_hot_h_o_cha"
+  0x0001403653D4   1x  "W"
+  0x000140365BF0   1x  "p"
+  0x000140365F1C   1x  "D"
+  0x000140366084   1x  "<"
+  0x0001403663B0   1x  "{"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== color_fires  0x14010f44d..0x14010f505 ==
+  0x000140356EAD   1x  "color_firesthermalrefiningresolve_hot_h_o_chargeschemical_reacti"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== thermal  0x14010f505..0x14010f76b ==
+  0x000140356EB8   1x  "thermalrefiningresolve_hot_h_o_chargeschemical_reactionsflush_ch"
+  0x000140643E10   1x  "P`d@"
+  0x0001402F6A40   1x  <f32 0.019999999552965164>
+  0x0001402DF350   1x  <f32 0.7200000286102295>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== refining  0x14010f76b..0x14011114c ==
+  0x000140356EBF   1x  "refiningresolve_hot_h_o_chargeschemical_reactionsflush_chem_blas"
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001402E00A8   1x  <f32 520.0>
+  0x0001402F5438   1x  <f32 24000.0>
+  0x0001402F5CD0   1x  <f32 0.5799999833106995>
+  0x0001402F6E0C   1x  <f32 105.0>
+  0x0001402F6E10   1x  <f32 2500.0>
+  0x0001402F6E14   1x  <f32 2000000.0>
+  0x0001402F6E08   1x  <f32 3750.0>
+  0x000140643E10   4x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== resolve_hot_h_o_charges  0x14011114c..0x140111204 ==
+  0x000140356EC7   1x  "resolve_hot_h_o_chargeschemical_reactionsflush_chem_blastbase_ne"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== chemical_reactions  0x140111204..0x140111380 ==
+  0x000140356EDE   1x  "chemical_reactionsflush_chem_blastbase_neutralizationacid_displa"
+  0x0001402F5CD0   1x  <f32 0.5799999833106995>
+  0x0001402F6E0C   1x  <f32 105.0>
+  0x0001402F6E10   1x  <f32 2500.0>
+  0x0001402F6E18   1x  <f32 180000.0>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== flush_chem_blast  0x140111380..0x1401115e9 ==
+  0x000140356EF0   1x  "flush_chem_blastbase_neutralizationacid_displacementoxidising_at"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== base_neutralization  0x1401115e9..0x1401126a1 ==
+  0x000140356F00   1x  "base_neutralizationacid_displacementoxidising_attackalloy_acid_l"
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001402F6E1C   2x  <f32 1.8799999952316284>
+  0x0001402F6510   1x  <f32 0.009999999776482582>
+  0x000140643E10   6x  "P`d@"
+  0x0001402DF07C   1x  <f32 0.5>
+  0x0001402DF718   1x  <f32 80.0>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== acid_displacement  0x1401126a1..0x140113d11 ==
+  0x000140356F13   1x  "acid_displacementoxidising_attackalloy_acid_leachalloy_formation"
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001402F6E20   1x  <f32 0.7199999094009399>
+  0x0001402F6E28   1x  "ff&@33"
+  0x0001402F6E2C   1x  "33"
+  0x0001402F6E24   1x  "x"
+  0x000140366B98   1x  "D"
+  0x000140366D28   1x  "`"
+  0x0001402F6E1C   1x  <f32 1.8799999952316284>
+  0x0001402DF008   1x  <f32 1.0>
+  0x000140643E10   6x  "P`d@"
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x0001402DF09C   1x  <f32 0.10000000149011612>
+  0x00014034B651   1x  "NO₂"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== oxidising_attack  0x140113d11..0x140114eaa ==
+  0x000140356F24   1x  "oxidising_attackalloy_acid_leachalloy_formationdissolvediffuse_s"
+  0x0001402F6E1C   1x  <f32 1.8799999952316284>
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001402DF094   1x  <f32 2.0>
+  0x0001402F5390   1x  <f32 0.30000001192092896>
+  0x0001402DF334   1x  <f32 0.4000000059604645>
+  0x000140643E10   7x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== alloy_acid_leach  0x140114eaa..0x1401160fa ==
+  0x000140356F34   1x  "alloy_acid_leachalloy_formationdissolvediffuse_solutecarbonic_de"
+  0x0001402F5400   1x  <f32 0.0>
+  0x0001403671D8   1x  "m"
+  0x000140643E10   3x  "P`d@"
+  0x0001402F5CC8   1x  <f32 0.15000000596046448>
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== alloy_formation  0x1401160fa..0x1401174f2 ==
+  0x000140356F44   1x  "alloy_formationdissolvediffuse_solutecarbonic_degassingreactions"
+  0x0001402DF23C   1x  <f32 0.20000000298023224>
+  0x0001402DFE90   1x  <f32 0.0>
+  0x0001402DFA3C   1x  <f32 160.0>
+  0x0001402F5470   1x  <f32 65535.0>
+  0x0001402E00B4   1x  <f32 192.0>
+  0x000140367368   1x  "F"
+  0x000140367378   1x  "w"
+  0x000140643E10   1x  "P`d@"
+  0x000140367398   1x  "J"
+  0x0001403673A8   1x  "c"
+  0x0001403673C8   1x  "E"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== dissolve  0x1401174f2..0x140118961 ==
+  0x000140356F53   1x  "dissolvediffuse_solutecarbonic_degassingreactionsroof_maskpartic"
+  0x000140643E10   2x  "P`d@"
+  0x0001402DF090   1x  <f32 0.05000000074505806>
+  0x000140367408   1x  "L"
+  0x000140367438   1x  "E"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== diffuse_solute  0x140118961..0x140118ed5 ==
+  0x000140356F5B   1x  "diffuse_solutecarbonic_degassingreactionsroof_maskparticle_movem"
+  0x0001403456E1   1x  "H₂CO₃Carbonic Acid"
+  0x0001402F6A40   1x  <f32 0.019999999552965164>
+  0x0001402F6610   1x  <f32 0.0>
+  0x000140643E10   3x  "P`d@"
+  0x0001402F6E38   1x  "H"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== carbonic_degassing  0x140118ed5..0x140119443 ==
+  0x000140356F69   1x  "carbonic_degassingreactionsroof_maskparticle_movementtick_airbor"
+  0x000140643E10   6x  "P`d@"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+
+== reactions  0x140119443..0x140119655 ==
+  0x000140356F7B   1x  "reactionsroof_maskparticle_movementtick_airborneflow_water_press"
+  0x0001402DFE40   1x  "(knN"
+  0x0001402DFE44   1x  <f32 1000.0>
+

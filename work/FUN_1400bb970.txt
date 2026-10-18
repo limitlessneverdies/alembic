@@ -1,0 +1,57 @@
+// ==== FUNC FUN_1400bb970 @ 1400bb970 ====
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+float * FUN_1400bb970(float *param_1)
+
+{
+  longlong unaff_GS_OFFSET;
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  float fVar5;
+  
+  fVar1 = (float)FUN_140183be0();
+  fVar5 = *(float *)(*(longlong *)
+                      (*(longlong *)(unaff_GS_OFFSET + 0x58) + (ulonglong)_tls_index * 8) + 0x4070);
+  fVar2 = (float)FUN_140183be0();
+  fVar3 = (float)FUN_140183c90();
+  fVar2 = fVar2 / DAT_1402f48f4;
+  fVar4 = fVar2;
+  if (fVar5 <= fVar2) {
+    fVar4 = fVar5;
+  }
+  fVar4 = (float)(-(uint)NAN(fVar5) & (uint)fVar2 | ~-(uint)NAN(fVar5) & (uint)fVar4);
+  fVar3 = fVar3 / _DAT_1402f48f8;
+  fVar5 = fVar3;
+  if (fVar4 <= fVar3) {
+    fVar5 = fVar4;
+  }
+  fVar5 = (float)(-(uint)NAN(fVar4) & (uint)fVar3 | ~-(uint)NAN(fVar4) & (uint)fVar5);
+  if (fVar5 <= DAT_1402df3b8) {
+    fVar5 = DAT_1402df3b8;
+  }
+  fVar5 = fVar1 / fVar5 + _DAT_1402df1e8 + DAT_1402df070;
+  *param_1 = fVar5;
+  *(undefined8 *)(param_1 + 1) = DAT_1402f6550;
+  param_1[3] = 26.0;
+  param_1[4] = fVar5;
+  *(undefined8 *)(param_1 + 5) = DAT_1402f6560;
+  param_1[7] = 26.0;
+  param_1[8] = fVar5;
+  *(undefined8 *)(param_1 + 9) = DAT_1402f6570;
+  param_1[0xb] = 26.0;
+  param_1[0xc] = fVar5;
+  *(undefined8 *)(param_1 + 0xd) = DAT_1402f6580;
+  param_1[0xf] = 26.0;
+  param_1[0x10] = fVar5;
+  *(undefined8 *)(param_1 + 0x11) = DAT_1402f6590;
+  param_1[0x13] = 26.0;
+  param_1[0x14] = fVar5;
+  *(undefined8 *)(param_1 + 0x15) = DAT_1402f65a0;
+  param_1[0x17] = 26.0;
+  return param_1;
+}
+
+

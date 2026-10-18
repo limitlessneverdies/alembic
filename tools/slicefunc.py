@@ -1,5 +1,5 @@
-import sys
-bigf = r'C:\Users\limit\rea-tools\decompiled\alembic_all_decompiled.c'
+﻿import sys
+bigf = r'C:\Users\limit\rea-tools\extracted\alembic_all_extracted.c'
 idx = r'C:\Users\limit\rea-tools\func-index.txt'
 if len(sys.argv) < 2:
     print('usage: python slicefunc.py <FUN_name> [outfile]'); sys.exit(1)

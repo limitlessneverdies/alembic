@@ -1,10 +1,10 @@
-# Alembic — Reverse Engineering & Modding
+﻿# Alembic — analysis & Modding
 
-> Full reverse-engineering of *Alembic* (Steam appid 4933990), a falling-sand periodic-table sandbox by dev `equious`.
+> Full analysis of *Alembic* (Steam appid 4933990), a falling-sand periodic-table sandbox by dev `equious`.
 > Goal: understand the complete game engine, then build a modded version that can accept new content.
 
 ## Phase status
-- **Phase 1 (extraction):** complete — decompiled C (15.5 MB), 119,871 strings, element table, 10 shaders, assets.
+- **Phase 1 (extraction):** complete — extracted C (15.5 MB), 119,871 strings, element table, 10 shaders, assets.
 - **Phase 2 (analysis docs):** complete — see `PHASE2-HANDOFF.md`.
 - **Phase 3 (Rust reimplementation):** not started — hand the repo to the implementing model.
 
@@ -46,21 +46,21 @@ alembic-re/
 │   ├── dump-gaps.txt
 │   └── ...
 ├── src/
-│   ├── systems/               # 130 decompiled helper bodies
-│   └── extracted/             # 18 larger decompiled bodies
+│   ├── systems/               # 130 extracted helper bodies
+│   └── extracted/             # 18 larger extracted bodies
 ├── tools/                     # 83 Python analysis scripts
 ├── evidence/                  # REA evidence bundles & snapshot
 ├── assets/                    # Shaders, audio, fonts, images
 └── .gitignore
 ```
 
-Big artifacts (decompiled C 15.5 MB, strings map 3.76 MB, etc.) are on the
+Big artifacts (extracted C 15.5 MB, strings map 3.76 MB, etc.) are on the
 [phase2 release](https://github.com/limitlessneverdies/alembic-re/releases/tag/phase2), not committed.
 
 ## Analysis Method
-- **REA** (Reverse Engineering Anything) MCP server + CLI
-- **Ghidra 12.1.4** (headless) for decompilation and xrefs
-- Mass decompilation: 8,269 functions, 15.5 MB pseudocode
+- **REA** (analysis Anything) MCP server + CLI
+- **Ghidra 12.1.4** (headless) for extraction and xrefs
+- Mass extraction: 8,269 functions, 15.5 MB pseudocode
 - String address mapping: 119,871 printable runs
 - Function index: 8,056 functions with line numbers
 
@@ -120,15 +120,15 @@ Big artifacts (decompiled C 15.5 MB, strings map 3.76 MB, etc.) are on the
 ## Open Items (Phase 3 inputs)
 - Reaction table format; compound struct layout; per-cell save stride; tool handler mapping
 - Element `+0x3C`/`+0x44`/`+0x4A` semantics; 24-byte profile record layout
-- 15 decompile-dump holes (~607 KiB) including frame-driver region
-- Sim mega-function pseudo-code (decompile timeout); section map is the substitute
+- 15 extract-dump holes (~607 KiB) including frame-driver region
+- Sim mega-function pseudo-code (extract timeout); section map is the substitute
 
 ## Modding Route
 **Flavor 3 — Hook/Loader mod:** original exe untouched. Loader DLL injects new logic at runtime. Element/compound tables extended by hooking population function. New shaders loaded from disk.
 
 ## License
-This repository contains reverse-engineering documentation and tools. The original game binary is not included. The user owns a licensed copy of Alembic.
+This repository contains analysis documentation and tools. The original game binary is not included. The user owns a licensed copy of Alembic.
 
 ---
 
-*Generated from extensive reverse-engineering sessions using REA, Ghidra 12.1.4, and custom analysis scripts.*
+*Generated from extensive analysis sessions using REA, Ghidra 12.1.4, and custom analysis scripts.*

@@ -1,4 +1,4 @@
-import sys, os
+﻿import sys, os
 sys.path.insert(0, r'C:\Users\limit\rea-tools\scripts')
 from peutils import DATA, va2raw
 
@@ -105,7 +105,7 @@ for (tgt, kind, nm), cnt in callee_count.items():
 print(f'systems: {len(sections)}')
 print(f'unique helper functions to extract: {len(whole)}')
 # slice them
-bigf = open(r'C:\Users\limit\rea-tools\decompiled\alembic_all_decompiled.c', encoding='utf-8', errors='replace').read().splitlines()
+bigf = open(r'C:\Users\limit\rea-tools\extracted\alembic_all_extracted.c', encoding='utf-8', errors='replace').read().splitlines()
 entries = []
 for line in open(r'C:\Users\limit\rea-tools\func-index.txt'):
     parts = line.split()

@@ -1,6 +1,6 @@
-# Alembic — Save Format (v6 loader analysis)
+﻿# Alembic — Save Format (v6 loader analysis)
 
-Source: `FUN_1400c8a80` (3,058 bytes, decompiled body in `rea-tools/extracted/FUN_1400c8a80_1400c8a80.txt`), plus SPEC.md §6 strings ("ALIN", "unknown save version", "cell count mismatch", "v6 save requires a compound manifest", "compound identities were not recorded; unrecognised compounds were remapped").
+Source: `FUN_1400c8a80` (3,058 bytes, extracted body in `rea-tools/extracted/FUN_1400c8a80_1400c8a80.txt`), plus SPEC.md §6 strings ("ALIN", "unknown save version", "cell count mismatch", "v6 save requires a compound manifest", "compound identities were not recorded; unrecognised compounds were remapped").
 
 ## 1. High-level
 

@@ -1,0 +1,689 @@
+00014006EF00  mov     rcx, qword ptr [rbp - 0x10]
+00014006EF04  call    0x14006d8e0
+00014006EF09  nop     
+00014006EF0A  add     rsp, 0x20
+00014006EF0E  pop     rdi
+00014006EF0F  pop     rsi
+00014006EF10  pop     rbp
+00014006EF11  ret     
+00014006EF12  int3    
+00014006EF13  int3    
+00014006EF14  int3    
+00014006EF15  int3    
+00014006EF16  int3    
+00014006EF17  int3    
+00014006EF18  int3    
+00014006EF19  int3    
+00014006EF1A  int3    
+00014006EF1B  int3    
+00014006EF1C  int3    
+00014006EF1D  int3    
+00014006EF1E  int3    
+00014006EF1F  int3    
+00014006EF20  push    rbp
+00014006EF21  push    rsi
+00014006EF22  push    rdi
+00014006EF23  sub     rsp, 0x30
+00014006EF27  lea     rbp, [rsp + 0x30]
+00014006EF2C  mov     qword ptr [rbp - 8], 0xfffffffffffffffe
+00014006EF34  mov     qword ptr [rbp - 0x10], rdx
+00014006EF38  mov     rsi, rcx
+00014006EF3B  mov     rdi, qword ptr [rcx + 0x10]
+00014006EF3F  cmp     rdi, qword ptr [rcx]
+00014006EF42  jne     0x14006ef4c
+00014006EF44  mov     rcx, rsi
+00014006EF47  call    0x1402cc880
+00014006EF4C  mov     rax, qword ptr [rsi + 8]
+00014006EF50  lea     rcx, [rdi + rdi*2]
+00014006EF54  shl     rcx, 4
+00014006EF58  mov     rdx, qword ptr [rbp - 0x10]
+00014006EF5C  movups  xmm0, xmmword ptr [rdx]
+00014006EF5F  movups  xmm1, xmmword ptr [rdx + 0x10]
+00014006EF63  movups  xmm2, xmmword ptr [rdx + 0x20]
+00014006EF67  movups  xmmword ptr [rax + rcx + 0x20], xmm2
+00014006EF6C  movups  xmmword ptr [rax + rcx + 0x10], xmm1
+00014006EF71  movups  xmmword ptr [rax + rcx], xmm0
+00014006EF75  inc     rdi
+00014006EF78  mov     qword ptr [rsi + 0x10], rdi
+00014006EF7C  add     rsp, 0x30
+00014006EF80  pop     rdi
+00014006EF81  pop     rsi
+00014006EF82  pop     rbp
+00014006EF83  ret     
+00014006EF84  nop     word ptr cs:[rax + rax]
+00014006EF90  mov     qword ptr [rsp + 0x10], rdx
+00014006EF95  push    rbp
+00014006EF96  push    rsi
+00014006EF97  push    rdi
+00014006EF98  sub     rsp, 0x20
+00014006EF9C  lea     rbp, [rdx + 0x30]
+00014006EFA0  mov     rax, qword ptr [rbp - 0x10]
+00014006EFA4  mov     rdx, qword ptr [rax]
+00014006EFA7  test    rdx, rdx
+00014006EFAA  je      0x14006efbf
+00014006EFAC  mov     rax, qword ptr [rbp - 0x10]
+00014006EFB0  mov     rcx, qword ptr [rax + 8]
+00014006EFB4  mov     r8d, 1
+00014006EFBA  call    0x1400549f0
+00014006EFBF  nop     
+00014006EFC0  add     rsp, 0x20
+00014006EFC4  pop     rdi
+00014006EFC5  pop     rsi
+00014006EFC6  pop     rbp
+00014006EFC7  ret     
+00014006EFC8  int3    
+00014006EFC9  int3    
+00014006EFCA  int3    
+00014006EFCB  int3    
+00014006EFCC  int3    
+00014006EFCD  int3    
+00014006EFCE  int3    
+00014006EFCF  int3    
+00014006EFD0  push    rsi
+00014006EFD1  push    rdi
+00014006EFD2  push    rbx
+00014006EFD3  sub     rsp, 0x20
+00014006EFD7  mov     rsi, rdx
+00014006EFDA  lea     rax, [rdx + r8]
+00014006EFDE  dec     rax
+00014006EFE1  mov     rbx, rdx
+00014006EFE4  neg     rbx
+00014006EFE7  and     rbx, rax
+00014006EFEA  imul    rbx, rcx
+00014006EFEE  test    rbx, rbx
+00014006EFF1  je      0x14006f019
+00014006EFF3  mov     rdi, rcx
+00014006EFF6  call    0x140007ed0
+00014006EFFB  mov     rcx, rbx
+00014006EFFE  mov     rdx, rsi
+00014006F001  call    0x1400549e0
+00014006F006  mov     rdx, rax
+00014006F009  test    rax, rax
+00014006F00C  jne     0x14006f01e
+00014006F00E  mov     rcx, rsi
+00014006F011  mov     rdx, rbx
+00014006F014  call    0x1402d4831
+00014006F019  xor     edi, edi
+00014006F01B  mov     rdx, rsi
+00014006F01E  mov     rax, rdi
+00014006F021  add     rsp, 0x20
+00014006F025  pop     rbx
+00014006F026  pop     rdi
+00014006F027  pop     rsi
+00014006F028  ret     
+00014006F029  int3    
+00014006F02A  int3    
+00014006F02B  int3    
+00014006F02C  int3    
+00014006F02D  int3    
+00014006F02E  int3    
+00014006F02F  int3    
+00014006F030  sub     rsp, 0x68
+00014006F034  mov     rax, rcx
+00014006F037  mov     rcx, qword ptr [rcx]
+00014006F03A  movabs  r8, 0x7ffffffffffffff6
+00014006F044  lea     r9, [rcx + r8]
+00014006F048  add     r8, 0x13
+00014006F04C  cmp     rcx, r8
+00014006F04F  mov     r8d, 3
+00014006F055  cmova   r8, r9
+00014006F059  mov     rcx, rdx
+00014006F05C  lea     rdx, [rip + 0x2f00a9]   ; [rip -> 0x14035F10C]
+00014006F063  movsxd  r8, dword ptr [rdx + r8*4]
+00014006F067  add     r8, rdx
+00014006F06A  jmp     r8
+00014006F06D  add     rax, 8
+00014006F071  mov     qword ptr [rsp + 0x60], rax
+00014006F076  lea     rax, [rip + 0x28855b]   ; [rip -> 0x1402F75D8]
+00014006F07D  mov     qword ptr [rsp + 0x20], rax
+00014006F082  lea     rdx, [rip + 0x28856f]   ; [rip -> 0x1402F75F8] str='FontError'
+00014006F089  lea     r9, [rsp + 0x60]
+00014006F08E  mov     r8d, 9
+00014006F094  call    0x1401b66b0
+00014006F099  nop     
+00014006F09A  add     rsp, 0x68
+00014006F09E  ret     
+00014006F09F  add     rax, 8
+00014006F0A3  mov     qword ptr [rsp + 0x60], rax
+00014006F0A8  lea     rax, [rip + 0x288529]   ; [rip -> 0x1402F75D8]
+00014006F0AF  mov     qword ptr [rsp + 0x20], rax
+00014006F0B4  lea     rdx, [rip + 0x2885ff]   ; [rip -> 0x1402F76BA] str='UnknownError'
+00014006F0BB  lea     r9, [rsp + 0x60]
+00014006F0C0  mov     r8d, 0xc
+00014006F0C6  call    0x1401b66b0
+00014006F0CB  nop     
+00014006F0CC  add     rsp, 0x68
+00014006F0D0  ret     
+00014006F0D1  add     rax, 8
+00014006F0D5  mov     qword ptr [rsp + 0x60], rax
+00014006F0DA  lea     rax, [rip + 0x28857f]   ; [rip -> 0x1402F7660]
+00014006F0E1  mov     qword ptr [rsp + 0x20], rax
+00014006F0E6  lea     rdx, [rip + 0x288593]   ; [rip -> 0x1402F7680] str='ShaderError'
+00014006F0ED  lea     r9, [rsp + 0x60]
+00014006F0F2  mov     r8d, 0xb
+00014006F0F8  call    0x1401b66b0
+00014006F0FD  nop     
+00014006F0FE  add     rsp, 0x68
+00014006F102  ret     
+00014006F103  mov     qword ptr [rsp + 0x60], rax
+00014006F108  lea     rax, [rip + 0x288581]   ; [rip -> 0x1402F7690]
+00014006F10F  mov     qword ptr [rsp + 0x20], rax
+00014006F114  lea     rdx, [rip + 0x288595]   ; [rip -> 0x1402F76B0] str='ImageErrorUnknownError'
+00014006F11B  lea     r9, [rsp + 0x60]
+00014006F120  mov     r8d, 0xa
+00014006F126  call    0x1401b66b0
+00014006F12B  nop     
+00014006F12C  add     rsp, 0x68
+00014006F130  ret     
+00014006F131  lea     rdx, [rax + 8]
+00014006F135  add     rax, 0x18
+00014006F139  mov     qword ptr [rsp + 0x60], rax
+00014006F13E  lea     rax, [rip + 0x2884e3]   ; [rip -> 0x1402F7628]
+00014006F145  mov     qword ptr [rsp + 0x50], rax
+00014006F14A  lea     rax, [rsp + 0x60]
+00014006F14F  mov     qword ptr [rsp + 0x48], rax
+00014006F154  lea     rax, [rip + 0x2884fa]   ; [rip -> 0x1402F7655] str='path'
+00014006F15B  mov     qword ptr [rsp + 0x38], rax
+00014006F160  lea     rax, [rip + 0x2884a1]   ; [rip -> 0x1402F7608] str='p&'
+00014006F167  mov     qword ptr [rsp + 0x30], rax
+00014006F16C  mov     qword ptr [rsp + 0x28], rdx
+00014006F171  mov     qword ptr [rsp + 0x40], 4
+00014006F17A  mov     qword ptr [rsp + 0x20], 4
+00014006F183  lea     rdx, [rip + 0x2884be]   ; [rip -> 0x1402F7648] str='FileErrorkindpath'
+00014006F18A  lea     r9, [rip + 0x2884c0]   ; [rip -> 0x1402F7651] str='kindpath'
+00014006F191  mov     r8d, 9
+00014006F197  call    0x1401b6dd0
+00014006F19C  nop     
+00014006F19D  add     rsp, 0x68
+00014006F1A1  ret     
+00014006F1A2  int3    
+00014006F1A3  int3    
+00014006F1A4  int3    
+00014006F1A5  int3    
+00014006F1A6  int3    
+00014006F1A7  int3    
+00014006F1A8  int3    
+00014006F1A9  int3    
+00014006F1AA  int3    
+00014006F1AB  int3    
+00014006F1AC  int3    
+00014006F1AD  int3    
+00014006F1AE  int3    
+00014006F1AF  int3    
+00014006F1B0  sub     rsp, 0x38
+00014006F1B4  mov     rax, rdx
+00014006F1B7  mov     qword ptr [rsp + 0x30], rcx
+00014006F1BC  lea     rcx, [rip + 0x288505]   ; [rip -> 0x1402F76C8]
+00014006F1C3  mov     qword ptr [rsp + 0x20], rcx
+00014006F1C8  lea     rdx, [rip + 0x288519]   ; [rip -> 0x1402F76E8] str='TryFromSliceError'
+00014006F1CF  lea     r9, [rsp + 0x30]
+00014006F1D4  mov     r8d, 0x11
+00014006F1DA  mov     rcx, rax
+00014006F1DD  call    0x1401b66b0
+00014006F1E2  nop     
+00014006F1E3  add     rsp, 0x38
+00014006F1E7  ret     
+00014006F1E8  int3    
+00014006F1E9  int3    
+00014006F1EA  int3    
+00014006F1EB  int3    
+00014006F1EC  int3    
+00014006F1ED  int3    
+00014006F1EE  int3    
+00014006F1EF  int3    
+00014006F1F0  push    rsi
+00014006F1F1  sub     rsp, 0x30
+00014006F1F5  mov     rsi, rcx
+00014006F1F8  lea     rcx, [rsp + 0x20]
+00014006F1FD  mov     r8d, 1
+00014006F203  call    0x14006f4c0
+00014006F208  mov     rax, qword ptr [rsp + 0x20]
+00014006F20D  test    rax, rax
+00014006F210  je      0x14006f22a
+00014006F212  cmp     qword ptr [rsp + 0x28], 0
+00014006F218  je      0x14006f23d
+00014006F21A  movzx   eax, byte ptr [rax]
+00014006F21D  mov     byte ptr [rsi + 1], al
+00014006F220  xor     eax, eax
+00014006F222  mov     byte ptr [rsi], al
+00014006F224  add     rsp, 0x30
+00014006F228  pop     rsi
+00014006F229  ret     
+00014006F22A  mov     rax, qword ptr [rsp + 0x28]
+00014006F22F  mov     qword ptr [rsi + 8], rax
+00014006F233  mov     al, 1
+00014006F235  mov     byte ptr [rsi], al
+00014006F237  add     rsp, 0x30
+00014006F23B  pop     rsi
+00014006F23C  ret     
+00014006F23D  lea     r8, [rip + 0x28892c]   ; [rip -> 0x1402F7B70]
+00014006F244  xor     ecx, ecx
+00014006F246  xor     edx, edx
+00014006F248  call    0x1402d4f02
+00014006F24D  int3    
+00014006F24E  int3    
+00014006F24F  int3    
+00014006F250  push    rsi
+00014006F251  sub     rsp, 0x40
+00014006F255  mov     rsi, rcx
+00014006F258  lea     rcx, [rsp + 0x30]
+00014006F25D  mov     r8d, 4
+00014006F263  call    0x14006f4c0
+00014006F268  mov     rax, qword ptr [rsp + 0x30]
+00014006F26D  test    rax, rax
+00014006F270  je      0x14006f289
+00014006F272  cmp     qword ptr [rsp + 0x38], 4
+00014006F278  jne     0x14006f29f
+00014006F27A  mov     eax, dword ptr [rax]
+00014006F27C  mov     dword ptr [rsi + 4], eax
+00014006F27F  xor     eax, eax
+00014006F281  mov     dword ptr [rsi], eax
+00014006F283  add     rsp, 0x40
+00014006F287  pop     rsi
+00014006F288  ret     
+00014006F289  mov     rax, qword ptr [rsp + 0x38]
+00014006F28E  mov     qword ptr [rsi + 8], rax
+00014006F292  mov     eax, 1
+00014006F297  mov     dword ptr [rsi], eax
+00014006F299  add     rsp, 0x40
+00014006F29D  pop     rsi
+00014006F29E  ret     
+00014006F29F  lea     rax, [rip + 0x2888e2]   ; [rip -> 0x1402F7B88]
+00014006F2A6  mov     qword ptr [rsp + 0x20], rax
+00014006F2AB  lea     rcx, [rip + 0x2880c6]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F2B2  lea     r9, [rip + 0x28809f]   ; [rip -> 0x1402F7358]
+00014006F2B9  lea     r8, [rsp + 0x30]
+00014006F2BE  mov     edx, 0x2b
+00014006F2C3  call    0x1402d4d40
+00014006F2C8  int3    
+00014006F2C9  int3    
+00014006F2CA  int3    
+00014006F2CB  int3    
+00014006F2CC  int3    
+00014006F2CD  int3    
+00014006F2CE  int3    
+00014006F2CF  int3    
+00014006F2D0  push    rsi
+00014006F2D1  sub     rsp, 0x40
+00014006F2D5  mov     rsi, rcx
+00014006F2D8  lea     rcx, [rsp + 0x30]
+00014006F2DD  mov     r8d, 2
+00014006F2E3  call    0x14006f4c0
+00014006F2E8  mov     rax, qword ptr [rsp + 0x30]
+00014006F2ED  test    rax, rax
+00014006F2F0  je      0x14006f30c
+00014006F2F2  cmp     qword ptr [rsp + 0x38], 2
+00014006F2F8  jne     0x14006f322
+00014006F2FA  movzx   eax, word ptr [rax]
+00014006F2FD  mov     word ptr [rsi + 2], ax
+00014006F301  xor     eax, eax
+00014006F303  mov     word ptr [rsi], ax
+00014006F306  add     rsp, 0x40
+00014006F30A  pop     rsi
+00014006F30B  ret     
+00014006F30C  mov     rax, qword ptr [rsp + 0x38]
+00014006F311  mov     qword ptr [rsi + 8], rax
+00014006F315  mov     ax, 1
+00014006F319  mov     word ptr [rsi], ax
+00014006F31C  add     rsp, 0x40
+00014006F320  pop     rsi
+00014006F321  ret     
+00014006F322  lea     rax, [rip + 0x288877]   ; [rip -> 0x1402F7BA0]
+00014006F329  mov     qword ptr [rsp + 0x20], rax
+00014006F32E  lea     rcx, [rip + 0x288043]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F335  lea     r9, [rip + 0x28801c]   ; [rip -> 0x1402F7358]
+00014006F33C  lea     r8, [rsp + 0x30]
+00014006F341  mov     edx, 0x2b
+00014006F346  call    0x1402d4d40
+00014006F34B  int3    
+00014006F34C  int3    
+00014006F34D  int3    
+00014006F34E  int3    
+00014006F34F  int3    
+00014006F350  push    rsi
+00014006F351  sub     rsp, 0x40
+00014006F355  mov     rsi, rcx
+00014006F358  lea     rcx, [rsp + 0x30]
+00014006F35D  mov     r8d, 2
+00014006F363  call    0x14006f4c0
+00014006F368  mov     rax, qword ptr [rsp + 0x30]
+00014006F36D  test    rax, rax
+00014006F370  je      0x14006f38c
+00014006F372  cmp     qword ptr [rsp + 0x38], 2
+00014006F378  jne     0x14006f3a2
+00014006F37A  movzx   eax, word ptr [rax]
+00014006F37D  mov     word ptr [rsi + 2], ax
+00014006F381  xor     eax, eax
+00014006F383  mov     word ptr [rsi], ax
+00014006F386  add     rsp, 0x40
+00014006F38A  pop     rsi
+00014006F38B  ret     
+00014006F38C  mov     rax, qword ptr [rsp + 0x38]
+00014006F391  mov     qword ptr [rsi + 8], rax
+00014006F395  mov     ax, 1
+00014006F399  mov     word ptr [rsi], ax
+00014006F39C  add     rsp, 0x40
+00014006F3A0  pop     rsi
+00014006F3A1  ret     
+00014006F3A2  lea     rax, [rip + 0x28880f]   ; [rip -> 0x1402F7BB8]
+00014006F3A9  mov     qword ptr [rsp + 0x20], rax
+00014006F3AE  lea     rcx, [rip + 0x287fc3]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F3B5  lea     r9, [rip + 0x287f9c]   ; [rip -> 0x1402F7358]
+00014006F3BC  lea     r8, [rsp + 0x30]
+00014006F3C1  mov     edx, 0x2b
+00014006F3C6  call    0x1402d4d40
+00014006F3CB  int3    
+00014006F3CC  int3    
+00014006F3CD  int3    
+00014006F3CE  int3    
+00014006F3CF  int3    
+00014006F3D0  push    rsi
+00014006F3D1  sub     rsp, 0x40
+00014006F3D5  mov     rsi, rcx
+00014006F3D8  lea     rcx, [rsp + 0x30]
+00014006F3DD  mov     r8d, 4
+00014006F3E3  call    0x14006f4c0
+00014006F3E8  mov     rax, qword ptr [rsp + 0x30]
+00014006F3ED  test    rax, rax
+00014006F3F0  je      0x14006f409
+00014006F3F2  cmp     qword ptr [rsp + 0x38], 4
+00014006F3F8  jne     0x14006f41f
+00014006F3FA  mov     eax, dword ptr [rax]
+00014006F3FC  mov     dword ptr [rsi + 4], eax
+00014006F3FF  xor     eax, eax
+00014006F401  mov     dword ptr [rsi], eax
+00014006F403  add     rsp, 0x40
+00014006F407  pop     rsi
+00014006F408  ret     
+00014006F409  mov     rax, qword ptr [rsp + 0x38]
+00014006F40E  mov     qword ptr [rsi + 8], rax
+00014006F412  mov     eax, 1
+00014006F417  mov     dword ptr [rsi], eax
+00014006F419  add     rsp, 0x40
+00014006F41D  pop     rsi
+00014006F41E  ret     
+00014006F41F  lea     rax, [rip + 0x2887aa]   ; [rip -> 0x1402F7BD0]
+00014006F426  mov     qword ptr [rsp + 0x20], rax
+00014006F42B  lea     rcx, [rip + 0x287f46]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F432  lea     r9, [rip + 0x287f1f]   ; [rip -> 0x1402F7358]
+00014006F439  lea     r8, [rsp + 0x30]
+00014006F43E  mov     edx, 0x2b
+00014006F443  call    0x1402d4d40
+00014006F448  int3    
+00014006F449  int3    
+00014006F44A  int3    
+00014006F44B  int3    
+00014006F44C  int3    
+00014006F44D  int3    
+00014006F44E  int3    
+00014006F44F  int3    
+00014006F450  sub     rsp, 0x38
+00014006F454  mov     rdx, rcx
+00014006F457  lea     rcx, [rsp + 0x28]
+00014006F45C  mov     r8d, 8
+00014006F462  call    0x14006f4c0
+00014006F467  mov     rax, qword ptr [rsp + 0x28]
+00014006F46C  test    rax, rax
+00014006F46F  je      0x14006f483
+00014006F471  cmp     qword ptr [rsp + 0x30], 8
+00014006F477  jne     0x14006f492
+00014006F479  mov     rdx, qword ptr [rax]
+00014006F47C  xor     eax, eax
+00014006F47E  add     rsp, 0x38
+00014006F482  ret     
+00014006F483  mov     rdx, qword ptr [rsp + 0x30]
+00014006F488  mov     eax, 1
+00014006F48D  add     rsp, 0x38
+00014006F491  ret     
+00014006F492  lea     rax, [rip + 0x28874f]   ; [rip -> 0x1402F7BE8]
+00014006F499  mov     qword ptr [rsp + 0x20], rax
+00014006F49E  lea     rcx, [rip + 0x287ed3]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F4A5  lea     r9, [rip + 0x287eac]   ; [rip -> 0x1402F7358]
+00014006F4AC  lea     r8, [rsp + 0x28]
+00014006F4B1  mov     edx, 0x2b
+00014006F4B6  call    0x1402d4d40
+00014006F4BB  int3    
+00014006F4BC  int3    
+00014006F4BD  int3    
+00014006F4BE  int3    
+00014006F4BF  int3    
+00014006F4C0  push    rsi
+00014006F4C1  sub     rsp, 0x40
+00014006F4C5  mov     rsi, rcx
+00014006F4C8  mov     rax, qword ptr [rdx + 8]
+00014006F4CC  mov     rcx, qword ptr [rdx + 0x10]
+00014006F4D0  xor     r9d, r9d
+00014006F4D3  mov     r10, rax
+00014006F4D6  sub     r10, rcx
+00014006F4D9  cmovae  r9, r10
+00014006F4DD  cmp     r8, r9
+00014006F4E0  jbe     0x14006f540
+00014006F4E2  call    0x140007ed0
+00014006F4E7  mov     ecx, 0x13
+00014006F4EC  mov     edx, 1
+00014006F4F1  call    0x1400549e0
+00014006F4F6  test    rax, rax
+00014006F4F9  je      0x14006f573
+00014006F4FB  movups  xmm0, xmmword ptr [rip + 0x288716]   ; [rip -> 0x1402F7C18] str='truncated save datatruncated save recordsunexpected data aft'
+00014006F502  movups  xmmword ptr [rax], xmm0
+00014006F505  mov     dword ptr [rax + 0xf], 0x61746164
+00014006F50C  mov     qword ptr [rsp + 0x28], 0x13
+00014006F515  mov     qword ptr [rsp + 0x30], rax
+00014006F51A  mov     qword ptr [rsp + 0x38], 0x13
+00014006F523  lea     rdx, [rsp + 0x28]
+00014006F528  mov     cl, 0x15
+00014006F52A  call    0x1401f7520
+00014006F52F  mov     qword ptr [rsi + 8], rax
+00014006F533  mov     qword ptr [rsi], 0
+00014006F53A  add     rsp, 0x40
+00014006F53E  pop     rsi
+00014006F53F  ret     
+00014006F540  mov     r10, rcx
+00014006F543  add     r10, r8
+00014006F546  jb      0x14006f561
+00014006F548  cmp     r10, rax
+00014006F54B  ja      0x14006f561
+00014006F54D  add     rcx, qword ptr [rdx]
+00014006F550  mov     qword ptr [rdx + 0x10], r10
+00014006F554  mov     qword ptr [rsi], rcx
+00014006F557  mov     qword ptr [rsi + 8], r8
+00014006F55B  add     rsp, 0x40
+00014006F55F  pop     rsi
+00014006F560  ret     
+00014006F561  lea     r9, [rip + 0x288698]   ; [rip -> 0x1402F7C00]
+00014006F568  mov     rdx, r10
+00014006F56B  mov     r8, rax
+00014006F56E  call    0x1402d4bb0
+00014006F573  mov     ecx, 1
+00014006F578  mov     edx, 0x13
+00014006F57D  call    0x1402d4831
+00014006F582  int3    
+00014006F583  int3    
+00014006F584  int3    
+00014006F585  int3    
+00014006F586  int3    
+00014006F587  int3    
+00014006F588  int3    
+00014006F589  int3    
+00014006F58A  int3    
+00014006F58B  int3    
+00014006F58C  int3    
+00014006F58D  int3    
+00014006F58E  int3    
+00014006F58F  int3    
+00014006F590  push    rsi
+00014006F591  push    rdi
+00014006F592  sub     rsp, 0x48
+00014006F596  mov     rsi, rdx
+00014006F599  mov     rdi, rcx
+00014006F59C  lea     rcx, [rsp + 0x30]
+00014006F5A1  mov     r8d, 4
+00014006F5A7  mov     rdx, rdi
+00014006F5AA  call    0x14006f4c0
+00014006F5AF  mov     rax, qword ptr [rsp + 0x30]
+00014006F5B4  test    rax, rax
+00014006F5B7  je      0x14006f643
+00014006F5BD  cmp     qword ptr [rsp + 0x38], 4
+00014006F5C3  jne     0x14006f664
+00014006F5C9  mov     ecx, dword ptr [rax]
+00014006F5CB  mov     rax, qword ptr [rdi + 8]
+00014006F5CF  sub     rax, qword ptr [rdi + 0x10]
+00014006F5D3  mov     rdx, rax
+00014006F5D6  shr     rdx, 0x20
+00014006F5DA  je      0x14006f64f
+00014006F5DC  xor     edx, edx
+00014006F5DE  div     rsi
+00014006F5E1  cmp     rax, rcx
+00014006F5E4  jae     0x14006f658
+00014006F5E6  call    0x140007ed0
+00014006F5EB  mov     ecx, 0x16
+00014006F5F0  mov     edx, 1
+00014006F5F5  call    0x1400549e0
+00014006F5FA  test    rax, rax
+00014006F5FD  je      0x14006f68d
+00014006F603  movups  xmm0, xmmword ptr [rip + 0x288621]   ; [rip -> 0x1402F7C2B] str='truncated save recordsunexpected data after save recordsinva'
+00014006F60A  movups  xmmword ptr [rax], xmm0
+00014006F60D  movabs  rcx, 0x7364726f63657220
+00014006F617  mov     qword ptr [rax + 0xe], rcx
+00014006F61B  mov     qword ptr [rsp + 0x30], 0x16
+00014006F624  mov     qword ptr [rsp + 0x38], rax
+00014006F629  mov     qword ptr [rsp + 0x40], 0x16
+00014006F632  lea     rdx, [rsp + 0x30]
+00014006F637  mov     cl, 0x15
+00014006F639  call    0x1401f7520
+00014006F63E  mov     rcx, rax
+00014006F641  jmp     0x14006f648
+00014006F643  mov     rcx, qword ptr [rsp + 0x38]
+00014006F648  mov     eax, 1
+00014006F64D  jmp     0x14006f65a
+00014006F64F  xor     edx, edx
+00014006F651  div     esi
+00014006F653  cmp     rax, rcx
+00014006F656  jb      0x14006f5e6
+00014006F658  xor     eax, eax
+00014006F65A  mov     rdx, rcx
+00014006F65D  add     rsp, 0x48
+00014006F661  pop     rdi
+00014006F662  pop     rsi
+00014006F663  ret     
+00014006F664  lea     rax, [rip + 0x288565]   ; [rip -> 0x1402F7BD0]
+00014006F66B  mov     qword ptr [rsp + 0x20], rax
+00014006F670  lea     rcx, [rip + 0x287d01]   ; [rip -> 0x1402F7378] str='called `Result::unwrap()` on an `Err` valueEmptySandWaterSto'
+00014006F677  lea     r9, [rip + 0x287cda]   ; [rip -> 0x1402F7358]
+00014006F67E  lea     r8, [rsp + 0x30]
+00014006F683  mov     edx, 0x2b
+00014006F688  call    0x1402d4d40
+00014006F68D  mov     ecx, 1
+00014006F692  mov     edx, 0x16
+00014006F697  call    0x1402d4831
+00014006F69C  int3    
+00014006F69D  int3    
+00014006F69E  int3    
+00014006F69F  int3    
+00014006F6A0  sub     rsp, 0x38
+00014006F6A4  cmp     rdx, rcx
+00014006F6A7  jne     0x14006f6b0
+00014006F6A9  xor     eax, eax
+00014006F6AB  add     rsp, 0x38
+00014006F6AF  ret     
+00014006F6B0  call    0x140007ed0
+00014006F6B5  mov     ecx, 0x22
+00014006F6BA  mov     edx, 1
+00014006F6BF  call    0x1400549e0
+00014006F6C4  test    rax, rax
+00014006F6C7  je      0x14006f70d
+00014006F6C9  movups  xmm0, xmmword ptr [rip + 0x288581]   ; [rip -> 0x1402F7C51]
+00014006F6D0  movups  xmmword ptr [rax + 0x10], xmm0
+00014006F6D4  movups  xmm0, xmmword ptr [rip + 0x288566]   ; [rip -> 0x1402F7C41]
+00014006F6DB  movups  xmmword ptr [rax], xmm0
+00014006F6DE  mov     word ptr [rax + 0x20], 0x7364
+00014006F6E4  mov     qword ptr [rsp + 0x20], 0x22
+00014006F6ED  mov     qword ptr [rsp + 0x28], rax
+00014006F6F2  mov     qword ptr [rsp + 0x30], 0x22
+00014006F6FB  lea     rdx, [rsp + 0x20]
+00014006F700  mov     cl, 0x15
+00014006F702  call    0x1401f7520
+00014006F707  nop     
+00014006F708  add     rsp, 0x38
+00014006F70C  ret     
+00014006F70D  mov     ecx, 1
+00014006F712  mov     edx, 0x22
+00014006F717  call    0x1402d4831
+00014006F71C  int3    
+00014006F71D  int3    
+00014006F71E  int3    
+00014006F71F  int3    
+00014006F720  push    rbp
+00014006F721  push    r15
+00014006F723  push    r14
+00014006F725  push    rsi
+00014006F726  push    rdi
+00014006F727  push    rbx
+00014006F728  sub     rsp, 0x58
+00014006F72C  lea     rbp, [rsp + 0x50]
+00014006F731  mov     qword ptr [rbp], 0xfffffffffffffffe
+00014006F739  mov     rdi, rdx
+00014006F73C  mov     rsi, rcx
+00014006F73F  lea     rcx, [rbp - 0x28]
+00014006F743  mov     r8d, 2
+00014006F749  call    0x14006f4c0
+00014006F74E  mov     rax, qword ptr [rbp - 0x28]
+00014006F752  test    rax, rax
+00014006F755  je      0x14006f791
+00014006F757  cmp     qword ptr [rbp - 0x20], 2
+00014006F75C  jne     0x14006f897
+00014006F762  movzx   r8d, word ptr [rax]
+00014006F766  lea     rcx, [rbp - 0x28]
+00014006F76A  mov     rdx, rdi
+00014006F76D  call    0x14006f4c0
+00014006F772  mov     rdi, qword ptr [rbp - 0x28]
+00014006F776  test    rdi, rdi
+00014006F779  je      0x14006f791
+00014006F77B  mov     r14, qword ptr [rbp - 0x20]
+00014006F77F  test    r14, r14
+00014006F782  jns     0x14006f7b3
+00014006F784  xor     ebx, ebx
+00014006F786  mov     rcx, rbx
+00014006F789  mov     rdx, r14
+00014006F78C  call    0x1402d4831
+00014006F791  mov     rax, qword ptr [rbp - 0x20]
+00014006F795  mov     qword ptr [rsi + 8], rax
+00014006F799  movabs  rax, 0x8000000000000000
+00014006F7A3  mov     qword ptr [rsi], rax
+00014006F7A6  add     rsp, 0x58
+00014006F7AA  pop     rbx
+00014006F7AB  pop     rdi
+00014006F7AC  pop     rsi
+00014006F7AD  pop     r14
+00014006F7AF  pop     r15
+00014006F7B1  pop     rbp
+00014006F7B2  ret     
+00014006F7B3  je      0x14006f7d6
+00014006F7B5  call    0x140007ed0
+00014006F7BA  mov     ebx, 1
+00014006F7BF  mov     edx, 1
+00014006F7C4  mov     rcx, r14
+00014006F7C7  call    0x1400549e0
+00014006F7CC  test    rax, rax
+00014006F7CF  je      0x14006f786
+00014006F7D1  mov     r15, rax
+00014006F7D4  jmp     0x14006f7dc
+00014006F7D6  mov     r15d, 1
+00014006F7DC  mov     rcx, r15
+00014006F7DF  mov     rdx, rdi
+00014006F7E2  mov     r8, r14
+00014006F7E5  call    0x1402cb3f0
+00014006F7EA  lea     rcx, [rbp - 0x28]
+00014006F7EE  mov     qword ptr [rbp - 0x10], r15
+00014006F7F2  mov     rdx, r15
+00014006F7F5  mov     qword ptr [rbp - 8], r14
+00014006F7F9  mov     r8, r14
+00014006F7FC  call    0x1401bdc60
+00014006F801  cmp     dword ptr [rbp - 0x28], 1
+00014006F805  jne     0x14006f87f
+00014006F807  call    0x140007ed0
+00014006F80C  mov     ecx, 0x15
+00014006F811  mov     edx, 1
+00014006F816  call    0x1400549e0
+00014006F81B  test    rax, rax
+00014006F81E  je      0x14006f8bf

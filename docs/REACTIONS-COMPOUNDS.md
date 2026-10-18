@@ -1,4 +1,4 @@
-# Alembic — Reactions & Compound Registry
+﻿# Alembic — Reactions & Compound Registry
 
 Source: `SPEC.md` §§3,5,6,10,11; `FUN_1400bbf70` registry dossier (REA ev_1beb52eb…); sim pipeline §2 of `SIM-PIPELINE.md`; save loader `FUN_1400c8a80`.
 
@@ -12,7 +12,7 @@ Source: `SPEC.md` §§3,5,6,10,11; `FUN_1400bbf70` registry dossier (REA ev_1beb
 
 ## 2. Compound struct layout — UNKNOWN
 
-The per-compound entry (80 bytes, `0x50`) layout is **not yet extracted**. Candidate fields (INFERRED from element table parity and save strings): name/desc slices, component element ids, formation conditions, display color. Needs a decompiled `FUN_1400bbf70` body pass (dossier exists; full pseudo-code not captured) and a real save's manifest.
+The per-compound entry (80 bytes, `0x50`) layout is **not yet extracted**. Candidate fields (INFERRED from element table parity and save strings): name/desc slices, component element ids, formation conditions, display color. Needs a extracted `FUN_1400bbf70` body pass (dossier exists; full pseudo-code not captured) and a real save's manifest.
 
 ## 3. Reaction passes in the sim (CONFIRMED names + order)
 

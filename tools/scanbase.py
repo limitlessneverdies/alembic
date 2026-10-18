@@ -1,6 +1,6 @@
-import re, sys, bisect, collections
+﻿import re, sys, bisect, collections
 
-BIG = r'C:\Users\limit\rea-tools\decompiled\alembic_all_decompiled.c'
+BIG = r'C:\Users\limit\rea-tools\extracted\alembic_all_extracted.c'
 IDX = r'C:\Users\limit\rea-tools\func-index.txt'
 
 # --- build function index (line -> func)

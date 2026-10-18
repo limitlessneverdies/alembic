@@ -1,4 +1,4 @@
-# Alembic — Simulation Pipeline (Reverse-Engineered Map)
+﻿# Alembic — Simulation Pipeline (Complete Map)
 
 Target: `alembic.exe` (Steam appid 4933990), sha256 `31b67190d09f9e8891a4c8129258604a85aa354dae521295a2a052d2a10d3e99`.
 All addresses are image-base VAs (ImageBase `0x140000000`). Raw→VA deltas: `.text` +0x140000C00, `.rdata` +0x140001200, `.data` +0x140001A00.
@@ -17,13 +17,13 @@ Confidence tags: **CONFIRMED** = byte/code-verified; **INFERRED** = reasoned fro
 | End | immediately before `FUN_140137C10` (`0x140137C10`) |
 | Size | `0x39D10` = **236,816 bytes (~231 KiB)** |
 | Structure | 62 consecutive system sections (lexical blocks), one per named system |
-| Ghidra decompile | **TIMES OUT** (never retry blind; the pseudo-code of this function has never been produced) |
+| Ghidra extract | **TIMES OUT** (never retry blind; the pseudo-code of this function has never been produced) |
 
 The reconstruction in this document was produced from:
 - 1,135 RIP-relative LEA references inside the function (`fun_1400fdf00_refs.txt`)
 - 1,667 direct call sites (`fun_calls.tsv`)
 - the 62-name debug string pool (below) — all 62 refs to the pool come from this function alone (`poolrefs.txt`)
-- 130 individually-decompiled helper bodies (`../src/systems/`)
+- 130 individually-extracted helper bodies (`../src/systems/`)
 
 ### 1.1 Per-system profile framework
 
@@ -168,7 +168,7 @@ site B:
   0x14001DAFB  jbe    0x14001DC71
 ```
 
-**CONFIRMED**: both call sites are inside the address range `0x140008370`–`0x14002F090`, a region that the current 15.5 MB decompile dump does **not** include (see §6). The enclosing function(s) of these sites have not yet been decompiled as whole bodies.
+**CONFIRMED**: both call sites are inside the address range `0x140008370`–`0x14002F090`, a region that the current 15.5 MB extract dump does **not** include (see §6). The enclosing function(s) of these sites have not yet been extracted as whole bodies.
 
 **INFERRED** frame flow at site A: sim tick → check `world+0x297A` mode byte → present/render path (`FUN_140176C20` may be a vsync/present gate given `cx=0xFFC5` looks like a message/ID constant; unverified) → continue UI.
 
@@ -212,8 +212,8 @@ Source artifacts: `../data/sim-sections.txt`, `../data/sim-timeline.txt`, `../da
 
 ## 6. Known gaps / open items
 
-1. **Decompile-dump holes (15 regions, ≈640 KB total)** — functions with no bodies in `alembic_all_decompiled.c` (see `../data/dump-gaps.txt`). Largest: `0x140008370 → 0x14002F090` (159,008 B — hosts the frame driver), and `0x1400FDF00 → 0x140137C10` (236,816 B — this pipeline). Workaround adopted: `src/systems/` holds 130 helper bodies extracted individually from REA; supplementary passes fill others.
-2. `FUN_1400FDF00` pseudo-code itself: **UNKNOWN** (decompiler timeout — algorithmic, not hardware). Section map in this file is the substitute.
+1. **extract-dump holes (15 regions, ≈640 KB total)** — functions with no bodies in `alembic_all_extracted.c` (see `../data/dump-gaps.txt`). Largest: `0x140008370 → 0x14002F090` (159,008 B — hosts the frame driver), and `0x1400FDF00 → 0x140137C10` (236,816 B — this pipeline). Workaround adopted: `src/systems/` holds 130 helper bodies extracted individually from REA; supplementary passes fill others.
+2. `FUN_1400FDF00` pseudo-code itself: **UNKNOWN** (extractr timeout — algorithmic, not hardware). Section map in this file is the substitute.
 3. 24-byte profile record layout: **UNKNOWN**.
 4. Site B's `0x707` (1799) counter and `world+0x297A` flag: semantics **INFERRED** (stepping/warm-up); verify against live game (`Cheat Engine`-style watch on `world+0x28B8`).
 5. Section 62 call list truncated in current map (cosmetic).

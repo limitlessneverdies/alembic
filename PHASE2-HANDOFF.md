@@ -1,10 +1,10 @@
-# Alembic Reverse-Engineering — Phase 2 Handoff
+﻿# Alembic analysis — Phase 2 Handoff
 
 Repository: `https://github.com/limitlessneverdies/alembic-re` (master). Local: `C:\Users\limit\alembic-re`.
 Target binary: `alembic.exe` (Steam appid 4933990), sha256 `31b67190d09f9e8891a4c8129258604a85aa354dae521295a2a052d2a10d3e99`.
 
 ## Phase status
-- Phase 1 (extraction): COMPLETE — decompiled C (15.5 MB), 119,871 strings map, element table, shaders, assets.
+- Phase 1 (extraction): COMPLETE — extracted C (15.5 MB), 119,871 strings map, element table, shaders, assets.
 - Phase 2 (analysis docs): COMPLETE — this repo's `docs/` + `data/` + `src/`.
 - Phase 3 (Rust reimplementation): NOT STARTED — hand this repo to the implementing model.
 
@@ -30,7 +30,7 @@ Target binary: `alembic.exe` (Steam appid 4933990), sha256 `31b67190d09f9e8891a4
 - `dump-gaps.txt` — 15 uncarved code regions (~607 KiB).
 
 ## Code (`src/`, `tools/`)
-- `src/systems/*.txt` — 130 decompiled helper bodies.
+- `src/systems/*.txt` — 130 extracted helper bodies.
 - `tools/*.py` — Python toolkit (peutils, sim_map, callscan, timeline, leascan, elements_extract, kindtable, find_callers, disasm_frame_entry, …).
 
 ## Key verified facts
@@ -42,7 +42,7 @@ Target binary: `alembic.exe` (Steam appid 4933990), sha256 `31b67190d09f9e8891a4
 6. Audio: rodio 0.17.3 + cpal 0.15.3; 16 ogg + assets in `assets/`.
 
 ## Open items (Phase 3 inputs)
-- Reaction table format; compound struct layout; per-cell save stride; tool handler mapping; element +0x3C/+0x44/+0x4A semantics; 24-byte profile record layout; 15 dump holes (~607 KiB) incl. frame driver region; sim mega-function pseudo-code (decompile timeout); snapshot serialization.
+- Reaction table format; compound struct layout; per-cell save stride; tool handler mapping; element +0x3C/+0x44/+0x4A semantics; 24-byte profile record layout; 15 dump holes (~607 KiB) incl. frame driver region; sim mega-function pseudo-code (extract timeout); snapshot serialization.
 
 ## Reproduce
 All analysis scripts in `tools/`. Primary: `sim_map.py`, `callscan.py`, `timeline.py`, `leascan.py`, `elements_extract.py`, `kindtable.py`, `find_callers.py`, `disasm_frame_entry.py`. Inputs: `alembic.exe` (not in repo — obtain from Steam).
@@ -51,7 +51,7 @@ All analysis scripts in `tools/`. Primary: `sim_map.py`, `callscan.py`, `timelin
 Claims are labeled CONFIRMED/INFERRED/UNKNOWN with REA/byte/code backing. Original exe untouched. Evidence artifacts in `evidence/`: `alembic-final-bundle.json` (72,928 B, 11 records, 4 unknowns), `alembic-session-bundle.json` (2 records), `alembic.snapshot` (70,474 B, 7 evidence records, 1 workflow entry). An earlier REA pass produced a larger snapshot (13.65 MB) holding an oversized save-loader dossier (evidence_id `ev_6161d7a8…`); that snapshot was overwritten during the unknown-recording recovery pass. The save-loader pseudo-code is preserved in `src/extracted/FUN_1400c8a80_1400c8a80.txt` and summarized in `docs/SAVE-FORMAT.md`. REA MCP provider was observed wedged ("Analysis could not complete") intermittently; `rea doctor` reports environment healthy. Unknowns recorded (4): element `+0x4A` low byte, `+0x44` radioactivity unit, v6 per-cell stride + compound-manifest entry, 24-byte profile record layout.
 
 ## Big artifacts (GitHub release, not committed)
-- `rea-tools/decompiled/alembic_all_decompiled.c` (15.5 MB)
+- `rea-tools/extracted/alembic_all_extracted.c` (15.5 MB)
 - `rea-tools/strings-address-map.txt` (3.76 MB)
 - `rea-tools/lea-refs.txt` (0.4 MB)
 - `rea-tools/func-index.txt` (0.27 MB)

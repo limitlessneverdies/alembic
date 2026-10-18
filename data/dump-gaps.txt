@@ -1,7 +1,7 @@
-# alembic_all_decompiled.c — decompile-dump holes
+﻿# alembic_all_extracted.c — extract-dump holes
 # Regions of .text with NO function body in the 15.5 MB dump.
 # Format: start_va  end_va  size_bytes  (end is exclusive; next defined function)
-# These regions were not carved at export time (decompiler timeout or skipped batches).
+# These regions were not carved at export time (extractr timeout or skipped batches).
 # Reproduce: re-run Ghidra headless / REA per-function on these ranges.
 
 0x140008370  0x14002F090  159008  (155.3 KiB)

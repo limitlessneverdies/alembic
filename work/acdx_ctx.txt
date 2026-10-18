@@ -1,0 +1,212 @@
+000140089099  mov     rdx, qword ptr [rdi - 0x20]
+00014008909D  test    rdx, rdx
+0001400890A0  je      0x1400890b1
+0001400890A2  mov     rcx, qword ptr [rdi - 0x18]
+0001400890A6  mov     r8d, 1
+0001400890AC  call    0x1400549f0
+0001400890B1  mov     rdx, qword ptr [rdi - 8]
+0001400890B5  test    rdx, rdx
+0001400890B8  je      0x140089090
+0001400890BA  mov     rcx, qword ptr [rdi]
+0001400890BD  add     rdx, rdx
+0001400890C0  mov     r8d, 1
+0001400890C6  call    0x1400549f0
+0001400890CB  jmp     0x140089090
+0001400890CD  mov     rax, qword ptr [rbp + 0x210]
+0001400890D4  mov     rdi, qword ptr [rax + 0x88]
+0001400890DB  shl     rdi, 2
+0001400890DF  add     rdi, 0x9d
+0001400890E6  mov     qword ptr [rbp + 0x288], rdx
+0001400890ED  mov     qword ptr [rbp + 0x218], r14
+0001400890F4  jns     0x140089137
+0001400890F6  xor     ebx, ebx
+0001400890F8  mov     rcx, rbx
+0001400890FB  mov     rdx, rdi
+0001400890FE  call    0x1402d4831
+000140089103  jmp     0x14008add8
+000140089108  mov     rax, qword ptr [rbp + 0x240]
+00014008910F  test    rax, rax
+000140089112  je      0x140089126
+000140089114  imul    rdx, rax, 0x58
+000140089118  mov     r8d, 8
+00014008911E  mov     rcx, rsi
+000140089121  call    0x1400549f0
+000140089126  lea     rcx, [rbp + 0x270]
+00014008912D  call    0x1401c5fb0
+000140089132  jmp     0x14008a9c7
+000140089137  mov     rsi, qword ptr [rbp + 0x2c0]
+00014008913E  call    0x140007ed0
+000140089143  mov     ebx, 1
+000140089148  mov     edx, 1
+00014008914D  mov     rcx, rdi
+000140089150  call    0x1400549e0
+000140089155  test    rax, rax
+000140089158  je      0x1400890f8
+00014008915A  mov     qword ptr [rbp + 0x2b0], rdi
+000140089161  mov     qword ptr [rbp + 0x2b8], rax
+000140089168  mov     qword ptr [rbp + 0x2c0], 0
+000140089173  cmp     rdi, 3
+000140089177  jbe     0x14008aab2
+00014008917D  xor     ecx, ecx
+00014008917F  mov     dword ptr [rax + rcx], 0x58444341
+000140089186  mov     rdi, rcx
+000140089189  lea     rax, [rcx + 4]
+00014008918D  mov     qword ptr [rbp + 0x2c0], rax
+000140089194  cmp     rax, qword ptr [rbp + 0x2b0]
+00014008919B  jne     0x1400891a9
+00014008919D  lea     rcx, [rbp + 0x2b0]
+0001400891A4  call    0x1402d4880
+0001400891A9  mov     rax, qword ptr [rbp + 0x2b8]
+0001400891B0  mov     byte ptr [rax + rdi + 4], 0xd
+0001400891B5  add     rdi, 5
+0001400891B9  mov     qword ptr [rbp + 0x2c0], rdi
+0001400891C0  mov     rax, qword ptr [rbp + 0x2b0]
+0001400891C7  sub     rax, rdi
+0001400891CA  cmp     rax, 3
+0001400891CE  jbe     0x14008aae8
+0001400891D4  mov     rdx, qword ptr [rbp + 0x288]
+0001400891DB  mov     rax, qword ptr [rbp + 0x2b8]
+0001400891E2  mov     dword ptr [rax + rdi], esi
+0001400891E5  add     rdi, 4
+0001400891E9  mov     qword ptr [rbp + 0x2c0], rdi
+0001400891F0  mov     rax, qword ptr [rbp + 0x2b0]
+0001400891F7  sub     rax, rdi
+0001400891FA  cmp     rsi, rax
+0001400891FD  ja      0x14008ab18
+000140089203  mov     rcx, qword ptr [rbp + 0x2b8]
+00014008920A  add     rcx, rdi
+00014008920D  mov     r8, rsi
+000140089210  call    0x1402cb3f0
+000140089215  add     rdi, rsi
+000140089218  mov     qword ptr [rbp + 0x2c0], rdi
+00014008921F  mov     rax, qword ptr [rbp + 0x2b0]
+000140089226  sub     rax, rdi
+000140089229  cmp     rax, 1
+00014008922D  jbe     0x14008ab4c
+000140089233  mov     rax, qword ptr [rbp + 0x2b8]
+00014008923A  mov     word ptr [rax + rdi], 0x8d
+000140089240  add     rdi, 2
+000140089244  mov     qword ptr [rbp + 0x2c0], rdi
+00014008924B  mov     ebx, 0x102
+000140089250  mov     eax, 0x103
+000140089255  lea     rsi, [rbp + 0x2b0]
+00014008925C  jmp     0x140089285
+00014008925E  nop     
+000140089260  mov     rax, qword ptr [rbp + 0x2b8]
+000140089267  mov     byte ptr [rax + r14], dil
+00014008926B  mov     rdi, r14
+00014008926E  inc     rdi
+000140089271  mov     qword ptr [rbp + 0x2c0], rdi
+000140089278  lea     rax, [rbx + 1]
+00014008927C  cmp     rbx, 0x18f
+000140089283  je      0x1400892a6
+000140089285  mov     rcx, rdi
+000140089288  movzx   edi, byte ptr [rbp + rbx + 0x70]
+00014008928D  mov     rbx, rax
+=== 1216
+00014008909D  test    rdx, rdx
+0001400890A0  je      0x1400890b1
+0001400890A2  mov     rcx, qword ptr [rdi - 0x18]
+0001400890A6  mov     r8d, 1
+0001400890AC  call    0x1400549f0
+0001400890B1  mov     rdx, qword ptr [rdi - 8]
+0001400890B5  test    rdx, rdx
+0001400890B8  je      0x140089090
+0001400890BA  mov     rcx, qword ptr [rdi]
+0001400890BD  add     rdx, rdx
+0001400890C0  mov     r8d, 1
+0001400890C6  call    0x1400549f0
+0001400890CB  jmp     0x140089090
+0001400890CD  mov     rax, qword ptr [rbp + 0x210]
+0001400890D4  mov     rdi, qword ptr [rax + 0x88]
+0001400890DB  shl     rdi, 2
+0001400890DF  add     rdi, 0x9d
+0001400890E6  mov     qword ptr [rbp + 0x288], rdx
+0001400890ED  mov     qword ptr [rbp + 0x218], r14
+0001400890F4  jns     0x140089137
+0001400890F6  xor     ebx, ebx
+0001400890F8  mov     rcx, rbx
+0001400890FB  mov     rdx, rdi
+0001400890FE  call    0x1402d4831
+000140089103  jmp     0x14008add8
+000140089108  mov     rax, qword ptr [rbp + 0x240]
+00014008910F  test    rax, rax
+000140089112  je      0x140089126
+000140089114  imul    rdx, rax, 0x58
+000140089118  mov     r8d, 8
+00014008911E  mov     rcx, rsi
+000140089121  call    0x1400549f0
+000140089126  lea     rcx, [rbp + 0x270]
+00014008912D  call    0x1401c5fb0
+000140089132  jmp     0x14008a9c7
+000140089137  mov     rsi, qword ptr [rbp + 0x2c0]
+00014008913E  call    0x140007ed0
+000140089143  mov     ebx, 1
+000140089148  mov     edx, 1
+00014008914D  mov     rcx, rdi
+000140089150  call    0x1400549e0
+000140089155  test    rax, rax
+000140089158  je      0x1400890f8
+00014008915A  mov     qword ptr [rbp + 0x2b0], rdi
+000140089161  mov     qword ptr [rbp + 0x2b8], rax
+000140089168  mov     qword ptr [rbp + 0x2c0], 0
+000140089173  cmp     rdi, 3
+000140089177  jbe     0x14008aab2
+00014008917D  xor     ecx, ecx
+00014008917F  mov     dword ptr [rax + rcx], 0x58444341
+000140089186  mov     rdi, rcx
+000140089189  lea     rax, [rcx + 4]
+00014008918D  mov     qword ptr [rbp + 0x2c0], rax
+000140089194  cmp     rax, qword ptr [rbp + 0x2b0]
+00014008919B  jne     0x1400891a9
+00014008919D  lea     rcx, [rbp + 0x2b0]
+0001400891A4  call    0x1402d4880
+0001400891A9  mov     rax, qword ptr [rbp + 0x2b8]
+0001400891B0  mov     byte ptr [rax + rdi + 4], 0xd
+0001400891B5  add     rdi, 5
+0001400891B9  mov     qword ptr [rbp + 0x2c0], rdi
+0001400891C0  mov     rax, qword ptr [rbp + 0x2b0]
+0001400891C7  sub     rax, rdi
+0001400891CA  cmp     rax, 3
+0001400891CE  jbe     0x14008aae8
+0001400891D4  mov     rdx, qword ptr [rbp + 0x288]
+0001400891DB  mov     rax, qword ptr [rbp + 0x2b8]
+0001400891E2  mov     dword ptr [rax + rdi], esi
+0001400891E5  add     rdi, 4
+0001400891E9  mov     qword ptr [rbp + 0x2c0], rdi
+0001400891F0  mov     rax, qword ptr [rbp + 0x2b0]
+0001400891F7  sub     rax, rdi
+0001400891FA  cmp     rsi, rax
+0001400891FD  ja      0x14008ab18
+000140089203  mov     rcx, qword ptr [rbp + 0x2b8]
+00014008920A  add     rcx, rdi
+00014008920D  mov     r8, rsi
+000140089210  call    0x1402cb3f0
+000140089215  add     rdi, rsi
+000140089218  mov     qword ptr [rbp + 0x2c0], rdi
+00014008921F  mov     rax, qword ptr [rbp + 0x2b0]
+000140089226  sub     rax, rdi
+000140089229  cmp     rax, 1
+00014008922D  jbe     0x14008ab4c
+000140089233  mov     rax, qword ptr [rbp + 0x2b8]
+00014008923A  mov     word ptr [rax + rdi], 0x8d
+000140089240  add     rdi, 2
+000140089244  mov     qword ptr [rbp + 0x2c0], rdi
+00014008924B  mov     ebx, 0x102
+000140089250  mov     eax, 0x103
+000140089255  lea     rsi, [rbp + 0x2b0]
+00014008925C  jmp     0x140089285
+00014008925E  nop     
+000140089260  mov     rax, qword ptr [rbp + 0x2b8]
+000140089267  mov     byte ptr [rax + r14], dil
+00014008926B  mov     rdi, r14
+00014008926E  inc     rdi
+000140089271  mov     qword ptr [rbp + 0x2c0], rdi
+000140089278  lea     rax, [rbx + 1]
+00014008927C  cmp     rbx, 0x18f
+000140089283  je      0x1400892a6
+000140089285  mov     rcx, rdi
+000140089288  movzx   edi, byte ptr [rbp + rbx + 0x70]
+00014008928D  mov     rbx, rax
+000140089290  mov     r14, rcx
+=== 1217

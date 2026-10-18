@@ -1,0 +1,124 @@
+===== FUNC @ 0x1400fde30 =====
+  0001400FDE30  sub       rsp, 0x28
+  0001400FDE34  mov       rax, qword ptr [rcx + 0x8a0]
+  0001400FDE3B  test      rax, rax
+  0001400FDE3E  je        0x1400fde63
+  0001400FDE40  mov       r8, qword ptr [rcx + 0x8a8]
+  0001400FDE47  add       edx, r8d
+  0001400FDE4A  xor       r9d, r9d
+  0001400FDE4D  test      edx, edx
+  0001400FDE4F  cmovg     r9d, edx
+  0001400FDE53  dec       eax
+  0001400FDE55  cmp       eax, r9d
+  0001400FDE58  cmovge    eax, r9d
+  0001400FDE5C  cdqe      
+  0001400FDE5E  cmp       r8, rax
+  0001400FDE61  jne       0x1400fde68
+  0001400FDE63  add       rsp, 0x28
+  0001400FDE67  ret       
+===== FUNC @ 0x1400870a0 =====
+  0001400870A0  movzx     eax, byte ptr [rip + 0x5beab9]
+  0001400870A7  cmp       dl, 2
+  0001400870AA  jne       0x1400870b5
+  0001400870AC  test      al, al
+  0001400870AE  je        0x1400870b5
+  0001400870B0  xor       eax, eax
+  0001400870B2  and       al, 1
+  0001400870B4  ret       
+===== FUNC @ 0x1400870f0 =====
+  0001400870F0  push      rbp
+  0001400870F1  push      r15
+  0001400870F3  push      r14
+  0001400870F5  push      r13
+  0001400870F7  push      r12
+  0001400870F9  push      rsi
+  0001400870FA  push      rdi
+  0001400870FB  push      rbx
+  0001400870FC  sub       rsp, 0x138
+  000140087103  lea       rbp, [rsp + 0x80]
+  00014008710B  mov       qword ptr [rbp + 0xb0], 0xfffffffffffffffe
+  000140087116  mov       rsi, rcx
+  000140087119  movzx     eax, byte ptr [rip + 0x5bea40]
+  000140087120  cmp       dl, 2
+  000140087123  jne       0x14008712d
+  000140087125  test      al, al
+  000140087127  jne       0x14008742b
+  00014008712D  cmp       byte ptr [rsi + 0x192], 0
+  000140087134  jne       0x14008742b
+  00014008713A  cmp       byte ptr [rsi + 0x18f], 0
+  000140087141  jne       0x14008742b
+  000140087147  mov       al, 1
+  000140087149  mov       ecx, edx
+  00014008714B  shl       al, cl
+  00014008714D  mov       ecx, dword ptr [rsi + 0x194]
+  000140087153  movzx     ebx, dl
+  000140087156  bt        ecx, ebx
+  000140087159  jb        0x14008742b
+  00014008715F  or        cl, al
+  000140087161  mov       byte ptr [rsi + 0x194], cl
+  000140087167  mov       byte ptr [rsi + 0x191], 1
+  00014008716E  lea       r15d, [rbx*8]
+  000140087176  lea       rax, [rip + 0x2d5b73]
+  00014008717D  mov       rdi, qword ptr [r15 + rax]
+  000140087181  lea       rax, [rip + 0x2d5ba0]
+  000140087188  mov       r13, qword ptr [r15 + rax]
+  00014008718C  mov       qword ptr [rbp - 0x28], rdi
+  000140087190  mov       qword ptr [rbp - 0x20], r13
+  000140087194  call      0x140007ed0
+  000140087199  mov       ecx, 0x11
+  00014008719E  mov       edx, 1
+  0001400871A3  call      0x1400549e0
+  0001400871A8  test      rax, rax
+  0001400871AB  je        0x140087440
+  0001400871B1  movups    xmm0, xmmword ptr [rip + 0x2718ba]
+  0001400871B8  movups    xmmword ptr [rax], xmm0
+  0001400871BB  mov       qword ptr [rbp + 0x90], rax
+  0001400871C2  mov       byte ptr [rax + 0x10], 0x44
+  0001400871C6  call      0x140007ed0
+  0001400871CB  mov       edx, 1
+  0001400871D0  mov       rcx, r13
+  0001400871D3  call      0x1400549e0
+  0001400871D8  test      rax, rax
+  0001400871DB  je        0x14008744f
+  0001400871E1  mov       qword ptr [rbp + 0x98], rax
+  0001400871E8  mov       rcx, rax
+  0001400871EB  mov       rdx, rdi
+  0001400871EE  mov       r8, r13
+  0001400871F1  call      0x1402cb3f0
+  0001400871F6  lea       rax, [rip + 0x2d5b63]
+===== FUNC @ 0x1400c6d80 =====
+  0001400C6D80  movsxd    rax, ecx
+  0001400C6D83  imul      rcx, rax, -0x49f49f49
+  0001400C6D8A  shr       rcx, 0x20
+  0001400C6D8E  add       ecx, eax
+  0001400C6D90  mov       edx, ecx
+  0001400C6D92  shr       edx, 0x1f
+  0001400C6D95  sar       ecx, 8
+  0001400C6D98  add       ecx, edx
+  0001400C6D9A  imul      ecx, ecx, 0x168
+  0001400C6DA0  sub       eax, ecx
+  0001400C6DA2  mov       ecx, eax
+  0001400C6DA4  sar       ecx, 0x1f
+  0001400C6DA7  and       ecx, 0x168
+  0001400C6DAD  add       ecx, eax
+  0001400C6DAF  imul      eax, ecx, 0x2d83
+  0001400C6DB5  add       eax, 0x3e942
+  0001400C6DBA  shr       eax, 0x13
+  0001400C6DBD  lea       eax, [rax + rax*8]
+  0001400C6DC0  lea       eax, [rax + rax*4]
+  0001400C6DC3  mov       ecx, eax
+  0001400C6DC5  sub       cx, 0x168
+  0001400C6DCA  cmovb     ecx, eax
+  0001400C6DCD  movsx     ecx, cx
+  0001400C6DD0  lea       eax, [rcx + 0x168]
+  0001400C6DD6  test      cx, cx
+  0001400C6DD9  cmovns    eax, ecx
+  0001400C6DDC  ret       
+===== FUNC @ 0x14008fb20 =====
+  00014008FB20  sub       rsp, 0x28
+  00014008FB24  mov       ecx, 0x10
+  00014008FB29  call      qword ptr [rip + 0x556741]
+  00014008FB2F  movzx     eax, ax
+  00014008FB32  shr       eax, 0xf
+  00014008FB35  add       rsp, 0x28
+  00014008FB39  ret       

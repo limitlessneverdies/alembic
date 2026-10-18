@@ -1,0 +1,78 @@
+0001400D02C4  mov     qword ptr [rbp + 0x70], rsi
+0001400D02C8  mov     rax, qword ptr [rbp + 0x158]
+0001400D02CF  mov     r13, qword ptr [rbp + 0x168]
+0001400D02D6  sub     rax, r13
+0001400D02D9  cmp     rax, 1
+0001400D02DD  jbe     0x1400d0cb0
+0001400D02E3  mov     rax, qword ptr [rbp + 0x160]
+0001400D02EA  mov     word ptr [rax + r13], r14w
+0001400D02EF  add     r13, 2
+0001400D02F3  mov     qword ptr [rbp + 0x168], r13
+0001400D02FA  mov     rax, qword ptr [rbp + 0x158]
+0001400D0301  sub     rax, r13
+0001400D0304  cmp     r14, rax
+0001400D0307  ja      0x1400d0ce0
+0001400D030D  mov     rcx, qword ptr [rbp + 0x160]
+0001400D0314  add     rcx, r13
+0001400D0317  mov     rdx, qword ptr [rbp + 0xc8]
+0001400D031E  mov     r8, r14
+0001400D0321  call    0x1402cb3f0
+0001400D0326  add     r13, r14
+0001400D0329  mov     qword ptr [rbp + 0x168], r13
+0001400D0330  mov     rax, qword ptr [rbp + 0x158]
+0001400D0337  sub     rax, r13
+0001400D033A  cmp     rax, 7
+0001400D033E  jbe     0x1400d0d0d
+0001400D0344  mov     rax, qword ptr [rbp + 0x1e8]
+0001400D034B  mov     rcx, qword ptr [rbp + 0x160]
+0001400D0352  mov     qword ptr [rcx + r13], rax
+0001400D0356  add     r13, 8
+0001400D035A  mov     qword ptr [rbp + 0x168], r13
+0001400D0361  call    0x1401a61a0
+0001400D0366  mov     dword ptr [rbp + 0x120], eax
+0001400D036C  mov     dword ptr [rbp + 0x124], edx
+0001400D0372  lea     rcx, [rbp + 0xd0]
+0001400D0379  lea     rdx, [rbp + 0x120]
+0001400D0380  mov     r8d, 0xd53e8000
+0001400D0386  mov     r9d, 0x19db1de
+0001400D038C  call    0x1401a6150
+0001400D0391  cmp     byte ptr [rbp + 0xd0], 0
+0001400D0398  jne     0x1400d03a3
+0001400D039A  mov     rsi, qword ptr [rbp + 0xd8]
+0001400D03A1  jmp     0x1400d03a5
+0001400D03A3  xor     esi, esi
+0001400D03A5  mov     rcx, qword ptr [rbp + 0x148]
+0001400D03AC  mov     rax, qword ptr [rbp + 0x158]
+0001400D03B3  mov     r14, qword ptr [rbp + 0x168]
+0001400D03BA  sub     rax, r14
+0001400D03BD  cmp     rax, 7
+0001400D03C1  jbe     0x1400d0d3d
+0001400D03C7  mov     rax, qword ptr [rbp + 0x160]
+0001400D03CE  mov     qword ptr [rax + r14], rsi
+0001400D03D2  add     r14, 8
+0001400D03D6  mov     qword ptr [rbp + 0x168], r14
+0001400D03DD  movzx   esi, word ptr [rcx + 0x1cd2]
+0001400D03E4  mov     rax, qword ptr [rbp + 0x158]
+0001400D03EB  sub     rax, r14
+0001400D03EE  cmp     rax, 1
+0001400D03F2  jbe     0x1400d0d74
+0001400D03F8  mov     rax, qword ptr [rbp + 0x160]
+0001400D03FF  mov     word ptr [rax + r14], si
+0001400D0404  add     r14, 2
+0001400D0408  mov     qword ptr [rbp + 0x168], r14
+0001400D040F  mov     esi, dword ptr [rcx + 0x19ec]
+0001400D0415  mov     rax, qword ptr [rbp + 0x158]
+0001400D041C  sub     rax, r14
+0001400D041F  cmp     rax, 3
+0001400D0423  jbe     0x1400d0dab
+0001400D0429  mov     rax, qword ptr [rbp + 0x160]
+0001400D0430  mov     dword ptr [rax + r14], esi
+0001400D0434  add     r14, 4
+0001400D0438  mov     qword ptr [rbp + 0x168], r14
+0001400D043F  mov     esi, dword ptr [rcx + 0x19f0]
+0001400D0445  mov     rax, qword ptr [rbp + 0x158]
+0001400D044C  sub     rax, r14
+0001400D044F  cmp     rax, 3
+0001400D0453  jbe     0x1400d0de2
+0001400D0459  mov     rax, qword ptr [rbp + 0x160]
+0001400D0460  mov     dword ptr [rax + r14], esi

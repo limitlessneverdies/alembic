@@ -1,0 +1,114 @@
+0001402CF200  push    rbp
+0001402CF201  push    r15
+0001402CF203  push    r14
+0001402CF205  push    r13
+0001402CF207  push    r12
+0001402CF209  push    rsi
+0001402CF20A  push    rdi
+0001402CF20B  push    rbx
+0001402CF20C  sub     rsp, 0x88
+0001402CF213  lea     rbp, [rsp + 0x80]
+0001402CF21B  mov     qword ptr [rbp], 0xfffffffffffffffe
+0001402CF223  mov     rdi, r8
+0001402CF226  mov     rsi, rdx
+0001402CF229  mov     qword ptr [rbp - 0x38], rcx
+0001402CF22D  mov     byte ptr [rbp - 0x21], r9b
+0001402CF231  test    r9b, r9b
+0001402CF234  je      0x1402cf2a6
+0001402CF236  call    0x140007ed0
+0001402CF23B  mov     ecx, 5
+0001402CF240  mov     edx, 1
+0001402CF245  call    0x1400549e0
+0001402CF24A  test    rax, rax
+0001402CF24D  je      0x1402cfafc
+0001402CF253  mov     qword ptr [rbp - 0x18], 5
+0001402CF25B  mov     qword ptr [rbp - 0x10], rax
+0001402CF25F  mov     byte ptr [rax + 4], 2
+0001402CF263  mov     dword ptr [rax], 0x504d4344
+0001402CF269  mov     qword ptr [rbp - 8], 5
+0001402CF271  mov     qword ptr [rsp + 0x20], 1
+0001402CF27A  lea     rcx, [rbp - 0x18]
+0001402CF27E  mov     edx, 5
+0001402CF283  mov     r8d, 4
+0001402CF289  mov     r9d, 1
+0001402CF28F  call    0x1402cc040
+0001402CF294  mov     rax, qword ptr [rbp - 0x10]
+0001402CF298  mov     r14, qword ptr [rbp - 8]
+0001402CF29C  mov     dword ptr [rax + r14], edi
+0001402CF2A0  add     r14, 4
+0001402CF2A4  jmp     0x1402cf315
+0001402CF2A6  call    0x140007ed0
+0001402CF2AB  mov     ecx, 5
+0001402CF2B0  mov     edx, 1
+0001402CF2B5  call    0x1400549e0
+0001402CF2BA  test    rax, rax
+0001402CF2BD  je      0x1402cfafc
+0001402CF2C3  mov     qword ptr [rbp - 0x18], 5
+0001402CF2CB  mov     qword ptr [rbp - 0x10], rax
+0001402CF2CF  mov     byte ptr [rax + 4], 1
+0001402CF2D3  mov     dword ptr [rax], 0x504d4344
+0001402CF2D9  mov     qword ptr [rbp - 8], 5
+0001402CF2E1  mov     qword ptr [rsp + 0x20], 1
+0001402CF2EA  lea     rcx, [rbp - 0x18]
+0001402CF2EE  mov     edx, 5
+0001402CF2F3  mov     r8d, 2
+0001402CF2F9  mov     r9d, 1
+0001402CF2FF  call    0x1402cc040
+0001402CF304  mov     rax, qword ptr [rbp - 0x10]
+0001402CF308  mov     r14, qword ptr [rbp - 8]
+0001402CF30C  mov     word ptr [rax + r14], di
+0001402CF311  add     r14, 2
+0001402CF315  mov     qword ptr [rbp - 8], r14
+0001402CF319  imul    rax, rdi, 0x58
+0001402CF31D  add     rax, rsi
+0001402CF320  mov     qword ptr [rbp - 0x58], rax
+0001402CF324  lea     rax, [rsi + 0x58]
+0001402CF328  cmp     rsi, qword ptr [rbp - 0x58]
+0001402CF32C  cmove   rax, rsi
+0001402CF330  je      0x1402cfa78
+0001402CF336  nop     word ptr cs:[rax + rax]
+0001402CF340  mov     qword ptr [rbp - 0x30], rax
+0001402CF344  mov     rax, qword ptr [rsi + 0x18]
+0001402CF348  mov     rcx, 0xfffffffffffffdff
+0001402CF34F  add     rax, rcx
+0001402CF352  cmp     rax, -0x200
+0001402CF358  jb      0x1402cf9ed
+0001402CF35E  cmp     qword ptr [rsi + 0x30], 0x20
+0001402CF363  ja      0x1402cf9ed
+0001402CF369  mov     qword ptr [rbp - 0x20], rsi
+0001402CF36D  movzx   r12d, word ptr [rsi]
+0001402CF371  cmp     byte ptr [rbp - 0x21], 0
+0001402CF375  je      0x1402cf3a0
+0001402CF377  mov     rax, qword ptr [rbp - 0x18]
+0001402CF37B  sub     rax, r14
+0001402CF37E  cmp     rax, 1
+0001402CF382  jbe     0x1402cf945
+0001402CF388  mov     rax, qword ptr [rbp - 0x10]
+0001402CF38C  mov     word ptr [rax + r14], r12w
+0001402CF391  add     r14, 2
+0001402CF395  jmp     0x1402cf3c9
+0001402CF397  nop     word ptr [rax + rax]
+0001402CF3A0  movzx   eax, r12w
+0001402CF3A4  cmp     eax, 0xff
+0001402CF3A9  ja      0x1402cfa9f
+0001402CF3AF  cmp     r14, qword ptr [rbp - 0x18]
+0001402CF3B3  jne     0x1402cf3be
+0001402CF3B5  lea     rcx, [rbp - 0x18]
+0001402CF3B9  call    0x1402d4880
+0001402CF3BE  mov     rax, qword ptr [rbp - 0x10]
+0001402CF3C2  mov     byte ptr [rax + r14], r12b
+0001402CF3C6  inc     r14
+0001402CF3C9  mov     qword ptr [rbp - 8], r14
+0001402CF3CD  mov     rax, qword ptr [rbp - 0x20]
+0001402CF3D1  movzx   esi, word ptr [rax + 0x18]
+0001402CF3D5  mov     rax, qword ptr [rbp - 0x18]
+0001402CF3D9  sub     rax, r14
+0001402CF3DC  cmp     rax, 1
+0001402CF3E0  jbe     0x1402cf7f8
+0001402CF3E6  mov     rax, qword ptr [rbp - 0x10]
+0001402CF3EA  mov     word ptr [rax + r14], si
+0001402CF3EF  add     r14, 2
+0001402CF3F3  mov     qword ptr [rbp - 8], r14
+0001402CF3F7  mov     rax, qword ptr [rbp - 0x20]
+0001402CF3FB  mov     r13, qword ptr [rax + 0x10]
+0001402CF3FF  mov     r12, qword ptr [rax + 0x18]

@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 
 # Merge name-lea refs (poolrefs.txt) with call scan (fun_calls raw) into one ordered timeline.
 # Usage: timeline.py poolrefs.txt calls.tsv [out.txt]
@@ -43,7 +43,7 @@ for line in read_text(calls_file).splitlines():
 POOL_BASE = 0x140356D20
 starts_list = sorted(set(tv for _, tv in pool))
 name_starts = {}
-ram = open(r'C:\Users\limit\rea-tools\decompiled\alembic_all_decompiled.c', 'rb')
+ram = open(r'C:\Users\limit\rea-tools\extracted\alembic_all_extracted.c', 'rb')
 # read pool bytes directly from exe instead
 sys.path.insert(0, r'C:\Users\limit\rea-tools\scripts')
 from peutils import DATA, va2raw

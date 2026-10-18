@@ -1,3 +1,3 @@
-// ==== FUNC FUN_1400fdf00 @ 1400fdf00 ====
-// decompile failed: Exception while decompiling 1400fdf00: process: timeout
+﻿// ==== FUNC FUN_1400fdf00 @ 1400fdf00 ====
+// extract failed: Exception while extracting 1400fdf00: process: timeout
 

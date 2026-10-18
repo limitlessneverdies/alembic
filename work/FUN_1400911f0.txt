@@ -1,0 +1,63 @@
+// ==== FUNC FUN_1400911f0 @ 1400911f0 ====
+
+/* WARNING: Function: __chkstk replaced with injection: alloca_probe */
+
+undefined8 * FUN_1400911f0(undefined8 *param_1)
+
+{
+  longlong *local_1370;
+  undefined8 local_1368;
+  undefined1 local_eb0 [624];
+  undefined8 local_c40;
+  undefined8 local_c38;
+  longlong local_778;
+  undefined8 local_770;
+  undefined8 local_768;
+  undefined8 *local_f0;
+  undefined8 local_d8;
+  undefined8 uStack_d0;
+  ulonglong local_c8;
+  undefined8 local_78;
+  undefined8 local_60;
+  undefined8 uStack_48;
+  
+  uStack_48 = 0x140091206;
+  local_60 = 0xfffffffffffffffe;
+  FUN_14009c310();
+  local_d8 = 0;
+  uStack_d0 = 8;
+  local_c8 = 0;
+  FUN_14014aff0(&local_778);
+  local_78 = local_770;
+  FUN_1401988a0(&local_1370,local_770,local_768);
+  if ((int)local_1370 != 2) {
+                    /* WARNING: Subroutine does not return */
+    FUN_1402cb3f0(&local_c40,&local_1370,0x270);
+  }
+  local_c38 = local_1368;
+  local_c40 = 2;
+  if (local_778 != 0) {
+    thunk_FUN_140191310(local_78,local_778,1);
+  }
+  if ((int)local_c40 != 2) {
+    local_f0 = param_1;
+                    /* WARNING: Subroutine does not return */
+    FUN_1402cb3f0(local_eb0,&local_c40,0x270);
+  }
+  FUN_14006ded0(&local_c40);
+  if (1 < local_c8) {
+    local_1370 = &local_778;
+    if (local_c8 < 0x15) {
+      FUN_1401f0d70(uStack_d0,local_c8,1,&local_1370);
+    }
+    else {
+      FUN_140055fe0(uStack_d0,local_c8,&local_1370);
+    }
+  }
+  param_1[2] = local_c8;
+  *param_1 = local_d8;
+  param_1[1] = uStack_d0;
+  return param_1;
+}
+
+

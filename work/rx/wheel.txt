@@ -1,0 +1,124 @@
+  000140017000  sub       dword ptr [rax], eax
+  000140017002  add       cl, ch
+  000140017004  cmpsb     byte ptr [rsi], byte ptr [rdi]
+  000140017005  add       al, byte ptr [rax]
+  000140017007  add       byte ptr [rcx], dh
+  000140017009  ror       byte ptr [rax - 0x75], 0x95
+  00014001700D  and       byte ptr [rip - 0x45800000], 0x9f
+  000140017014  sub       dword ptr [rax], eax
+  000140017016  add       byte ptr [rdi], al
+  000140017018  setne     al
+  00014001701B  lea       eax, [rax*8 + 0xc]
+  000140017022  jmp       0x140017047
+  000140017024  mov       rdx, qword ptr [rbp + 0x2580]
+  00014001702B  mov       eax, dword ptr [rdx + 0x2924]
+  000140017031  mov       ecx, eax
+  000140017033  shr       ecx, 0x1f
+  000140017036  add       ecx, eax
+  000140017038  sar       ecx, 1
+  00014001703A  cmp       ecx, 3
+  00014001703D  mov       eax, 2
+  000140017042  cmovge    eax, ecx
+  000140017045  dec       eax
+  000140017047  add       r15d, dword ptr [rdx + 0x291c]
+  00014001704E  cmp       r15d, eax
+  000140017051  cmovl     eax, r15d
+  000140017055  test      r15d, r15d
+  000140017058  mov       ecx, 1
+  00014001705D  cmovg     ecx, eax
+  000140017060  jmp       0x1400172a8
+  000140017065  test      r14b, r14b
+  000140017068  mov       eax, 0x32
+  00014001706D  mov       ecx, 0xa
+  000140017072  cmovne    ecx, eax
+  000140017075  imul      r15d, ecx
+  000140017079  mov       rdx, qword ptr [rbp + 0x2580]
+  000140017080  add       r15d, dword ptr [rdx + 0x2944]
+  000140017087  cmp       r15d, 0xfffffef0
+  00014001708E  mov       eax, 0xfffffeef
+  000140017093  cmovge    eax, r15d
+  000140017097  cmp       eax, 0x1388
+  00014001709C  mov       ecx, 0x1388
+  0001400170A1  cmovl     ecx, eax
+  0001400170A4  mov       dword ptr [rdx + 0x2944], ecx
+  0001400170AA  jmp       0x1400172ae
+  0001400170AF  movzx     eax, r14b
+  0001400170B3  lea       eax, [rax + rax*8]
+  0001400170B6  inc       eax
+  0001400170B8  imul      r15d, eax
+  0001400170BC  mov       rdx, qword ptr [rbp + 0x2580]
+  0001400170C3  add       r15d, dword ptr [rdx + 0x2928]
+  0001400170CA  cmp       r15d, 2
+  0001400170CE  mov       eax, 1
+  0001400170D3  cmovge    eax, r15d
+  0001400170D7  cmp       eax, 0x64
+  0001400170DA  mov       ecx, 0x64
+  0001400170DF  cmovl     ecx, eax
+  0001400170E2  mov       dword ptr [rdx + 0x2928], ecx
+  0001400170E8  jmp       0x1400172ae
+  0001400170ED  mov       rdx, qword ptr [rbp + 0x2580]
+  0001400170F4  add       r15d, dword ptr [rdx + 0x292c]
+  0001400170FB  cmp       r15d, 2
+  0001400170FF  mov       eax, 1
+  000140017104  cmovge    eax, r15d
+  000140017108  cmp       eax, 0xa
+  00014001710B  mov       ecx, 0xa
+  000140017110  cmovl     ecx, eax
+  000140017113  mov       dword ptr [rdx + 0x292c], ecx
+  000140017119  jmp       0x1400172ae
+  00014001711E  mov       rdx, qword ptr [rbp + 0x2580]
+  000140017125  add       r15d, dword ptr [rdx + 0x291c]
+  00014001712C  cmp       r15d, 2
+  000140017130  mov       eax, 1
+  000140017135  cmovge    eax, r15d
+  000140017139  cmp       eax, 0xa
+  00014001713C  mov       ecx, 0xa
+  000140017141  jmp       0x1400172a5
+  000140017146  mov       rax, qword ptr [rbp + 0x2580]
+  00014001714D  mov       dword ptr [rax + 0x2940], r8d
+  000140017154  jmp       0x140015fd6
+  000140017159  mov       rax, qword ptr [rbp + 0x2580]
+  000140017160  mov       dword ptr [rax + 0x293c], r8d
+  000140017167  jmp       0x140015fd6
+  00014001716C  mov       rax, qword ptr [rbp + 0x2580]
+  000140017173  mov       dword ptr [rax + 0x2920], r8d
+  00014001717A  jmp       0x140015fd6
+  00014001717F  mov       rax, qword ptr [rbp + 0x2580]
+  000140017186  mov       dword ptr [rax + 0x2944], r8d
+  00014001718D  jmp       0x140015fd6
+  000140017192  mov       rax, qword ptr [rbp + 0x2580]
+  000140017199  mov       dword ptr [rax + 0x2928], r8d
+  0001400171A0  jmp       0x140015fd6
+  0001400171A5  mov       rax, qword ptr [rbp + 0x2580]
+  0001400171AC  mov       dword ptr [rax + 0x2924], r8d
+  0001400171B3  jmp       0x140015fd6
+  0001400171B8  mov       rax, qword ptr [rbp + 0x2580]
+  0001400171BF  mov       dword ptr [rax + 0x292c], r8d
+  0001400171C6  jmp       0x140015fd6
+  0001400171CB  mov       r8, qword ptr [rbp + 0x2580]
+  0001400171D2  mov       byte ptr [r8 + 0x23c], al
+  0001400171D9  mov       byte ptr [r8 + 0x24c], al
+  0001400171E0  mov       byte ptr [r8 + 0x26c], al
+  0001400171E7  mov       byte ptr [r8 + 0x27c], al
+  0001400171EE  mov       byte ptr [r8 + 0x28c], al
+  0001400171F5  mov       byte ptr [r8 + 0x2ac], al
+  0001400171FC  mov       byte ptr [r8 + 0x2cc], al
+  000140017203  jmp       0x140016969
+  000140017208  movzx     ecx, byte ptr [rdx + 0x299f]
+  00014001720F  mov       eax, ecx
+  000140017211  add       eax, -3
+  000140017214  cmp       eax, 9
+  000140017217  ja        0x14001cbba
+  00014001721D  lea       rdx, [rip + 0x2d45f0]
+  000140017224  movsxd    rax, dword ptr [rdx + rax*4]
+  000140017228  add       rax, rdx
+  00014001722B  jmp       rax
+  00014001722D  mov       rdx, qword ptr [rbp + 0x2580]
+  000140017234  add       esi, dword ptr [rdx + 0x291c]
+  00014001723A  cmp       esi, 2
+  00014001723D  mov       eax, 1
+  000140017242  cmovge    eax, esi
+  000140017245  cmp       eax, 0x14
+  000140017248  mov       ecx, 0x14
+  00014001724D  jmp       0x1400172a5
+  00014001724F  lea       r8, [rip + 0x2c957a]

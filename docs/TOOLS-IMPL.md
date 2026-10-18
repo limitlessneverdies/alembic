@@ -1,6 +1,6 @@
-# Alembic — Tool Implementations (16 tools)
+﻿# Alembic — Tool Implementations (16 tools)
 
-Source: `SPEC.md §9`, binary strings ("Have 5+ different gases", "Dissolve solute into water (make brine)", "Shake window (Shift+drag)"), and decompiled helpers. Individual tool-handler → function mapping is **not yet complete** (see §4) — the handlers live in the decompile dump but have not been labelled per tool.
+Source: `SPEC.md §9`, binary strings ("Have 5+ different gases", "Dissolve solute into water (make brine)", "Shake window (Shift+drag)"), and extracted helpers. Individual tool-handler → function mapping is **not yet complete** (see §4) — the handlers live in the extract dump but have not been labelled per tool.
 
 ## 1. Tool list (from SPEC.md, CONFIRMED names)
 
@@ -27,7 +27,7 @@ These gate tool availability in the UI (favorites radial / tool tabs).
 
 ## 3. What is verified in code
 
-- Heat brush kernel: `FUN_140041150` (decompiled, body in dump) implements a circular brush over cells: radius loop (`param_5 * param_5`), per-cell `SQRT` falloff, reads `*(byte *)(param_1 + uVar7*4)` (element id), calls `FUN_140008370(element_byte)` to obtain a packed color (`uVar7 = flags | r<<8 | g<<16 | b<<24`) used to scale the applied heat. This is the **Heat** tool's application kernel (INFERRED — function not yet tied to a tool enum, but behaviour matches).
+- Heat brush kernel: `FUN_140041150` (extracted, body in dump) implements a circular brush over cells: radius loop (`param_5 * param_5`), per-cell `SQRT` falloff, reads `*(byte *)(param_1 + uVar7*4)` (element id), calls `FUN_140008370(element_byte)` to obtain a packed color (`uVar7 = flags | r<<8 | g<<16 | b<<24`) used to scale the applied heat. This is the **Heat** tool's application kernel (INFERRED — function not yet tied to a tool enum, but behaviour matches).
 - Generic brush radius/pressure application appears in the same family (`FUN_1400c4360`, `FUN_1400549f0` thunk, `FUN_1402cba90` memset) — used by Place/Pressure.
 - Selection/copy/paste use `FUN_1402cb3f0` (panic/memcpy-style) and `thunk_FUN_140191310` (free) for buffer management (INFERRED).
 - Prefab stamping uses `FUN_140057040`/`FUN_14005b9f0` (shape helpers, called from the conveyors/spawners code too).

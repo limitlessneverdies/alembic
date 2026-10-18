@@ -1,0 +1,83 @@
+0001400BDEB0  push    r15
+0001400BDEB2  push    r14
+0001400BDEB4  push    r13
+0001400BDEB6  push    r12
+0001400BDEB8  push    rsi
+0001400BDEB9  push    rdi
+0001400BDEBA  push    rbp
+0001400BDEBB  push    rbx
+0001400BDEBC  sub     rsp, 0x158
+0001400BDEC3  movaps  xmmword ptr [rsp + 0x140], xmm15
+0001400BDECC  movaps  xmmword ptr [rsp + 0x130], xmm14
+0001400BDED5  movaps  xmmword ptr [rsp + 0x120], xmm13
+0001400BDEDE  movaps  xmmword ptr [rsp + 0x110], xmm12
+0001400BDEE7  movaps  xmmword ptr [rsp + 0x100], xmm11
+0001400BDEF0  movaps  xmmword ptr [rsp + 0xf0], xmm10
+0001400BDEF9  movaps  xmmword ptr [rsp + 0xe0], xmm9
+0001400BDF02  movaps  xmmword ptr [rsp + 0xd0], xmm8
+0001400BDF0B  movaps  xmmword ptr [rsp + 0xc0], xmm7
+0001400BDF13  movaps  xmmword ptr [rsp + 0xb0], xmm6
+0001400BDF1B  mov     ebx, r8d
+0001400BDF1E  movss   dword ptr [rsp + 0x74], xmm1
+0001400BDF24  movaps  xmm6, xmm0
+0001400BDF27  mov     cl, 1
+0001400BDF29  call    0x140095140
+0001400BDF2E  mov     cl, 2
+0001400BDF30  call    0x140095140
+0001400BDF35  mov     cl, 3
+0001400BDF37  call    0x140095140
+0001400BDF3C  mov     cl, 4
+0001400BDF3E  call    0x140095140
+0001400BDF43  call    0x14008f260
+0001400BDF48  call    0x140183be0
+0001400BDF4D  movaps  xmm13, xmm0
+0001400BDF51  mov     eax, dword ptr [rip + 0x588171]
+0001400BDF57  mov     rcx, qword ptr gs:[0x58]
+0001400BDF60  mov     rsi, qword ptr [rcx + rax*8]
+0001400BDF64  movss   xmm8, dword ptr [rsi + 0x4070]
+0001400BDF6D  call    0x140183be0
+0001400BDF72  movaps  xmm9, xmm0
+0001400BDF76  call    0x140183c90
+0001400BDF7B  movss   xmm7, dword ptr [rip + 0x236971]
+0001400BDF83  divss   xmm9, xmm7
+0001400BDF88  movaps  xmm1, xmm8
+0001400BDF8C  cmpunordss xmm1, xmm8
+0001400BDF92  movaps  xmm2, xmm1
+0001400BDF95  andps   xmm2, xmm9
+0001400BDF99  minss   xmm9, xmm8
+0001400BDF9E  andnps  xmm1, xmm9
+0001400BDFA2  orps    xmm1, xmm2
+0001400BDFA5  movss   xmm8, dword ptr [rip + 0x23694a]
+0001400BDFAE  divss   xmm0, xmm8
+0001400BDFB3  movaps  xmm2, xmm0
+0001400BDFB6  minss   xmm2, xmm1
+0001400BDFBA  cmpunordss xmm1, xmm1
+0001400BDFBF  movaps  xmm3, xmm1
+0001400BDFC2  andnps  xmm3, xmm2
+0001400BDFC5  andps   xmm1, xmm0
+0001400BDFC8  orps    xmm1, xmm3
+0001400BDFCB  movss   xmm11, dword ptr [rip + 0x2213e4]
+0001400BDFD4  maxss   xmm1, xmm11
+0001400BDFD9  divss   xmm13, xmm1
+0001400BDFDE  call    0x140183c90
+0001400BDFE3  movaps  xmm9, xmm0
+0001400BDFE7  movss   xmm12, dword ptr [rsi + 0x4070]
+0001400BDFF0  call    0x140183be0
+0001400BDFF5  movaps  xmm10, xmm0
+0001400BDFF9  call    0x140183c90
+0001400BDFFE  divss   xmm10, xmm7
+0001400BE003  movaps  xmm1, xmm12
+0001400BE007  cmpunordss xmm1, xmm12
+0001400BE00D  movaps  xmm2, xmm1
+0001400BE010  andps   xmm2, xmm10
+0001400BE014  minss   xmm10, xmm12
+0001400BE019  andnps  xmm1, xmm10
+0001400BE01D  orps    xmm1, xmm2
+0001400BE020  divss   xmm0, xmm8
+0001400BE025  movaps  xmm2, xmm0
+0001400BE028  minss   xmm2, xmm1
+0001400BE02C  cmpunordss xmm1, xmm1
+0001400BE031  movaps  xmm3, xmm1
+0001400BE034  andnps  xmm3, xmm2
+0001400BE037  andps   xmm1, xmm0
+0001400BE03A  orps    xmm1, xmm3

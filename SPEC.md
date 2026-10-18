@@ -1,4 +1,4 @@
-# Alembic Modding Specification (SPEC.md)
+﻿# Alembic Modding Specification (SPEC.md)
 
 ## 1. Overview
 
@@ -289,14 +289,14 @@ Original exe untouched. Loader DLL injects new logic at runtime.
 
 ## 15. Open Items (post-Phase 2)
 
-1. Sim mega-function `FUN_1400FDF00` pseudo-code — **UNKNOWN** (decompiler timeout); section map in `docs/SIM-PIPELINE.md` is the substitute.
+1. Sim mega-function `FUN_1400FDF00` pseudo-code — **UNKNOWN** (extractr timeout); section map in `docs/SIM-PIPELINE.md` is the substitute.
 2. Reaction table format — **UNKNOWN** (not extracted).
 3. Save v6 byte-level layout — loader analyzed (`docs/SAVE-FORMAT.md`); per-cell stride + compound manifest entry layout **UNKNOWN** (needs a real save).
 4. Compound struct layout — **UNKNOWN**.
 5. Tool implementations — names + unlock rules in `docs/TOOLS-IMPL.md`; per-tool handler mapping **UNKNOWN**.
 6. Element `+0x3C` f32, `+0x44` u16 radioactivity unit, `+0x4A` low byte — **UNKNOWN** (see `docs/ELEMENTS-INTERNALS.md`).
 7. Frame driver region `0x140008370`–`0x14002F090` — uncarved in the 15.5 MB dump; call sites A/B documented in `docs/SIM-PIPELINE.md` §3.
-8. 15 decompile-dump holes (~640 KB) — see `data/dump-gaps.txt`.
+8. 15 extract-dump holes (~640 KB) — see `data/dump-gaps.txt`.
 9. Section 62 snapshot call list truncated (cosmetic).
 10. 24-byte profile record layout — **UNKNOWN**.
 
@@ -306,7 +306,7 @@ Original exe untouched. Loader DLL injects new logic at runtime.
 
 | File | Size | Location |
 |------|------|----------|
-| alembic_all_decompiled.c | 15.5 MB | rea-tools/decompiled/ |
+| alembic_all_extracted.c | 15.5 MB | rea-tools/extracted/ |
 | strings-address-map.txt | ~5 MB | rea-tools/ |
 | func-index.txt | ~200 KB | rea-tools/ |
 | element-table.txt | ~2 KB | rea-tools/ (21 entries) |

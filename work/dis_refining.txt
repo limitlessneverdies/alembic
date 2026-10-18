@@ -1,0 +1,1461 @@
+  00014010F76B  lea rdx, [rip + 0x24774d]
+  00014010F772  mov qword ptr [rax + rcx*8], rdx
+  00014010F776  mov qword ptr [rax + rcx*8 + 8], 8
+  00014010F77F  movss dword ptr [rax + rcx*8 + 0x10], xmm6
+  00014010F785  inc rsi
+  00014010F788  mov qword ptr [rdi + 0xc0], rsi
+  00014010F78F  call 0x1401a63e0
+  00014010F794  mov qword ptr [rbp + 0xc00], rax
+  00014010F79B  mov dword ptr [rbp + 0xc08], edx
+  00014010F7A1  cmp dword ptr [rdi + 0x1a80], 0
+  00014010F7A8  je 0x1401110c9
+  00014010F7AE  cmp dword ptr [rdi + 0x1a90], 0
+  00014010F7B5  je 0x1401110c9
+  00014010F7BB  mov rcx, rdi
+  00014010F7BE  call 0x1400df650
+  00014010F7C3  mov qword ptr [rbp + 0xc20], 0
+  00014010F7CE  mov qword ptr [rbp + 0xc28], 8
+  00014010F7D9  xor ebx, ebx
+  00014010F7DB  lea rdi, [rbp + 0xc20]
+  00014010F7E2  xor esi, esi
+  00014010F7E4  mov qword ptr [rbp + 0xc30], rbx
+  00014010F7EB  mov rax, qword ptr [rbp + 0xda0]
+  00014010F7F2  mov rdx, qword ptr [rax]
+  00014010F7F5  mov rax, qword ptr [rbp + 0xd98]
+  00014010F7FC  mov rax, qword ptr [rax]
+  00014010F7FF  mov rcx, rsi
+  00014010F802  shl rcx, 4
+  00014010F806  add rax, rcx
+  00014010F809  add rax, 0xd
+  00014010F80D  jmp 0x14010f827
+  00014010F80F  movsx ecx, r8w
+  00014010F813  cmp ecx, 0x18f
+  00014010F819  jg 0x14010f8bc
+  00014010F81F  nop 
+  00014010F820  add rax, 0x10
+  00014010F824  inc rsi
+  00014010F827  cmp rsi, 0x22d66
+  00014010F82E  ja 0x14010f8ea
+  00014010F834  cmp rsi, rdx
+  00014010F837  jae 0x140135565
+  00014010F83D  movzx ecx, byte ptr [rax]
+  00014010F840  mov r8d, ecx
+  00014010F843  or r8d, 4
+  00014010F847  cmp r8d, 0x16
+  00014010F84B  jne 0x14010f820
+  00014010F84D  movzx r11d, byte ptr [rax - 5]
+  00014010F852  shr r11d, 2
+  00014010F856  and r11d, 3
+  00014010F85A  lea r8d, [r11 - 1]
+  00014010F85E  cmp r8d, 2
+  00014010F862  jb 0x14010f820
+  00014010F864  movzx r9d, word ptr [rax - 0xd]
+  00014010F869  movzx r8d, word ptr [rax - 0xb]
+  00014010F86E  movzx r10d, byte ptr [rax - 3]
+  00014010F873  cmp r11d, 3
+  00014010F877  je 0x14010f88c
+  00014010F879  lea r11, [rcx + rcx*2]
+  00014010F87D  lea r14, [rip + 0x248c0c]
+  00014010F884  cmp byte ptr [r14 + r11*4 + 8], 5
+  00014010F88A  jne 0x14010f820
+  00014010F88C  cmp cl, 0x12
+  00014010F88F  jne 0x14010f80f
+  00014010F895  test r10b, r10b
+  00014010F898  setne cl
+  00014010F89B  test r9w, r9w
+  00014010F89F  setle r9b
+  00014010F8A3  or r9b, cl
+  00014010F8A6  movsx ecx, r8w
+  00014010F8AA  cmp ecx, 0x190
+  00014010F8B0  setge cl
+  00014010F8B3  test r9b, cl
+  00014010F8B6  je 0x14010f820
+  00014010F8BC  cmp rbx, qword ptr [rbp + 0xc20]
+  00014010F8C3  jne 0x14010f8d4
+  00014010F8C5  mov byte ptr [rbp + 0xcb6], 1
+  00014010F8CC  mov rcx, rdi
+  00014010F8CF  call 0x1402d2c00
+  00014010F8D4  mov rax, qword ptr [rbp + 0xc28]
+  00014010F8DB  mov qword ptr [rax + rbx*8], rsi
+  00014010F8DF  inc rsi
+  00014010F8E2  inc rbx
+  00014010F8E5  jmp 0x14010f7e4
+  00014010F8EA  test rbx, rbx
+  00014010F8ED  je 0x1401110a7
+  00014010F8F3  call 0x140007ed0
+  00014010F8F8  mov ecx, 0x22d67
+  00014010F8FD  mov edx, 1
+  00014010F902  call 0x140054a10
+  00014010F907  mov qword ptr [rbp + 0xdc0], rax
+  00014010F90E  test rax, rax
+  00014010F911  je 0x1401364b3
+  00014010F917  call 0x140007ed0
+  00014010F91C  mov ecx, 0x22d67
+  00014010F921  mov edx, 1
+  00014010F926  call 0x1400549e0
+  00014010F92B  test rax, rax
+  00014010F92E  je 0x1401364ce
+  00014010F934  mov r8d, 0x22d67
+  00014010F93A  mov qword ptr [rbp + 0xd78], rax
+  00014010F941  mov rcx, rax
+  00014010F944  mov dl, 0xff
+  00014010F946  call 0x1402cba90
+  00014010F94B  mov qword ptr [rbp + 0xce0], 0
+  00014010F956  mov qword ptr [rbp + 0xce8], 8
+  00014010F961  xor ebx, ebx
+  00014010F963  lea rdi, [rbp + 0xce0]
+  00014010F96A  xor esi, esi
+  00014010F96C  mov qword ptr [rbp + 0xcf0], rbx
+  00014010F973  mov rax, qword ptr [rbp + 0xda0]
+  00014010F97A  mov rdx, qword ptr [rax]
+  00014010F97D  mov rax, rsi
+  00014010F980  shl rax, 4
+  00014010F984  mov rcx, qword ptr [rbp + 0xd98]
+  00014010F98B  add rax, qword ptr [rcx]
+  00014010F98E  jmp 0x14010f997
+  00014010F990  add rax, 0x10
+  00014010F994  inc rsi
+  00014010F997  cmp rsi, 0x22d67
+  00014010F99E  jae 0x14010fa4a
+  00014010F9A4  cmp rsi, rdx
+  00014010F9A7  jae 0x1401357ea
+  00014010F9AD  movzx ecx, byte ptr [rax + 0xd]
+  00014010F9B1  mov r8d, ecx
+  00014010F9B4  or r8d, 4
+  00014010F9B8  cmp r8d, 0x16
+  00014010F9BC  jne 0x14010f990
+  00014010F9BE  mov r10, qword ptr [rax + 2]
+  00014010F9C2  shr r10, 0x32
+  00014010F9C6  and r10d, 3
+  00014010F9CA  lea r8d, [r10 - 1]
+  00014010F9CE  cmp r8d, 2
+  00014010F9D2  jb 0x14010f990
+  00014010F9D4  movzx r9d, word ptr [rax]
+  00014010F9D8  movzx r8d, byte ptr [rax + 0xa]
+  00014010F9DD  cmp r10d, 3
+  00014010F9E1  je 0x14010f9f6
+  00014010F9E3  lea r10, [rcx + rcx*2]
+  00014010F9E7  lea r11, [rip + 0x248aa2]
+  00014010F9EE  cmp byte ptr [r11 + r10*4 + 8], 5
+  00014010F9F4  jne 0x14010f990
+  00014010F9F6  cmp cl, 0x12
+  00014010F9F9  jne 0x14010fa06
+  00014010F9FB  test r9w, r9w
+  00014010F9FF  jle 0x14010fa06
+  00014010FA01  test r8b, r8b
+  00014010FA04  je 0x14010f990
+  00014010FA06  mov rax, qword ptr [rbp + 0xdc0]
+  00014010FA0D  mov byte ptr [rax + rsi], 1
+  00014010FA11  mov rax, qword ptr [rbp + 0xd78]
+  00014010FA18  mov byte ptr [rax + rsi], 0
+  00014010FA1C  cmp rbx, qword ptr [rbp + 0xce0]
+  00014010FA23  jne 0x14010fa34
+  00014010FA25  mov byte ptr [rbp + 0xd07], 1
+  00014010FA2C  mov rcx, rdi
+  00014010FA2F  call 0x1402d2c00
+  00014010FA34  mov rax, qword ptr [rbp + 0xce8]
+  00014010FA3B  mov qword ptr [rax + rbx*8], rsi
+  00014010FA3F  inc rsi
+  00014010FA42  inc rbx
+  00014010FA45  jmp 0x14010f96c
+  00014010FA4A  xor r15d, r15d
+  00014010FA4D  mov rax, qword ptr [rbp + 0xce8]
+  00014010FA54  movaps xmm6, xmmword ptr [rip + 0x1e5995]
+  00014010FA5B  movaps xmm10, xmmword ptr [rip + 0x1e599d]
+  00014010FA63  lea r11, [rbp + 0xce0]
+  00014010FA6A  mov r10, qword ptr [rbp + 0xd78]
+  00014010FA71  nop word ptr cs:[rax + rax]
+  00014010FA80  cmp r15, rbx
+  00014010FA83  jae 0x14010fc59
+  00014010FA89  mov rdi, qword ptr [rax + r15*8]
+  00014010FA8D  cmp rdi, 0x22d66
+  00014010FA94  ja 0x140135805
+  00014010FA9A  inc r15
+  00014010FA9D  movzx r12d, byte ptr [r10 + rdi]
+  00014010FAA2  cmp r12b, 5
+  00014010FAA6  ja 0x14010fa80
+  00014010FAA8  imul rax, rdi, 0x21579805
+  00014010FAAF  shr rax, 0x20
+  00014010FAB3  mov r13d, edi
+  00014010FAB6  sub r13d, eax
+  00014010FAB9  shr r13d, 1
+  00014010FABC  add r13d, eax
+  00014010FABF  shr r13d, 8
+  00014010FAC3  imul eax, r13d, 0x1c5
+  00014010FACA  sub edi, eax
+  00014010FACC  mov qword ptr [rbp + 0x58], 4
+  00014010FAD4  movups xmmword ptr [rbp + 0x60], xmm6
+  00014010FAD8  movups xmmword ptr [rbp + 0x70], xmm10
+  00014010FADD  inc r12b
+  00014010FAE0  xor r14d, r14d
+  00014010FAE3  nop word ptr cs:[rax + rax]
+  00014010FAF0  cmp r14, 4
+  00014010FAF4  je 0x14010fc46
+  00014010FAFA  mov rcx, r14
+  00014010FAFD  inc r14
+  00014010FB00  mov qword ptr [rbp + 0x50], r14
+  00014010FB04  mov eax, dword ptr [rbp + rcx*8 + 0x60]
+  00014010FB08  add eax, edi
+  00014010FB0A  cmp eax, 0x1c4
+  00014010FB0F  ja 0x14010faf0
+  00014010FB11  mov ecx, dword ptr [rbp + rcx*8 + 0x64]
+  00014010FB15  add ecx, r13d
+  00014010FB18  cmp ecx, 0x13b
+  00014010FB1E  jae 0x14010faf0
+  00014010FB20  imul ecx, ecx, 0x1c5
+  00014010FB26  mov ebx, eax
+  00014010FB28  add rbx, rcx
+  00014010FB2B  cmp byte ptr [r10 + rbx], 0xff
+  00014010FB30  jne 0x14010faf0
+  00014010FB32  mov rax, qword ptr [rbp + 0xda0]
+  00014010FB39  mov rdx, qword ptr [rax]
+  00014010FB3C  cmp rdx, rbx
+  00014010FB3F  jbe 0x140135ef8
+  00014010FB45  mov rax, qword ptr [rbp + 0xd98]
+  00014010FB4C  mov rcx, qword ptr [rax]
+  00014010FB4F  mov rdx, rbx
+  00014010FB52  shl rdx, 4
+  00014010FB56  movzx eax, byte ptr [rcx + rdx + 8]
+  00014010FB5B  test al, 2
+  00014010FB5D  jne 0x14010faf0
+  00014010FB5F  movzx r8d, al
+  00014010FB63  shr r8d, 2
+  00014010FB67  and r8d, 3
+  00014010FB6B  lea r9d, [r8 - 1]
+  00014010FB6F  cmp r9d, 2
+  00014010FB73  jb 0x14010faf0
+  00014010FB79  cmp r8d, 3
+  00014010FB7D  je 0x14010fbf0
+  00014010FB7F  movzx r8d, byte ptr [rcx + rdx + 6]
+  00014010FB85  movzx edx, byte ptr [rcx + rdx + 0xd]
+  00014010FB8A  movzx ecx, dl
+  00014010FB8D  cmp dl, 0x29
+  00014010FB90  jne 0x14010fbb3
+  00014010FB92  lea rcx, [rip + 0x534c87]
+  00014010FB99  mov rcx, qword ptr [rcx + r8*8]
+  00014010FB9D  test rcx, rcx
+  00014010FBA0  je 0x14010faf0
+  00014010FBA6  add rcx, 0x18
+  00014010FBAA  movzx ecx, byte ptr [rcx]
+  00014010FBAD  test al, 0x20
+  00014010FBAF  jne 0x14010fbcd
+  00014010FBB1  jmp 0x14010fbd6
+  00014010FBB3  lea rcx, [rcx + rcx*2]
+  00014010FBB7  lea rdx, [rip + 0x2488d2]
+  00014010FBBE  lea rcx, [rdx + rcx*4]
+  00014010FBC2  add rcx, 8
+  00014010FBC6  movzx ecx, byte ptr [rcx]
+  00014010FBC9  test al, 0x20
+  00014010FBCB  je 0x14010fbd6
+  00014010FBCD  cmp cl, 2
+  00014010FBD0  je 0x14010faf0
+  00014010FBD6  movzx eax, cl
+  00014010FBD9  cmp eax, 6
+  00014010FBDC  ja 0x14010faf0
+  00014010FBE2  mov ecx, 0x61
+  00014010FBE7  bt ecx, eax
+  00014010FBEA  jae 0x14010faf0
+  00014010FBF0  mov byte ptr [r10 + rbx], r12b
+  00014010FBF4  mov rax, qword ptr [rbp + 0xdc0]
+  00014010FBFB  mov byte ptr [rax + rbx], 1
+  00014010FBFF  mov rsi, qword ptr [rbp + 0xcf0]
+  00014010FC06  cmp rsi, qword ptr [rbp + 0xce0]
+  00014010FC0D  jne 0x14010fc25
+  00014010FC0F  mov byte ptr [rbp + 0xd07], 1
+  00014010FC16  mov rcx, r11
+  00014010FC19  call 0x1402d2c00
+  00014010FC1E  lea r11, [rbp + 0xce0]
+  00014010FC25  mov rax, qword ptr [rbp + 0xce8]
+  00014010FC2C  mov qword ptr [rax + rsi*8], rbx
+  00014010FC30  inc rsi
+  00014010FC33  mov qword ptr [rbp + 0xcf0], rsi
+  00014010FC3A  mov r10, qword ptr [rbp + 0xd78]
+  00014010FC41  jmp 0x14010faf0
+  00014010FC46  mov rbx, qword ptr [rbp + 0xcf0]
+  00014010FC4D  mov rax, qword ptr [rbp + 0xce8]
+  00014010FC54  jmp 0x14010fa80
+  00014010FC59  call 0x140007ed0
+  00014010FC5E  mov ecx, 0x22d67
+  00014010FC63  mov edx, 1
+  00014010FC68  call 0x140054a10
+  00014010FC6D  mov qword ptr [rbp + 0xdc8], rax
+  00014010FC74  test rax, rax
+  00014010FC77  je 0x1401364e9
+  00014010FC7D  mov qword ptr [rbp + 0xc60], 0
+  00014010FC88  mov qword ptr [rbp + 0xc68], 8
+  00014010FC93  mov qword ptr [rbp + 0xc70], 0
+  00014010FC9E  mov qword ptr [rbp + 0xab0], 0
+  00014010FCA9  mov qword ptr [rbp + 0xab8], 8
+  00014010FCB4  mov qword ptr [rbp + 0xac0], 0
+  00014010FCBF  mov qword ptr [rbp + 0xb50], 0
+  00014010FCCA  mov qword ptr [rbp + 0xb58], 8
+  00014010FCD5  mov qword ptr [rbp + 0xb60], 0
+  00014010FCE0  mov qword ptr [rbp + 0x770], 0
+  00014010FCEB  mov qword ptr [rbp + 0x778], 8
+  00014010FCF6  mov qword ptr [rbp + 0x780], 0
+  00014010FD01  mov rax, qword ptr [rbp + 0xc20]
+  00014010FD08  mov qword ptr [rbp + 0xd60], rax
+  00014010FD0F  mov rcx, qword ptr [rbp + 0xc28]
+  00014010FD16  mov rax, qword ptr [rbp + 0xc30]
+  00014010FD1D  lea rax, [rcx + rax*8]
+  00014010FD21  mov qword ptr [rbp + 0xd88], rax
+  00014010FD28  mov rax, qword ptr [rbp + 0xdd0]
+  00014010FD2F  lea rax, [rax + 0x670]
+  00014010FD36  mov qword ptr [rbp + 0xd80], rax
+  00014010FD3D  movss xmm12, dword ptr [rip + 0x1d0362]
+  00014010FD46  movss xmm13, dword ptr [rip + 0x1e56e9]
+  00014010FD4F  movss xmm14, dword ptr [rip + 0x1cf494]
+  00014010FD58  movss xmm8, dword ptr [rip + 0x1e5f6f]
+  00014010FD61  movss xmm15, dword ptr [rip + 0x1e70a2]
+  00014010FD6A  movss xmm7, dword ptr [rip + 0x1e709e]
+  00014010FD72  movss xmm11, dword ptr [rip + 0x1e7099]
+  00014010FD7B  mov qword ptr [rbp + 0xd70], rcx
+  00014010FD82  mov qword ptr [rbp + 0xda8], rcx
+  00014010FD89  nop dword ptr [rax]
+  00014010FD90  mov rax, qword ptr [rbp + 0xda8]
+  00014010FD97  cmp rax, qword ptr [rbp + 0xd88]
+  00014010FD9E  je 0x140110f96
+  00014010FDA4  mov rcx, qword ptr [rax]
+  00014010FDA7  cmp rcx, 0x22d67
+  00014010FDAE  jae 0x140135825
+  00014010FDB4  add rax, 8
+  00014010FDB8  mov qword ptr [rbp + 0xda8], rax
+  00014010FDBF  mov rax, qword ptr [rbp + 0xdc8]
+  00014010FDC6  mov qword ptr [rbp + 0xdb0], rcx
+  00014010FDCD  cmp byte ptr [rax + rcx], 0
+  00014010FDD1  jne 0x14010fd90
+  00014010FDD3  mov rax, qword ptr [rbp + 0xda0]
+  00014010FDDA  mov rdx, qword ptr [rax]
+  00014010FDDD  mov rcx, qword ptr [rbp + 0xdb0]
+  00014010FDE4  cmp rcx, rdx
+  00014010FDE7  jae 0x140135a73
+  00014010FDED  mov rax, qword ptr [rbp + 0xd98]
+  00014010FDF4  mov r10, qword ptr [rax]
+  00014010FDF7  mov rdx, rcx
+  00014010FDFA  shl rdx, 4
+  00014010FDFE  movzx eax, byte ptr [r10 + rdx + 0xd]
+  00014010FE04  mov r8d, eax
+  00014010FE07  or r8d, 4
+  00014010FE0B  cmp r8d, 0x16
+  00014010FE0F  jne 0x14010fd90
+  00014010FE15  lea r8, [r10 + rdx]
+  00014010FE19  mov r9, qword ptr [r8 + 2]
+  00014010FE1D  shr r9, 0x32
+  00014010FE21  and r9d, 3
+  00014010FE25  lea r8d, [r9 - 1]
+  00014010FE29  cmp r8d, 2
+  00014010FE2D  jb 0x14010fd90
+  00014010FE33  movzx r8d, word ptr [r10 + rdx]
+  00014010FE38  movzx ecx, byte ptr [r10 + rdx + 0xa]
+  00014010FE3E  cmp r9d, 3
+  00014010FE42  je 0x14010fe5b
+  00014010FE44  lea rdx, [rax + rax*2]
+  00014010FE48  lea r9, [rip + 0x248641]
+  00014010FE4F  cmp byte ptr [r9 + rdx*4 + 8], 5
+  00014010FE55  jne 0x14010fd90
+  00014010FE5B  cmp al, 0x12
+  00014010FE5D  jne 0x14010fe6d
+  00014010FE5F  test r8w, r8w
+  00014010FE63  jle 0x14010fe6d
+  00014010FE65  test cl, cl
+  00014010FE67  je 0x14010fd90
+  00014010FE6D  mov rax, qword ptr [rbp + 0xdd0]
+  00014010FE74  mov rcx, qword ptr [rbp + 0xdb0]
+  00014010FE7B  cmp rcx, qword ptr [rax + 0x3a8]
+  00014010FE82  jae 0x14010fe99
+  00014010FE84  mov rax, qword ptr [rax + 0x3a0]
+  00014010FE8B  movzx eax, byte ptr [rax + rcx]
+  00014010FE8F  xor al, 1
+  00014010FE91  mov dword ptr [rbp + 0xdb8], eax
+  00014010FE97  jmp 0x14010fea3
+  00014010FE99  mov dword ptr [rbp + 0xdb8], 0
+  00014010FEA3  mov rax, qword ptr [rbp + 0xdc8]
+  00014010FEAA  mov qword ptr [rbp + 0xc70], 0
+  00014010FEB5  mov qword ptr [rbp + 0xac0], 0
+  00014010FEC0  mov qword ptr [rbp + 0xb60], 0
+  00014010FECB  mov qword ptr [rbp + 0x780], 0
+  00014010FED6  mov byte ptr [rax + rcx], 1
+  00014010FEDA  cmp qword ptr [rbp + 0xc60], 0
+  00014010FEE2  jne 0x14010fef0
+  00014010FEE4  lea rcx, [rbp + 0xc60]
+  00014010FEEB  call 0x1402d2c00
+  00014010FEF0  mov rax, qword ptr [rbp + 0xc68]
+  00014010FEF7  mov rcx, qword ptr [rbp + 0xdb0]
+  00014010FEFE  mov qword ptr [rax], rcx
+  00014010FF01  mov qword ptr [rbp + 0xc70], 1
+  00014010FF0C  mov eax, 1
+  00014010FF11  xor r13d, r13d
+  00014010FF14  jmp 0x14010ff27
+  00014010FF16  <gap 10>
+  00014010FF20  mov rax, qword ptr [rbp + 0xc70]
+  00014010FF27  cmp r13, rax
+  00014010FF2A  jae 0x140110282
+  00014010FF30  mov rax, qword ptr [rbp + 0xc68]
+  00014010FF37  mov r14, qword ptr [rax + r13*8]
+  00014010FF3B  mov rax, qword ptr [rbp + 0xda0]
+  00014010FF42  mov rdx, qword ptr [rax]
+  00014010FF45  cmp r14, rdx
+  00014010FF48  jae 0x140135307
+  00014010FF4E  mov rax, qword ptr [rbp + 0xd98]
+  00014010FF55  mov rax, qword ptr [rax]
+  00014010FF58  mov rcx, r14
+  00014010FF5B  shl rcx, 4
+  00014010FF5F  movzx edi, word ptr [rax + rcx]
+  00014010FF63  mov r12, qword ptr [rax + rcx + 2]
+  00014010FF68  movzx ebx, byte ptr [rax + rcx + 0xa]
+  00014010FF6D  movzx r15d, byte ptr [rax + rcx + 0xd]
+  00014010FF73  mov rsi, qword ptr [rbp + 0xac0]
+  00014010FF7A  cmp rsi, qword ptr [rbp + 0xab0]
+  00014010FF81  jne 0x14010ff8f
+  00014010FF83  lea rcx, [rbp + 0xab0]
+  00014010FF8A  call 0x1402d2c00
+  00014010FF8F  movzx eax, r15b
+  00014010FF93  mov rcx, qword ptr [rbp + 0xab8]
+  00014010FF9A  mov qword ptr [rcx + rsi*8], r14
+  00014010FF9E  inc rsi
+  00014010FFA1  mov qword ptr [rbp + 0xac0], rsi
+  00014010FFA8  mov ecx, eax
+  00014010FFAA  or ecx, 4
+  00014010FFAD  cmp ecx, 0x16
+  00014010FFB0  mov rsi, qword ptr [rbp + 0xdc8]
+  00014010FFB7  jne 0x14010ffcf
+  00014010FFB9  shr r12, 0x32
+  00014010FFBD  and r12d, 3
+  00014010FFC1  lea ecx, [r12 - 1]
+  00014010FFC6  cmp ecx, 2
+  00014010FFC9  jae 0x1401101d0
+  00014010FFCF  inc r13
+  00014010FFD2  mov rax, r14
+  00014010FFD5  movabs rcx, 0x21579804855e6013
+  00014010FFDF  mul rcx
+  00014010FFE2  mov r12, r14
+  00014010FFE5  sub r12, rdx
+  00014010FFE8  shr r12, 1
+  00014010FFEB  add r12, rdx
+  00014010FFEE  shr r12, 8
+  00014010FFF2  imul eax, r12d, 0x1c5
+  00014010FFF9  sub r14d, eax
+  00014010FFFC  mov qword ptr [rbp + 0x58], 4
+  000140110004  movups xmmword ptr [rbp + 0x60], xmm6
+  000140110008  movups xmmword ptr [rbp + 0x70], xmm10
+  00014011000D  xor ebx, ebx
+  00014011000F  jmp 0x140110030
+  000140110011  mov rax, qword ptr [rbp + 0xc68]
+  000140110018  mov qword ptr [rax + rsi*8], r15
+  00014011001C  inc rsi
+  00014011001F  mov qword ptr [rbp + 0xc70], rsi
+  000140110026  mov rsi, qword ptr [rbp + 0xdc8]
+  00014011002D  nop dword ptr [rax]
+  000140110030  cmp rbx, 4
+  000140110034  je 0x14010ff20
+  00014011003A  mov rcx, rbx
+  00014011003D  inc rbx
+  000140110040  mov qword ptr [rbp + 0x50], rbx
+  000140110044  mov eax, dword ptr [rbp + rcx*8 + 0x60]
+  000140110048  add eax, r14d
+  00014011004B  cmp eax, 0x1c4
+  000140110050  ja 0x140110030
+  000140110052  mov ecx, dword ptr [rbp + rcx*8 + 0x64]
+  000140110056  add ecx, r12d
+  000140110059  cmp ecx, 0x13b
+  00014011005F  jae 0x140110030
+  000140110061  imul ecx, ecx, 0x1c5
+  000140110067  mov r15d, eax
+  00014011006A  add r15, rcx
+  00014011006D  cmp byte ptr [rsi + r15], 0
+  000140110072  jne 0x140110030
+  000140110074  mov rax, qword ptr [rbp + 0xda0]
+  00014011007B  mov rdx, qword ptr [rax]
+  00014011007E  cmp rdx, r15
+  000140110081  jbe 0x140134c26
+  000140110087  mov rax, qword ptr [rbp + 0xd98]
+  00014011008E  mov rcx, qword ptr [rax]
+  000140110091  mov r9, r15
+  000140110094  shl r9, 4
+  000140110098  movzx eax, word ptr [rcx + r9]
+  00014011009D  movzx edx, byte ptr [rcx + r9 + 8]
+  0001401100A3  movzx r8d, byte ptr [rcx + r9 + 0xd]
+  0001401100A9  mov r10d, edx
+  0001401100AC  shr r10d, 2
+  0001401100B0  and r10d, 3
+  0001401100B4  lea r11d, [r10 - 1]
+  0001401100B8  cmp r11d, 2
+  0001401100BC  jae 0x1401100f7
+  0001401100BE  xor r9d, r9d
+  0001401100C1  test dl, 2
+  0001401100C4  je 0x140110179
+  0001401100CA  cmp r8b, 0x7e
+  0001401100CE  setge cl
+  0001401100D1  test dl, 0x10
+  0001401100D4  sete dl
+  0001401100D7  test cl, dl
+  0001401100D9  jne 0x140110188
+  0001401100DF  movzx eax, ax
+  0001401100E2  shr eax, 0xf
+  0001401100E5  or r9b, al
+  0001401100E8  test r9b, 1
+  0001401100EC  je 0x140110030
+  0001401100F2  jmp 0x140110188
+  0001401100F7  cmp r10d, 3
+  0001401100FB  jne 0x140110107
+  0001401100FD  mov r9b, 1
+  000140110100  test dl, 2
+  000140110103  je 0x140110179
+  000140110105  jmp 0x1401100ca
+  000140110107  movzx ecx, byte ptr [rcx + r9 + 6]
+  00014011010D  movzx r9d, r8b
+  000140110111  cmp r8b, 0x29
+  000140110115  jne 0x14011012d
+  000140110117  lea r9, [rip + 0x534702]
+  00014011011E  mov rcx, qword ptr [r9 + rcx*8]
+  000140110122  test rcx, rcx
+  000140110125  je 0x1401100be
+  000140110127  add rcx, 0x18
+  00014011012B  jmp 0x140110140
+  00014011012D  lea rcx, [r9 + r9*2]
+  000140110131  lea r9, [rip + 0x248358]
+  000140110138  lea rcx, [r9 + rcx*4]
+  00014011013C  add rcx, 8
+  000140110140  movzx ecx, byte ptr [rcx]
+  000140110143  mov r10d, edx
+  000140110146  shr r10b, 5
+  00014011014A  cmp cl, 2
+  00014011014D  sete r11b
+  000140110151  xor r9d, r9d
+  000140110154  test r10b, r11b
+  000140110157  jne 0x140110170
+  000140110159  cmp cl, 7
+  00014011015C  jae 0x140110170
+  00014011015E  mov r9b, 0x61
+  000140110161  shr r9b, cl
+  000140110164  nop word ptr cs:[rax + rax]
+  000140110170  test dl, 2
+  000140110173  jne 0x1401100ca
+  000140110179  xor eax, eax
+  00014011017B  or r9b, al
+  00014011017E  test r9b, 1
+  000140110182  je 0x140110030
+  000140110188  mov rax, qword ptr [rbp + 0xdc0]
+  00014011018F  cmp byte ptr [rax + r15], 1
+  000140110194  jne 0x140110030
+  00014011019A  mov byte ptr [rsi + r15], 1
+  00014011019F  mov rsi, qword ptr [rbp + 0xc70]
+  0001401101A6  cmp rsi, qword ptr [rbp + 0xc60]
+  0001401101AD  jne 0x140110011
+  0001401101B3  lea rcx, [rbp + 0xc60]
+  0001401101BA  call 0x1402d2c00
+  0001401101BF  jmp 0x140110011
+  0001401101C4  <gap 12>
+  0001401101D0  cmp r12d, 3
+  0001401101D4  je 0x1401101ec
+  0001401101D6  lea rcx, [rax + rax*2]
+  0001401101DA  lea rdx, [rip + 0x2482af]
+  0001401101E1  cmp byte ptr [rdx + rcx*4 + 8], 5
+  0001401101E6  jne 0x14010ffcf
+  0001401101EC  cmp r15b, 0x16
+  0001401101F0  je 0x140110245
+  0001401101F2  cmp eax, 0x12
+  0001401101F5  jne 0x14010ffcf
+  0001401101FB  test di, di
+  0001401101FE  jle 0x140110208
+  000140110200  test bl, bl
+  000140110202  je 0x14010ffcf
+  000140110208  mov rsi, qword ptr [rbp + 0xb60]
+  00014011020F  cmp rsi, qword ptr [rbp + 0xb50]
+  000140110216  jne 0x140110224
+  000140110218  lea rcx, [rbp + 0xb50]
+  00014011021F  call 0x1402d2c00
+  000140110224  mov rax, qword ptr [rbp + 0xb58]
+  00014011022B  mov qword ptr [rax + rsi*8], r14
+  00014011022F  inc rsi
+  000140110232  mov qword ptr [rbp + 0xb60], rsi
+  000140110239  mov rsi, qword ptr [rbp + 0xdc8]
+  000140110240  jmp 0x14010ffcf
+  000140110245  mov rsi, qword ptr [rbp + 0x780]
+  00014011024C  cmp rsi, qword ptr [rbp + 0x770]
+  000140110253  jne 0x140110261
+  000140110255  lea rcx, [rbp + 0x770]
+  00014011025C  call 0x1402d2c00
+  000140110261  mov rax, qword ptr [rbp + 0x778]
+  000140110268  mov qword ptr [rax + rsi*8], r14
+  00014011026C  inc rsi
+  00014011026F  mov qword ptr [rbp + 0x780], rsi
+  000140110276  mov rsi, qword ptr [rbp + 0xdc8]
+  00014011027D  jmp 0x14010ffcf
+  000140110282  cmp byte ptr [rbp + 0xdb8], 0
+  000140110289  je 0x1401106c3
+  00014011028F  call 0x140007ed0
+  000140110294  mov ecx, 0x22d67
+  000140110299  mov edx, 1
+  00014011029E  call 0x140054a10
+  0001401102A3  test rax, rax
+  0001401102A6  je 0x140136375
+  0001401102AC  mov rcx, rax
+  0001401102AF  mov qword ptr [rbp + 0xc70], 0
+  0001401102BA  mov qword ptr [rbp + 0xac0], 0
+  0001401102C5  mov rax, qword ptr [rbp + 0xdb0]
+  0001401102CC  mov qword ptr [rbp + 0xdb8], rcx
+  0001401102D3  mov byte ptr [rcx + rax], 1
+  0001401102D7  cmp qword ptr [rbp + 0xc60], 0
+  0001401102DF  jne 0x1401102ed
+  0001401102E1  lea rcx, [rbp + 0xc60]
+  0001401102E8  call 0x1402d2c00
+  0001401102ED  mov rax, qword ptr [rbp + 0xc68]
+  0001401102F4  mov rcx, qword ptr [rbp + 0xdb0]
+  0001401102FB  mov qword ptr [rax], rcx
+  0001401102FE  mov qword ptr [rbp + 0xc70], 1
+  000140110309  mov eax, 1
+  00014011030E  xor r12d, r12d
+  000140110311  mov rdi, qword ptr [rbp + 0xdb8]
+  000140110318  jmp 0x140110327
+  00014011031A  <gap 6>
+  000140110320  mov rax, qword ptr [rbp + 0xc70]
+  000140110327  cmp r12, rax
+  00014011032A  jae 0x140110552
+  000140110330  mov rax, qword ptr [rbp + 0xc68]
+  000140110337  mov rsi, qword ptr [rax + r12*8]
+  00014011033B  mov rdi, qword ptr [rbp + 0xac0]
+  000140110342  cmp rdi, qword ptr [rbp + 0xab0]
+  000140110349  jne 0x140110357
+  00014011034B  lea rcx, [rbp + 0xab0]
+  000140110352  call 0x1402d2c00
+  000140110357  inc r12
+  00014011035A  mov rax, qword ptr [rbp + 0xab8]
+  000140110361  mov qword ptr [rax + rdi*8], rsi
+  000140110365  inc rdi
+  000140110368  mov qword ptr [rbp + 0xac0], rdi
+  00014011036F  mov rax, rsi
+  000140110372  movabs rcx, 0x21579804855e6013
+  00014011037C  mul rcx
+  00014011037F  mov r14, rsi
+  000140110382  sub r14, rdx
+  000140110385  shr r14, 1
+  000140110388  add r14, rdx
+  00014011038B  shr r14, 8
+  00014011038F  imul eax, r14d, 0x1c5
+  000140110396  sub esi, eax
+  000140110398  mov qword ptr [rbp + 0x58], 4
+  0001401103A0  movups xmmword ptr [rbp + 0x60], xmm6
+  0001401103A4  movups xmmword ptr [rbp + 0x70], xmm10
+  0001401103A9  xor ebx, ebx
+  0001401103AB  jmp 0x1401103c5
+  0001401103AD  <gap 3>
+  0001401103B0  mov rax, qword ptr [rbp + 0xc68]
+  0001401103B7  mov qword ptr [rax + rdi*8], r15
+  0001401103BB  inc rdi
+  0001401103BE  mov qword ptr [rbp + 0xc70], rdi
+  0001401103C5  mov rdi, qword ptr [rbp + 0xdb8]
+  0001401103CC  nop dword ptr [rax]
+  0001401103D0  cmp rbx, 4
+  0001401103D4  je 0x140110320
+  0001401103DA  mov rcx, rbx
+  0001401103DD  inc rbx
+  0001401103E0  mov qword ptr [rbp + 0x50], rbx
+  0001401103E4  mov eax, dword ptr [rbp + rcx*8 + 0x60]
+  0001401103E8  add eax, esi
+  0001401103EA  cmp eax, 0x1c4
+  0001401103EF  ja 0x1401103d0
+  0001401103F1  mov ecx, dword ptr [rbp + rcx*8 + 0x64]
+  0001401103F5  add ecx, r14d
+  0001401103F8  cmp ecx, 0x13b
+  0001401103FE  jae 0x1401103d0
+  000140110400  imul ecx, ecx, 0x1c5
+  000140110406  mov r15d, eax
+  000140110409  add r15, rcx
+  00014011040C  cmp byte ptr [rdi + r15], 0
+  000140110411  jne 0x1401103d0
+  000140110413  mov rax, qword ptr [rbp + 0xda0]
+  00014011041A  mov rdx, qword ptr [rax]
+  00014011041D  cmp rdx, r15
+  000140110420  jbe 0x140134e67
+  000140110426  mov rax, qword ptr [rbp + 0xd98]
+  00014011042D  mov rcx, qword ptr [rax]
+  000140110430  mov r9, r15
+  000140110433  shl r9, 4
+  000140110437  movzx eax, word ptr [rcx + r9]
+  00014011043C  movzx edx, byte ptr [rcx + r9 + 8]
+  000140110442  movzx r8d, byte ptr [rcx + r9 + 0xd]
+  000140110448  mov r10d, edx
+  00014011044B  shr r10d, 2
+  00014011044F  and r10d, 3
+  000140110453  lea r11d, [r10 - 1]
+  000140110457  cmp r11d, 2
+  00014011045B  jae 0x140110496
+  00014011045D  xor r9d, r9d
+  000140110460  test dl, 2
+  000140110463  je 0x140110519
+  000140110469  cmp r8b, 0x7e
+  00014011046D  setge cl
+  000140110470  test dl, 0x10
+  000140110473  sete dl
+  000140110476  test cl, dl
+  000140110478  jne 0x140110528
+  00014011047E  movzx eax, ax
+  000140110481  shr eax, 0xf
+  000140110484  or r9b, al
+  000140110487  test r9b, 1
+  00014011048B  je 0x1401103d0
+  000140110491  jmp 0x140110528
+  000140110496  cmp r10d, 3
+  00014011049A  jne 0x1401104a6
+  00014011049C  mov r9b, 1
+  00014011049F  test dl, 2
+  0001401104A2  je 0x140110519
+  0001401104A4  jmp 0x140110469
+  0001401104A6  movzx ecx, byte ptr [rcx + r9 + 6]
+  0001401104AC  movzx r9d, r8b
+  0001401104B0  cmp r8b, 0x29
+  0001401104B4  jne 0x1401104cc
+  0001401104B6  lea r9, [rip + 0x534363]
+  0001401104BD  mov rcx, qword ptr [r9 + rcx*8]
+  0001401104C1  test rcx, rcx
+  0001401104C4  je 0x14011045d
+  0001401104C6  add rcx, 0x18
+  0001401104CA  jmp 0x1401104df
+  0001401104CC  lea rcx, [r9 + r9*2]
+  0001401104D0  lea r9, [rip + 0x247fb9]
+  0001401104D7  lea rcx, [r9 + rcx*4]
+  0001401104DB  add rcx, 8
+  0001401104DF  movzx ecx, byte ptr [rcx]
+  0001401104E2  mov r10d, edx
+  0001401104E5  shr r10b, 5
+  0001401104E9  cmp cl, 2
+  0001401104EC  sete r11b
+  0001401104F0  xor r9d, r9d
+  0001401104F3  test r10b, r11b
+  0001401104F6  jne 0x140110510
+  0001401104F8  cmp cl, 7
+  0001401104FB  jae 0x140110510
+  0001401104FD  mov r9b, 0x61
+  000140110500  shr r9b, cl
+  000140110503  nop word ptr cs:[rax + rax]
+  000140110510  test dl, 2
+  000140110513  jne 0x140110469
+  000140110519  xor eax, eax
+  00014011051B  or r9b, al
+  00014011051E  test r9b, 1
+  000140110522  je 0x1401103d0
+  000140110528  mov byte ptr [rdi + r15], 1
+  00014011052D  mov rdi, qword ptr [rbp + 0xc70]
+  000140110534  cmp rdi, qword ptr [rbp + 0xc60]
+  00014011053B  jne 0x1401103b0
+  000140110541  lea rcx, [rbp + 0xc60]
+  000140110548  call 0x1402d2c00
+  00014011054D  jmp 0x1401103b0
+  000140110552  mov qword ptr [rbp + 0xb60], 0
+  00014011055D  mov qword ptr [rbp + 0x780], 0
+  000140110568  mov rbx, qword ptr [rbp + 0xab8]
+  00014011056F  mov rax, qword ptr [rbp + 0xac0]
+  000140110576  lea r14, [rbx + rax*8]
+  00014011057A  nop word ptr [rax + rax]
+  000140110580  xor eax, eax
+  000140110582  cmp rbx, r14
+  000140110585  setne cl
+  000140110588  je 0x1401106b0
+  00014011058E  mov rsi, qword ptr [rbx]
+  000140110591  mov rdx, qword ptr [rbp + 0xda0]
+  000140110598  mov rdx, qword ptr [rdx]
+  00014011059B  cmp rsi, rdx
+  00014011059E  jae 0x140135689
+  0001401105A4  mov al, cl
+  0001401105A6  lea rbx, [rbx + rax*8]
+  0001401105AA  mov rax, qword ptr [rbp + 0xd98]
+  0001401105B1  mov rcx, qword ptr [rax]
+  0001401105B4  mov rdx, rsi
+  0001401105B7  shl rdx, 4
+  0001401105BB  movzx eax, byte ptr [rcx + rdx + 0xd]
+  0001401105C0  mov r8d, eax
+  0001401105C3  or r8d, 4
+  0001401105C7  cmp r8d, 0x16
+  0001401105CB  jne 0x140110580
+  0001401105CD  lea r8, [rcx + rdx]
+  0001401105D1  mov r9, qword ptr [r8 + 2]
+  0001401105D5  shr r9, 0x32
+  0001401105D9  and r9d, 3
+  0001401105DD  lea r8d, [r9 - 1]
+  0001401105E1  cmp r8d, 2
+  0001401105E5  jb 0x140110580
+  0001401105E7  movzx r8d, word ptr [rcx + rdx]
+  0001401105EC  movzx ecx, byte ptr [rcx + rdx + 0xa]
+  0001401105F1  cmp r9d, 3
+  0001401105F5  je 0x14011060e
+  0001401105F7  lea rdx, [rax + rax*2]
+  0001401105FB  lea r9, [rip + 0x247e8e]
+  000140110602  cmp byte ptr [r9 + rdx*4 + 8], 5
+  000140110608  jne 0x140110580
+  00014011060E  cmp al, 0x16
+  000140110610  je 0x14011065b
+  000140110612  movzx eax, al
+  000140110615  cmp eax, 0x12
+  000140110618  jne 0x140110693
+  00014011061A  test r8w, r8w
+  00014011061E  jle 0x140110628
+  000140110620  test cl, cl
+  000140110622  je 0x140110580
+  000140110628  mov rdi, qword ptr [rbp + 0xb60]
+  00014011062F  cmp rdi, qword ptr [rbp + 0xb50]
+  000140110636  jne 0x140110644
+  000140110638  lea rcx, [rbp + 0xb50]
+  00014011063F  call 0x1402d2c00
+  000140110644  mov rax, qword ptr [rbp + 0xb58]
+  00014011064B  mov qword ptr [rax + rdi*8], rsi
+  00014011064F  inc rdi
+  000140110652  mov qword ptr [rbp + 0xb60], rdi
+  000140110659  jmp 0x14011068c
+  00014011065B  mov rdi, qword ptr [rbp + 0x780]
+  000140110662  cmp rdi, qword ptr [rbp + 0x770]
+  000140110669  jne 0x140110677
+  00014011066B  lea rcx, [rbp + 0x770]
+  000140110672  call 0x1402d2c00
+  000140110677  mov rax, qword ptr [rbp + 0x778]
+  00014011067E  mov qword ptr [rax + rdi*8], rsi
+  000140110682  inc rdi
+  000140110685  mov qword ptr [rbp + 0x780], rdi
+  00014011068C  mov rdi, qword ptr [rbp + 0xdb8]
+  000140110693  cmp rsi, 0x22d67
+  00014011069A  jae 0x140135c95
+  0001401106A0  mov rax, qword ptr [rbp + 0xdc8]
+  0001401106A7  mov byte ptr [rax + rsi], 1
+  0001401106AB  jmp 0x140110580
+  0001401106B0  mov edx, 0x22d67
+  0001401106B5  mov r8d, 1
+  0001401106BB  mov rcx, rdi
+  0001401106BE  call 0x1400549f0
+  0001401106C3  mov rdx, qword ptr [rbp + 0xb60]
+  0001401106CA  mov rcx, rdx
+  0001401106CD  shr rcx, 1
+  0001401106D0  mov rax, qword ptr [rbp + 0x780]
+  0001401106D7  cmp rax, rcx
+  0001401106DA  cmovb rcx, rax
+  0001401106DE  mov qword ptr [rbp + 0xdb8], rcx
+  0001401106E5  test rcx, rcx
+  0001401106E8  je 0x14010fd90
+  0001401106EE  mov rcx, qword ptr [rbp + 0xb58]
+  0001401106F5  lea rax, [rbp + 0xa50]
+  0001401106FC  mov qword ptr [rbp + 0x50], rax
+  000140110700  cmp rdx, 2
+  000140110704  jae 0x140110f46
+  00014011070A  mov rcx, qword ptr [rbp + 0x778]
+  000140110711  mov rdx, qword ptr [rbp + 0x780]
+  000140110718  lea rax, [rbp + 0xa50]
+  00014011071F  mov qword ptr [rbp + 0x50], rax
+  000140110723  cmp rdx, 2
+  000140110727  jae 0x140110f60
+  00014011072D  cvtsi2ss xmm9, qword ptr [rbp + 0xdb8]
+  000140110736  mulss xmm9, dword ptr [rip + 0x1e66c9]
+  00014011073F  mov rsi, qword ptr [rbp + 0xac0]
+  000140110746  cmp rsi, 1
+  00014011074A  mov rax, rsi
+  00014011074D  adc rax, 0
+  000140110751  mov rdi, qword ptr [rbp + 0xab8]
+  000140110758  cvtsi2ss xmm0, rax
+  00014011075D  movaps xmm1, xmm9
+  000140110761  divss xmm1, xmm0
+  000140110765  xorps xmm0, xmm0
+  000140110768  sqrtss xmm0, xmm1
+  00014011076C  mulss xmm0, xmm12
+  000140110771  call 0x1402bba70
+  000140110776  xorps xmm1, xmm1
+  000140110779  maxss xmm1, xmm0
+  00014011077D  movaps xmm0, xmm13
+  000140110781  minss xmm0, xmm1
+  000140110785  cvttss2si eax, xmm0
+  000140110789  ucomiss xmm0, xmm14
+  00014011078D  mov ecx, 0x7fffffff
+  000140110792  cmova eax, ecx
+  000140110795  ucomiss xmm0, xmm0
+  000140110798  mov ecx, 0
+  00014011079D  cmovp eax, ecx
+  0001401107A0  test rsi, rsi
+  0001401107A3  je 0x140110817
+  0001401107A5  shl rsi, 3
+  0001401107A9  xor r8d, r8d
+  0001401107AC  jmp 0x1401107bf
+  0001401107AE  <gap 2>
+  0001401107B0  mov word ptr [rdx + rcx + 4], r9w
+  0001401107B6  add r8, 8
+  0001401107BA  cmp rsi, r8
+  0001401107BD  je 0x140110817
+  0001401107BF  mov rcx, qword ptr [rdi + r8]
+  0001401107C3  mov rdx, qword ptr [rbp + 0xda0]
+  0001401107CA  mov rdx, qword ptr [rdx]
+  0001401107CD  cmp rcx, rdx
+  0001401107D0  jae 0x14013573a
+  0001401107D6  mov rdx, qword ptr [rbp + 0xd98]
+  0001401107DD  mov rdx, qword ptr [rdx]
+  0001401107E0  shl rcx, 4
+  0001401107E4  test byte ptr [rdx + rcx + 8], 2
+  0001401107E9  jne 0x1401107b6
+  0001401107EB  lea r9, [rdx + rcx]
+  0001401107EF  movsx r9d, word ptr [r9 + 4]
+  0001401107F4  add r9d, eax
+  0001401107F7  cmp r9d, 0xffffa241
+  0001401107FE  jge 0x140110806
+  000140110800  mov r9d, 0xffffa240
+  000140110806  cmp r9d, 0x5dc0
+  00014011080D  jl 0x1401107b0
+  00014011080F  mov r9d, 0x5dc0
+  000140110815  jmp 0x1401107b0
+  000140110817  mov r9, qword ptr [rbp + 0xdb8]
+  00014011081E  lea r12, [r9 + r9]
+  000140110822  mov rdx, qword ptr [rbp + 0xb58]
+  000140110829  mov rax, qword ptr [rbp + 0xb60]
+  000140110830  lea rax, [rdx + rax*8]
+  000140110834  mov rcx, qword ptr [rbp + 0x778]
+  00014011083B  mov r8, qword ptr [rbp + 0x780]
+  000140110842  lea r8, [rcx + r8*8]
+  000140110846  mov r10, r12
+  000140110849  test rdx, rdx
+  00014011084C  je 0x140110873
+  00014011084E  nop 
+  000140110850  test r10, r10
+  000140110853  je 0x140110870
+  000140110855  dec r10
+  000140110858  cmp rdx, rax
+  00014011085B  je 0x140110873
+  00014011085D  lea rsi, [rdx + 8]
+  000140110861  mov r11, rcx
+  000140110864  jmp 0x140110889
+  000140110866  <gap 10>
+  000140110870  xor r10d, r10d
+  000140110873  test r9, r9
+  000140110876  je 0x1401108e1
+  000140110878  cmp rcx, r8
+  00014011087B  je 0x1401108e1
+  00014011087D  dec r9
+  000140110880  lea r11, [rcx + 8]
+  000140110884  xor esi, esi
+  000140110886  mov rdx, rcx
+  000140110889  mov rcx, qword ptr [rdx]
+  00014011088C  mov rdx, qword ptr [rbp + 0xda0]
+  000140110893  mov rdx, qword ptr [rdx]
+  000140110896  cmp rcx, rdx
+  000140110899  jae 0x14013535f
+  00014011089F  mov rdx, qword ptr [rbp + 0xd98]
+  0001401108A6  mov rdx, qword ptr [rdx]
+  0001401108A9  shl rcx, 4
+  0001401108AD  mov dword ptr [rdx + rcx], 0x140000
+  0001401108B4  mov word ptr [rdx + rcx + 6], 0
+  0001401108BB  mov byte ptr [rdx + rcx + 8], 1
+  0001401108C0  mov dword ptr [rdx + rcx + 9], 0
+  0001401108C8  mov dword ptr [rdx + rcx + 0xc], 0
+  0001401108D0  mov rdx, rsi
+  0001401108D3  mov rcx, r11
+  0001401108D6  test rdx, rdx
+  0001401108D9  jne 0x140110850
+  0001401108DF  jmp 0x140110873
+  0001401108E1  mov rax, qword ptr [rbp + 0xdb8]
+  0001401108E8  lea rbx, [rax + 3]
+  0001401108EC  shr rbx, 2
+  0001401108F0  xor r14d, r14d
+  0001401108F3  cmp r14, rbx
+  0001401108F6  jae 0x140110a69
+  0001401108FC  nop dword ptr [rax]
+  000140110900  mov rax, r14
+  000140110903  imul rax, r12
+  000140110907  mov rcx, rax
+  00014011090A  or rcx, rbx
+  00014011090D  shr rcx, 0x20
+  000140110911  je 0x140110930
+  000140110913  xor edx, edx
+  000140110915  div rbx
+  000140110918  mov rdx, qword ptr [rbp + 0xb60]
+  00014011091F  cmp rax, rdx
+  000140110922  jb 0x140110944
+  000140110924  jmp 0x140135477
+  000140110929  <gap 7>
+  000140110930  xor edx, edx
+  000140110932  div ebx
+  000140110934  mov rdx, qword ptr [rbp + 0xb60]
+  00014011093B  cmp rax, rdx
+  00014011093E  jae 0x140135477
+  000140110944  mov rcx, qword ptr [rbp + 0xb58]
+  00014011094B  mov rsi, qword ptr [rcx + rax*8]
+  00014011094F  mov rax, qword ptr [rbp + 0xda0]
+  000140110956  mov rdx, qword ptr [rax]
+  000140110959  cmp rsi, rdx
+  00014011095C  jae 0x14013548b
+  000140110962  mov rax, qword ptr [rbp + 0xd98]
+  000140110969  mov rax, qword ptr [rax]
+  00014011096C  mov r13, rsi
+  00014011096F  shl r13, 4
+  000140110973  imul r15d, esi, 0x9e3779b1
+  00014011097A  mov ecx, esi
+  00014011097C  and ecx, 0xf
+  00014011097F  add ecx, 5
+  000140110982  rol r15d, cl
+  000140110985  movzx edi, word ptr [rax + r13 + 4]
+  00014011098B  imul eax, esi, 0x6b
+  00014011098E  xor r15d, eax
+  000140110991  test r14b, 1
+  000140110995  jne 0x1401109d0
+  000140110997  mov rcx, qword ptr [rip + 0x533472]
+  00014011099E  call 0x140206870
+  0001401109A3  mov rcx, qword ptr [rip + 0x533466]
+  0001401109AA  call 0x140206870
+  0001401109AF  mov eax, r15d
+  0001401109B2  and eax, 3
+  0001401109B5  add eax, 5
+  0001401109B8  mov cl, 5
+  0001401109BA  mov r8b, 0xfd
+  0001401109BD  mov r9w, 0x834
+  0001401109C2  jmp 0x140110a09
+  0001401109C4  <gap 12>
+  0001401109D0  mov rcx, qword ptr [rip + 0x533439]
+  0001401109D7  call 0x140206870
+  0001401109DC  mov rcx, qword ptr [rip + 0x53342d]
+  0001401109E3  call 0x140206870
+  0001401109E8  movzx eax, r15b
+  0001401109EC  imul ecx, eax, 0x4f
+  0001401109EF  shr ecx, 0xa
+  0001401109F2  lea edx, [rcx + rcx*2]
+  0001401109F5  lea ecx, [rcx + rdx*4]
+  0001401109F8  sub al, cl
+  0001401109FA  add al, 0x12
+  0001401109FC  movzx eax, al
+  0001401109FF  mov cl, 7
+  000140110A01  mov r8b, 0xfc
+  000140110A04  mov r9w, 0x2bc
+  000140110A09  mov rdx, qword ptr [rbp + 0xda0]
+  000140110A10  mov rdx, qword ptr [rdx]
+  000140110A13  cmp rsi, rdx
+  000140110A16  jae 0x140135463
+  000140110A1C  inc r14
+  000140110A1F  mov rdx, qword ptr [rbp + 0xd98]
+  000140110A26  mov rdx, qword ptr [rdx]
+  000140110A29  mov word ptr [rdx + r13], ax
+  000140110A2E  mov word ptr [rdx + r13 + 2], r9w
+  000140110A34  mov word ptr [rdx + r13 + 4], di
+  000140110A3A  mov byte ptr [rdx + r13 + 6], 0
+  000140110A40  mov byte ptr [rdx + r13 + 7], r15b
+  000140110A45  mov dword ptr [rdx + r13 + 8], 1
+  000140110A4E  mov byte ptr [rdx + r13 + 0xc], r8b
+  000140110A53  mov byte ptr [rdx + r13 + 0xd], cl
+  000140110A58  mov word ptr [rdx + r13 + 0xe], 0x1200
+  000140110A60  cmp r14, rbx
+  000140110A63  jb 0x140110900
+  000140110A69  mov r11, qword ptr [rbp + 0xb58]
+  000140110A70  mov r9, qword ptr [rbp + 0xb60]
+  000140110A77  cmp r12, r9
+  000140110A7A  jae 0x140110b0c
+  000140110A80  mov rcx, qword ptr [r11 + r12*8]
+  000140110A84  mov rax, qword ptr [rbp + 0xda0]
+  000140110A8B  mov rdx, qword ptr [rax]
+  000140110A8E  cmp rcx, rdx
+  000140110A91  jae 0x140135875
+  000140110A97  mov rax, qword ptr [rbp + 0xdb8]
+  000140110A9E  shl rax, 4
+  000140110AA2  or rax, 8
+  000140110AA6  shl r9, 3
+  000140110AAA  nop word ptr [rax + rax]
+  000140110AB0  mov rdx, qword ptr [rbp + 0xd98]
+  000140110AB7  mov rdx, qword ptr [rdx]
+  000140110ABA  shl rcx, 4
+  000140110ABE  movsx r8d, word ptr [rdx + rcx + 2]
+  000140110AC4  cmp r8d, 0x17c
+  000140110ACB  mov r10d, 0x17c
+  000140110AD1  cmovge r8d, r10d
+  000140110AD5  mov word ptr [rdx + rcx], 0xb4
+  000140110ADB  mov word ptr [rdx + rcx + 2], r8w
+  000140110AE1  or byte ptr [rdx + rcx + 8], 1
+  000140110AE6  mov byte ptr [rdx + rcx + 0xa], 0
+  000140110AEB  cmp r9, rax
+  000140110AEE  je 0x140110b24
+  000140110AF0  mov rcx, qword ptr [r11 + rax]
+  000140110AF4  mov rdx, qword ptr [rbp + 0xda0]
+  000140110AFB  mov rdx, qword ptr [rdx]
+  000140110AFE  add rax, 8
+  000140110B02  cmp rcx, rdx
+  000140110B05  jb 0x140110ab0
+  000140110B07  jmp 0x140135875
+  000140110B0C  lea rax, [r11 + r9*8]
+  000140110B10  mov r10, qword ptr [rbp + 0x778]
+  000140110B17  mov rcx, qword ptr [rbp + 0x780]
+  000140110B1E  lea rsi, [r10 + rcx*8]
+  000140110B22  jmp 0x140110b51
+  000140110B24  mov r11, qword ptr [rbp + 0xb58]
+  000140110B2B  mov r9, qword ptr [rbp + 0xb60]
+  000140110B32  mov r10, qword ptr [rbp + 0x778]
+  000140110B39  mov rax, qword ptr [rbp + 0x780]
+  000140110B40  lea rsi, [r10 + rax*8]
+  000140110B44  test r11, r11
+  000140110B47  je 0x140110c34
+  000140110B4D  lea rax, [r11 + r9*8]
+  000140110B51  mov rdi, rax
+  000140110B54  sub rdi, r11
+  000140110B57  shr rdi, 3
+  000140110B5B  cmp rdi, r12
+  000140110B5E  cmovae rdi, r12
+  000140110B62  cmp rax, r11
+  000140110B65  je 0x140110c37
+  000140110B6B  cmp rdi, 1
+  000140110B6F  jne 0x140110b7a
+  000140110B71  xor ecx, ecx
+  000140110B73  xor ebx, ebx
+  000140110B75  jmp 0x140110bfb
+  000140110B7A  mov r14, rdi
+  000140110B7D  movabs rax, 0xffffffffffffffe
+  000140110B87  and r14, rax
+  000140110B8A  xor r15d, r15d
+  000140110B8D  xor ebx, ebx
+  000140110B8F  movabs r13, 0x21579804855e6013
+  000140110B99  nop dword ptr [rax]
+  000140110BA0  mov r8, qword ptr [r11 + rbx*8]
+  000140110BA4  mov rcx, qword ptr [r11 + rbx*8 + 8]
+  000140110BA9  mov rax, r8
+  000140110BAC  mul r13
+  000140110BAF  mov rax, r8
+  000140110BB2  sub rax, rdx
+  000140110BB5  shr rax, 1
+  000140110BB8  add rax, rdx
+  000140110BBB  shr rax, 8
+  000140110BBF  imul rax, rax, 0x1c5
+  000140110BC6  sub r8, rax
+  000140110BC9  add r8, r15
+  000140110BCC  mov rax, rcx
+  000140110BCF  mul r13
+  000140110BD2  add rbx, 2
+  000140110BD6  mov rax, rcx
+  000140110BD9  sub rax, rdx
+  000140110BDC  shr rax, 1
+  000140110BDF  add rax, rdx
+  000140110BE2  shr rax, 8
+  000140110BE6  imul rax, rax, 0x1c5
+  000140110BED  sub rcx, rax
+  000140110BF0  add rcx, r8
+  000140110BF3  mov r15, rcx
+  000140110BF6  cmp r14, rbx
+  000140110BF9  jne 0x140110ba0
+  000140110BFB  test dil, 1
+  000140110BFF  je 0x140110c39
+  000140110C01  mov r8, qword ptr [r11 + rbx*8]
+  000140110C05  mov rax, r8
+  000140110C08  movabs rdx, 0x21579804855e6013
+  000140110C12  mul rdx
+  000140110C15  mov rax, r8
+  000140110C18  sub rax, rdx
+  000140110C1B  shr rax, 1
+  000140110C1E  add rax, rdx
+  000140110C21  shr rax, 8
+  000140110C25  imul rax, rax, 0x1c5
+  000140110C2C  sub r8, rax
+  000140110C2F  add rcx, r8
+  000140110C32  jmp 0x140110c39
+  000140110C34  xor r11d, r11d
+  000140110C37  xor ecx, ecx
+  000140110C39  mov r13, rsi
+  000140110C3C  sub r13, r10
+  000140110C3F  shr r13, 3
+  000140110C43  mov rax, qword ptr [rbp + 0xdb8]
+  000140110C4A  cmp r13, rax
+  000140110C4D  cmovae r13, rax
+  000140110C51  cmp rsi, r10
+  000140110C54  je 0x140110d22
+  000140110C5A  cmp r13, 1
+  000140110C5E  jne 0x140110c67
+  000140110C60  xor edi, edi
+  000140110C62  jmp 0x140110ceb
+  000140110C67  mov rbx, r13
+  000140110C6A  movabs rax, 0x7fffffffffffffe
+  000140110C74  and rbx, rax
+  000140110C77  mov r14, rcx
+  000140110C7A  xor edi, edi
+  000140110C7C  movabs r15, 0x21579804855e6013
+  000140110C86  nop word ptr cs:[rax + rax]
+  000140110C90  mov r8, qword ptr [r10 + rdi*8]
+  000140110C94  mov rcx, qword ptr [r10 + rdi*8 + 8]
+  000140110C99  mov rax, r8
+  000140110C9C  mul r15
+  000140110C9F  mov rax, r8
+  000140110CA2  sub rax, rdx
+  000140110CA5  shr rax, 1
+  000140110CA8  add rax, rdx
+  000140110CAB  shr rax, 8
+  000140110CAF  imul rax, rax, 0x1c5
+  000140110CB6  sub r8, rax
+  000140110CB9  add r8, r14
+  000140110CBC  mov rax, rcx
+  000140110CBF  mul r15
+  000140110CC2  add rdi, 2
+  000140110CC6  mov rax, rcx
+  000140110CC9  sub rax, rdx
+  000140110CCC  shr rax, 1
+  000140110CCF  add rax, rdx
+  000140110CD2  shr rax, 8
+  000140110CD6  imul rax, rax, 0x1c5
+  000140110CDD  sub rcx, rax
+  000140110CE0  add rcx, r8
+  000140110CE3  mov r14, rcx
+  000140110CE6  cmp rbx, rdi
+  000140110CE9  jne 0x140110c90
+  000140110CEB  test r13b, 1
+  000140110CEF  je 0x140110d22
+  000140110CF1  mov r8, qword ptr [r10 + rdi*8]
+  000140110CF5  mov rax, r8
+  000140110CF8  movabs rdx, 0x21579804855e6013
+  000140110D02  mul rdx
+  000140110D05  mov rax, r8
+  000140110D08  sub rax, rdx
+  000140110D0B  shr rax, 1
+  000140110D0E  add rax, rdx
+  000140110D11  shr rax, 8
+  000140110D15  imul rax, rax, 0x1c5
+  000140110D1C  sub r8, rax
+  000140110D1F  add rcx, r8
+  000140110D22  cmp r9, r12
+  000140110D25  cmovb r12, r9
+  000140110D29  test r9, r9
+  000140110D2C  je 0x140110d3b
+  000140110D2E  cmp r12, 1
+  000140110D32  jne 0x140110d43
+  000140110D34  xor r8d, r8d
+  000140110D37  xor edi, edi
+  000140110D39  jmp 0x140110db1
+  000140110D3B  xor r8d, r8d
+  000140110D3E  jmp 0x140110ddb
+  000140110D43  mov rbx, r12
+  000140110D46  movabs rax, 0xffffffffffffffe
+  000140110D50  and rbx, rax
+  000140110D53  xor r14d, r14d
+  000140110D56  xor edi, edi
+  000140110D58  movabs r15, 0x21579804855e6013
+  000140110D62  nop word ptr cs:[rax + rax]
+  000140110D70  mov r9, qword ptr [r11 + rdi*8]
+  000140110D74  mov r8, qword ptr [r11 + rdi*8 + 8]
+  000140110D79  mov rax, r9
+  000140110D7C  mul r15
+  000140110D7F  sub r9, rdx
+  000140110D82  shr r9, 1
+  000140110D85  add r9, rdx
+  000140110D88  shr r9, 8
+  000140110D8C  add r9, r14
+  000140110D8F  add rdi, 2
+  000140110D93  mov rax, r8
+  000140110D96  mul r15
+  000140110D99  sub r8, rdx
+  000140110D9C  shr r8, 1
+  000140110D9F  add r8, rdx
+  000140110DA2  shr r8, 8
+  000140110DA6  add r8, r9
+  000140110DA9  mov r14, r8
+  000140110DAC  cmp rbx, rdi
+  000140110DAF  jne 0x140110d70
+  000140110DB1  test r12b, 1
+  000140110DB5  je 0x140110ddb
+  000140110DB7  mov r9, qword ptr [r11 + rdi*8]
+  000140110DBB  mov rax, r9
+  000140110DBE  movabs rdx, 0x21579804855e6013
+  000140110DC8  mul rdx
+  000140110DCB  sub r9, rdx
+  000140110DCE  shr r9, 1
+  000140110DD1  add r9, rdx
+  000140110DD4  shr r9, 8
+  000140110DD8  add r8, r9
+  000140110DDB  cmp rsi, r10
+  000140110DDE  je 0x140110e7b
+  000140110DE4  cmp r13, 1
+  000140110DE8  jne 0x140110def
+  000140110DEA  xor r11d, r11d
+  000140110DED  jmp 0x140110e51
+  000140110DEF  mov rsi, r13
+  000140110DF2  movabs rax, 0x7fffffffffffffe
+  000140110DFC  and rsi, rax
+  000140110DFF  mov rdi, r8
+  000140110E02  xor r11d, r11d
+  000140110E05  movabs rbx, 0x21579804855e6013
+  000140110E0F  nop 
+  000140110E10  mov r9, qword ptr [r10 + r11*8]
+  000140110E14  mov r8, qword ptr [r10 + r11*8 + 8]
+  000140110E19  mov rax, r9
+  000140110E1C  mul rbx
+  000140110E1F  sub r9, rdx
+  000140110E22  shr r9, 1
+  000140110E25  add r9, rdx
+  000140110E28  shr r9, 8
+  000140110E2C  add r9, rdi
+  000140110E2F  add r11, 2
+  000140110E33  mov rax, r8
+  000140110E36  mul rbx
+  000140110E39  sub r8, rdx
+  000140110E3C  shr r8, 1
+  000140110E3F  add r8, rdx
+  000140110E42  shr r8, 8
+  000140110E46  add r8, r9
+  000140110E49  mov rdi, r8
+  000140110E4C  cmp rsi, r11
+  000140110E4F  jne 0x140110e10
+  000140110E51  test r13b, 1
+  000140110E55  je 0x140110e7b
+  000140110E57  mov r9, qword ptr [r10 + r11*8]
+  000140110E5B  mov rax, r9
+  000140110E5E  movabs rdx, 0x21579804855e6013
+  000140110E68  mul rdx
+  000140110E6B  sub r9, rdx
+  000140110E6E  shr r9, 1
+  000140110E71  add r9, rdx
+  000140110E74  shr r9, 8
+  000140110E78  add r8, r9
+  000140110E7B  mov rax, qword ptr [rbp + 0xdb8]
+  000140110E82  lea r9, [rax + rax*2]
+  000140110E86  mov rax, rcx
+  000140110E89  or rax, r9
+  000140110E8C  shr rax, 0x20
+  000140110E90  je 0x140110eb6
+  000140110E92  mov rax, rcx
+  000140110E95  xor edx, edx
+  000140110E97  div r9
+  000140110E9A  mov rsi, rax
+  000140110E9D  mov rax, r8
+  000140110EA0  or rax, r9
+  000140110EA3  shr rax, 0x20
+  000140110EA7  je 0x140110ecb
+  000140110EA9  mov rax, r8
+  000140110EAC  xor edx, edx
+  000140110EAE  div r9
+  000140110EB1  mov r15, rax
+  000140110EB4  jmp 0x140110ed6
+  000140110EB6  mov eax, ecx
+  000140110EB8  xor edx, edx
+  000140110EBA  div r9d
+  000140110EBD  mov esi, eax
+  000140110EBF  mov rax, r8
+  000140110EC2  or rax, r9
+  000140110EC5  shr rax, 0x20
+  000140110EC9  jne 0x140110ea9
+  000140110ECB  mov eax, r8d
+  000140110ECE  xor edx, edx
+  000140110ED0  div r9d
+  000140110ED3  mov r15d, eax
+  000140110ED6  movaps xmm0, xmm9
+  000140110EDA  movaps xmm1, xmm8
+  000140110EDE  call 0x1402bab40
+  000140110EE3  mulss xmm0, xmm15
+  000140110EE8  addss xmm0, xmm7
+  000140110EEC  minss xmm0, xmm11
+  000140110EF1  mov dword ptr [rsp + 0x20], 0x49f42400
+  000140110EF9  mov rcx, qword ptr [rbp + 0xdd0]
+  000140110F00  mov edx, esi
+  000140110F02  mov r8d, r15d
+  000140110F05  movaps xmm3, xmm0
+  000140110F08  call 0x1400f5dd0
+  000140110F0D  mov byte ptr [rsp + 0x30], 0
+  000140110F12  mov byte ptr [rsp + 0x28], 2
+  000140110F17  mov byte ptr [rsp + 0x20], 0
+  000140110F1C  mov rcx, qword ptr [rbp + 0xd80]
+  000140110F23  mov dl, 0x12
+  000140110F25  mov r8b, 0x16
+  000140110F28  mov r9b, 2
+  000140110F2B  call 0x140082ec0
+  000140110F30  mov rcx, qword ptr [rbp + 0xd80]
+  000140110F37  mov dl, 2
+  000140110F39  xor r8d, r8d
+  000140110F3C  call 0x140081cd0
+  000140110F41  jmp 0x14010fd90
+  000140110F46  cmp rdx, 0x15
+  000140110F4A  jae 0x140110f7a
+  000140110F4C  mov r8d, 1
+  000140110F52  lea r9, [rbp + 0x50]
+  000140110F56  call 0x1401f0ec0
+  000140110F5B  jmp 0x14011070a
+  000140110F60  cmp rdx, 0x15
+  000140110F64  jae 0x140110f88
+  000140110F66  mov r8d, 1
+  000140110F6C  lea r9, [rbp + 0x50]
+  000140110F70  call 0x1401f0ec0
+  000140110F75  jmp 0x14011072d
+  000140110F7A  lea r8, [rbp + 0x50]
+  000140110F7E  call 0x1401db190
+  000140110F83  jmp 0x14011070a
+  000140110F88  lea r8, [rbp + 0x50]
+  000140110F8C  call 0x1401db190
+  000140110F91  jmp 0x14011072d
+  000140110F96  mov rdx, qword ptr [rbp + 0xd60]
+  000140110F9D  test rdx, rdx
+  000140110FA0  mov rsi, qword ptr [rbp + 0xd78]
+  000140110FA7  je 0x140110fbf
+  000140110FA9  shl rdx, 3
+  000140110FAD  mov r8d, 8
+  000140110FB3  mov rcx, qword ptr [rbp + 0xd70]
+  000140110FBA  call 0x1400549f0
+  000140110FBF  mov rdx, qword ptr [rbp + 0x770]
+  000140110FC6  test rdx, rdx
+  000140110FC9  je 0x140110fe1
+  000140110FCB  mov rcx, qword ptr [rbp + 0x778]
+  000140110FD2  shl rdx, 3
+  000140110FD6  mov r8d, 8
+  000140110FDC  call 0x1400549f0
+  000140110FE1  mov rdx, qword ptr [rbp + 0xb50]
+  000140110FE8  test rdx, rdx
+  000140110FEB  je 0x140111003
+  000140110FED  mov rcx, qword ptr [rbp + 0xb58]
+  000140110FF4  shl rdx, 3
+  000140110FF8  mov r8d, 8
+  000140110FFE  call 0x1400549f0
+  000140111003  mov rdx, qword ptr [rbp + 0xab0]
+  00014011100A  test rdx, rdx
+  00014011100D  je 0x140111025
+  00014011100F  mov rcx, qword ptr [rbp + 0xab8]
+  000140111016  shl rdx, 3
+  00014011101A  mov r8d, 8
+  000140111020  call 0x1400549f0
+  000140111025  mov rdx, qword ptr [rbp + 0xc60]
+  00014011102C  test rdx, rdx
+  00014011102F  je 0x140111047
+  000140111031  mov rcx, qword ptr [rbp + 0xc68]
+  000140111038  shl rdx, 3
+  00014011103C  mov r8d, 8
+  000140111042  call 0x1400549f0
+  000140111047  mov edx, 0x22d67
+  00014011104C  mov r8d, 1
+  000140111052  mov rcx, qword ptr [rbp + 0xdc8]
+  000140111059  call 0x1400549f0
+  00014011105E  mov rdx, qword ptr [rbp + 0xce0]
+  000140111065  test rdx, rdx
+  000140111068  je 0x140111080
+  00014011106A  mov rcx, qword ptr [rbp + 0xce8]
+  000140111071  shl rdx, 3
+  000140111075  mov r8d, 8
+  00014011107B  call 0x1400549f0
+  000140111080  mov edx, 0x22d67
+  000140111085  mov r8d, 1
+  00014011108B  mov rcx, rsi
+  00014011108E  call 0x1400549f0
+  000140111093  mov edx, 0x22d67
+  000140111098  mov r8d, 1
+  00014011109E  mov rcx, qword ptr [rbp + 0xdc0]
+  0001401110A5  jmp 0x1401110c4
+  0001401110A7  mov rdx, qword ptr [rbp + 0xc20]
+  0001401110AE  test rdx, rdx
+  0001401110B1  je 0x1401110c9
+  0001401110B3  mov rcx, qword ptr [rbp + 0xc28]
+  0001401110BA  shl rdx, 3
+  0001401110BE  mov r8d, 8
+  0001401110C4  call 0x1400549f0
+  0001401110C9  lea rcx, [rbp + 0xc00]
+  0001401110D0  call 0x1401a6480
+  0001401110D5  test rax, rax
+  0001401110D8  js 0x1401110e4
+  0001401110DA  xorps xmm0, xmm0
+  0001401110DD  cvtsi2ss xmm0, rax
+  0001401110E2  jmp 0x1401110fc
+  0001401110E4  mov rcx, rax
+  0001401110E7  shr rcx, 1
+  0001401110EA  and eax, 1
+  0001401110ED  or rax, rcx
+  0001401110F0  xorps xmm0, xmm0
+  0001401110F3  cvtsi2ss xmm0, rax
+  0001401110F8  addss xmm0, xmm0
+  0001401110FC  xorps xmm6, xmm6
+  0001401110FF  cvtsi2ss xmm6, edx
+  000140111103  divss xmm6, dword ptr [rip + 0x1ced35]
+  00014011110B  addss xmm6, xmm0
+  00014011110F  mulss xmm6, dword ptr [rip + 0x1ced2d]
+  000140111117  mov rax, qword ptr [rbp + 0xdd0]
+  00014011111E  mov rsi, qword ptr [rax + 0xc0]
+  000140111125  cmp rsi, qword ptr [rax + 0xb0]
+  00014011112C  jne 0x14011113a
+  00014011112E  mov rcx, qword ptr [rbp + 0xcf8]
+  000140111135  call 0x1402cc340
+  00014011113A  mov rdi, qword ptr [rbp + 0xdd0]
+  000140111141  mov rax, qword ptr [rdi + 0xb8]
+  000140111148  lea rcx, [rsi + rsi*2]

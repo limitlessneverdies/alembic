@@ -1,0 +1,8 @@
+dcmp selector case 0 (byte==0) -> 0x140096B42
+dcmp selector case 1 (byte==1) -> 0x140096B7A
+dcmp selector case 2 (byte==2) -> 0x140096B5E
+dcmp selector case 3 (byte==3) -> 0x140096B6C
+dcmp selector case 4 (byte==4) -> 0x140096B50
+dcmp selector case 5 (byte==5) -> 0x140096BEF
+dcmp selector case 6 (byte==6) -> 0x140096BFA
+str@0x1403454B0: b'composition flaginvalid compound massinvalid compound phaseinvalid atom in compound manifestinvalid compound compositioninvalid or duplicate compound identitytoo many compound definitionsunsupported compound manifestd{/@\x01\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00j,\x00\x00\x17\x00\x00\x00!conflicting com'

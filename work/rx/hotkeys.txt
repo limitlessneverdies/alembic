@@ -1,0 +1,211 @@
+  000140017250  lea       eax, [rip + 0x2c957a]
+  000140017256  movss     xmm0, dword ptr [rip + 0x2c8372]
+  00014001725E  call      0x1402d49e0
+  000140017263  jmp       0x1400215f9
+  000140017268  lea       r8, [rip + 0x2c9561]
+  00014001726F  movss     xmm0, dword ptr [rip + 0x2c8359]
+  000140017277  movaps    xmm1, xmm8
+  00014001727B  call      0x1402d49e0
+  000140017280  jmp       0x1400215f9
+  000140017285  mov       rdx, qword ptr [rbp + 0x2580]
+  00014001728C  add       esi, dword ptr [rdx + 0x291c]
+  000140017292  cmp       esi, 2
+  000140017295  mov       eax, 1
+  00014001729A  cmovge    eax, esi
+  00014001729D  cmp       eax, 0xc
+  0001400172A0  mov       ecx, 0xc
+  0001400172A5  cmovl     ecx, eax
+  0001400172A8  mov       dword ptr [rdx + 0x291c], ecx
+  0001400172AE  mov       cx, 0x20
+  0001400172B2  call      0x140176c20
+  0001400172B7  test      al, al
+  0001400172B9  je        0x1400172d7
+  0001400172BB  mov       rax, qword ptr [rbp + 0x2580]
+  0001400172C2  xor       byte ptr [rax + 0x2998], 1
+  0001400172C9  lea       rcx, [rax + 0x360]
+  0001400172D0  xor       edx, edx
+  0001400172D2  call      0x1400fde30
+  0001400172D7  mov       rax, qword ptr [rbp + 0x2580]
+  0001400172DE  cmp       byte ptr [rax + 0x297a], 0
+  0001400172E5  jne       0x140017326
+  0001400172E7  mov       cx, 0x42
+  0001400172EB  call      0x140176c20
+  0001400172F0  test      al, al
+  0001400172F2  je        0x140017326
+  0001400172F4  mov       rdx, qword ptr [rbp + 0x2580]
+  0001400172FB  movzx     eax, byte ptr [rdx + 0x2999]
+  000140017302  mov       ecx, eax
+  000140017304  xor       cl, 1
+  000140017307  mov       byte ptr [rdx + 0x2999], cl
+  00014001730D  test      al, al
+  00014001730F  jne       0x140017326
+  000140017311  mov       rax, qword ptr [rbp + 0x2580]
+  000140017318  lea       rcx, [rax + 0x9d0]
+  00014001731F  mov       dl, 4
+  000140017321  call      0x1400870f0
+  000140017326  mov       rax, qword ptr [rbp + 0x2580]
+  00014001732D  cmp       byte ptr [rax + 0x297a], 0
+  000140017334  jne       0x140017361
+  000140017336  cmp       byte ptr [rax + 0x299a], 6
+  00014001733D  je        0x140017361
+  00014001733F  mov       cx, 0x48
+  000140017343  call      0x140176c20
+  000140017348  test      al, al
+  00014001734A  mov       rax, qword ptr [rbp + 0x2580]
+  000140017351  je        0x140017361
+  000140017353  cmp       byte ptr [rax + 0x299a], 1
+  00014001735A  setne     byte ptr [rax + 0x299a]
+  000140017361  movzx     eax, byte ptr [rax + 0x297a]
+  000140017368  or        al, byte ptr [rbp + 0x2560]
+  00014001736E  jne       0x1400173af
+  000140017370  mov       cx, 0x56
+  000140017374  call      0x140176c20
+  000140017379  test      al, al
+  00014001737B  je        0x1400173af
+  00014001737D  mov       rax, qword ptr [rbp + 0x2580]
+  000140017384  lea       rcx, [rax + 0x9d0]
+  00014001738B  mov       dl, 2
+  00014001738D  call      0x1400870a0
+  000140017392  test      al, al
+  000140017394  je        0x1400173af
+  000140017396  mov       rcx, qword ptr [rbp + 0x2580]
+  00014001739D  cmp       byte ptr [rcx + 0x299a], 2
+  0001400173A4  setne     al
+  0001400173A7  add       al, al
+  0001400173A9  mov       byte ptr [rcx + 0x299a], al
+  0001400173AF  mov       rax, qword ptr [rbp + 0x2580]
+  0001400173B6  cmp       byte ptr [rax + 0x297a], 0
+  0001400173BD  jne       0x1400173ff
+  0001400173BF  mov       cx, 0x50
+  0001400173C3  call      0x140176c20
+  0001400173C8  test      al, al
+  0001400173CA  je        0x1400173ff
+  0001400173CC  mov       rax, qword ptr [rbp + 0x2580]
+  0001400173D3  lea       rcx, [rax + 0x9d0]
+  0001400173DA  mov       dl, 4
+  0001400173DC  call      0x1400870a0
+  0001400173E1  test      al, al
+  0001400173E3  je        0x1400173ff
+  0001400173E5  mov       rcx, qword ptr [rbp + 0x2580]
+  0001400173EC  cmp       byte ptr [rcx + 0x299a], 4
+  0001400173F3  setne     al
+  0001400173F6  shl       al, 2
+  0001400173F9  mov       byte ptr [rcx + 0x299a], al
+  0001400173FF  mov       r8, qword ptr [rbp + 0x2580]
+  000140017406  cmp       byte ptr [r8 + 0x297a], 0
+  00014001740E  jne       0x1400174b4
+  000140017414  cmp       byte ptr [r8 + 0x299a], 4
+  00014001741C  jne       0x1400174b4
+  000140017422  mov       cx, 0x52
+  000140017426  call      0x140176c20
+  00014001742B  test      al, al
+  00014001742D  je        0x14001743d
+  00014001742F  mov       rax, qword ptr [rbp + 0x2580]
+  000140017436  mov       byte ptr [rax + 0x29ac], 0
+  00014001743D  mov       cx, 0x52
+  000140017441  call      0x140176e50
+  000140017446  test      al, al
+  000140017448  mov       r8, qword ptr [rbp + 0x2580]
+  00014001744F  je        0x1400174b4
+  000140017451  cmp       byte ptr [r8 + 0x29ac], 0
+  000140017459  jne       0x1400174b4
+  00014001745B  cmp       byte ptr [r8 + 0x299f], 0xf
+  000140017463  mov       eax, 0x2d
+  000140017468  mov       ecx, 0x5a
+  00014001746D  cmove     ecx, eax
+  000140017470  mov       eax, dword ptr [r8 + 0x2948]
+  000140017477  cdq       
+  000140017478  idiv      ecx
+  00014001747A  inc       eax
+  00014001747C  imul      eax, ecx
+  00014001747F  cdqe      
+  000140017481  imul      rcx, rax, -0x49f49f49
+  000140017488  shr       rcx, 0x20
+  00014001748C  add       ecx, eax
+  00014001748E  mov       edx, ecx
+  000140017490  shr       edx, 0x1f
+  000140017493  sar       ecx, 8
+  000140017496  add       ecx, edx
+  000140017498  imul      ecx, ecx, 0x168
+  00014001749E  sub       eax, ecx
+  0001400174A0  mov       ecx, eax
+  0001400174A2  sar       ecx, 0x1f
+  0001400174A5  and       ecx, 0x168
+  0001400174AB  add       ecx, eax
+  0001400174AD  mov       dword ptr [r8 + 0x2948], ecx
+  0001400174B4  lea       rdi, [r8 + 0x299f]
+  0001400174BB  cmp       byte ptr [r8 + 0x299f], 0xf
+  0001400174C3  jne       0x1400174df
+  0001400174C5  mov       ecx, dword ptr [r8 + 0x2948]
+  0001400174CC  call      0x1400c6d80
+  0001400174D1  mov       r8, qword ptr [rbp + 0x2580]
+  0001400174D8  mov       dword ptr [r8 + 0x2948], eax
+  0001400174DF  movzx     eax, byte ptr [r8 + 0x297a]
+  0001400174E7  or        al, byte ptr [rbp + 0x2560]
+  0001400174ED  jne       0x14001753a
+  0001400174EF  mov       cx, 0x53
+  0001400174F3  call      0x140176c20
+  0001400174F8  test      al, al
+  0001400174FA  mov       r8, qword ptr [rbp + 0x2580]
+  000140017501  je        0x14001753a
+  000140017503  xor       eax, eax
+  000140017505  cmp       byte ptr [r8 + 0x299a], 6
+  00014001750D  mov       ecx, 6
+  000140017512  cmove     ecx, eax
+  000140017515  mov       byte ptr [r8 + 0x299a], cl
+  00014001751C  mov       dword ptr [r8 + 0x2880], 0
+  000140017527  mov       dword ptr [r8 + 0x288c], 0
+  000140017532  mov       byte ptr [r8 + 0x2978], 0
+  00014001753A  movzx     eax, byte ptr [r8 + 0x297a]
+  000140017542  xor       al, 1
+  000140017544  test      byte ptr [rbp + 0x2560], al
+  00014001754A  je        0x140017572
+  00014001754C  mov       cx, 0x43
+  000140017550  call      0x140176c20
+  000140017555  test      al, al
+  000140017557  mov       r8, qword ptr [rbp + 0x2580]
+  00014001755E  je        0x140017572
+  000140017560  cmp       byte ptr [r8 + 0x299a], 6
+  000140017568  je        0x140017572
+  00014001756A  mov       byte ptr [r8 + 0x299a], 6
+  000140017572  cmp       byte ptr [r8 + 0x297a], 0
+  00014001757A  jne       0x1400175be
+  00014001757C  mov       cx, 0x4b
+  000140017580  call      0x140176c20
+  000140017585  test      al, al
+  000140017587  je        0x1400175be
+  000140017589  mov       rax, qword ptr [rbp + 0x2580]
+  000140017590  lea       rcx, [rax + 0x9d0]
+  000140017597  mov       dl, 5
+  000140017599  call      0x1400870a0
+  00014001759E  test      al, al
+  0001400175A0  je        0x1400175be
+  0001400175A2  xor       eax, eax
+  0001400175A4  mov       rcx, qword ptr [rbp + 0x2580]
+  0001400175AB  cmp       byte ptr [rcx + 0x299a], 5
+  0001400175B2  setne     al
+  0001400175B5  lea       eax, [rax + rax*4]
+  0001400175B8  mov       byte ptr [rcx + 0x299a], al
+  0001400175BE  mov       rax, qword ptr [rbp + 0x2580]
+  0001400175C5  cmp       byte ptr [rax + 0x297a], 0
+  0001400175CC  jne       0x140017610
+  0001400175CE  mov       cx, 0x4d
+  0001400175D2  call      0x140176c20
+  0001400175D7  test      al, al
+  0001400175D9  je        0x140017610
+  0001400175DB  mov       rax, qword ptr [rbp + 0x2580]
+  0001400175E2  lea       rcx, [rax + 0x9d0]
+  0001400175E9  mov       dl, 3
+  0001400175EB  call      0x1400870a0
+  0001400175F0  test      al, al
+  0001400175F2  je        0x140017610
+  0001400175F4  xor       eax, eax
+  0001400175F6  mov       rcx, qword ptr [rbp + 0x2580]
+  0001400175FD  cmp       byte ptr [rcx + 0x299a], 3
+  000140017604  setne     al
+  000140017607  lea       eax, [rax + rax*2]
+  00014001760A  mov       byte ptr [rcx + 0x299a], al
+  000140017610  mov       cx, 0xff09
+  000140017614  call      0x140176c20
+  000140017619  test      al, al
+  00014001761B  mov       r8, qword ptr [rbp + 0x2580]

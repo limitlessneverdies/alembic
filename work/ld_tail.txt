@@ -1,0 +1,101 @@
+0001400C9254  mov     byte ptr [rbp + 0x514], 1
+0001400C925B  lea     rdx, [rbp + 0x50]
+0001400C925F  mov     cl, 0x15
+0001400C9261  call    0x1401f7520
+0001400C9266  mov     r14, rax
+0001400C9269  jmp     0x1400c9a57
+0001400C926E  pxor    xmm7, xmm7
+0001400C9272  movdqu  xmmword ptr [rbp + 0x2a], xmm7
+0001400C9277  movdqa  xmmword ptr [rbp + 0x20], xmm7
+0001400C927C  movdqa  xmmword ptr [rbp + 0x10], xmm7
+0001400C9281  movdqa  xmmword ptr [rbp], xmm7
+0001400C9286  movdqa  xmmword ptr [rbp - 0x10], xmm7
+0001400C928B  movdqa  xmmword ptr [rbp - 0x20], xmm7
+0001400C9290  movdqa  xmmword ptr [rbp - 0x30], xmm7
+0001400C9295  movdqa  xmmword ptr [rbp - 0x40], xmm7
+0001400C929A  movdqa  xmmword ptr [rbp - 0x50], xmm7
+0001400C929F  movdqa  xmmword ptr [rbp + 0x220], xmm7
+0001400C92A7  mov     byte ptr [rbp + 0x4f8], 3
+0001400C92AE  movabs  rax, 0x8000000000000000
+0001400C92B8  mov     qword ptr [rbp + 0x4e8], rax
+0001400C92BF  mov     byte ptr [rbp + 0x4c8], 1
+0001400C92C6  mov     eax, 8
+0001400C92CB  mov     qword ptr [rbp + 0x418], rax
+0001400C92D2  mov     qword ptr [rbp + 0x420], 0
+0001400C92DD  mov     qword ptr [rbp + 0x428], rax
+0001400C92E4  mov     qword ptr [rbp + 0x430], rax
+0001400C92EB  mov     qword ptr [rbp + 0x438], 0
+0001400C92F6  mov     qword ptr [rbp + 0x440], 0
+0001400C9301  xor     r12d, r12d
+0001400C9304  mov     qword ptr [rbp + 0x448], 0
+0001400C930F  mov     qword ptr [rbp + 0x450], 0
+0001400C931A  mov     r14d, 8
+0001400C9320  xorps   xmm0, xmm0
+0001400C9323  movaps  xmmword ptr [rbp + 0x230], xmm0
+0001400C932A  xorps   xmm9, xmm9
+0001400C932E  xorps   xmm10, xmm10
+0001400C9332  xorps   xmm11, xmm11
+0001400C9336  xorps   xmm12, xmm12
+0001400C933A  xorps   xmm13, xmm13
+0001400C933E  xorps   xmm14, xmm14
+0001400C9342  xorps   xmm15, xmm15
+0001400C9346  pxor    xmm8, xmm8
+0001400C934B  xor     r13d, r13d
+0001400C934E  mov     qword ptr [rbp + 0x458], 0
+0001400C9359  mov     qword ptr [rbp + 0x460], 0
+0001400C9364  mov     qword ptr [rbp + 0x468], 0
+0001400C936F  jmp     0x1400c9554
+0001400C9374  mov     r8d, dword ptr [rbp + 0x264]
+0001400C937B  mov     byte ptr [rbp + 0x514], 1
+0001400C9382  lea     rcx, [rbp + 0x50]
+0001400C9386  lea     rdx, [rbp + 0x4d0]
+0001400C938D  call    0x14006f4c0
+0001400C9392  mov     rdx, qword ptr [rbp + 0x50]
+0001400C9396  mov     r14, qword ptr [rbp + 0x58]
+0001400C939A  test    rdx, rdx
+0001400C939D  je      0x1400c9a57
+0001400C93A3  movzx   r9d, byte ptr [rdi + 0x802]
+0001400C93AB  mov     byte ptr [rbp + 0x514], 1
+0001400C93B2  lea     rcx, [rbp + 0x260]
+0001400C93B9  mov     r8, r14
+0001400C93BC  call    0x140083b40
+0001400C93C1  mov     r13, qword ptr [rbp + 0x260]
+0001400C93C8  mov     r14, qword ptr [rbp + 0x268]
+0001400C93CF  mov     rax, r13
+0001400C93D2  neg     rax
+0001400C93D5  jo      0x1400c9a57
+0001400C93DB  movups  xmm9, xmmword ptr [rbp + 0x270]
+0001400C93E3  mov     rax, qword ptr [rbp + 0x280]
+0001400C93EA  mov     qword ptr [rbp + 0x418], rax
+0001400C93F1  movups  xmm10, xmmword ptr [rbp + 0x288]
+0001400C93F9  mov     rax, qword ptr [rbp + 0x298]
+0001400C9400  mov     qword ptr [rbp + 0x428], rax
+0001400C9407  movups  xmm11, xmmword ptr [rbp + 0x2a0]
+0001400C940F  mov     rax, qword ptr [rbp + 0x2b0]
+0001400C9416  mov     qword ptr [rbp + 0x430], rax
+0001400C941D  mov     rax, qword ptr [rbp + 0x2b8]
+0001400C9424  mov     qword ptr [rbp + 0x438], rax
+0001400C942B  mov     rax, qword ptr [rbp + 0x2c0]
+0001400C9432  mov     qword ptr [rbp + 0x440], rax
+0001400C9439  mov     rax, qword ptr [rbp + 0x2c8]
+0001400C9440  mov     qword ptr [rbp + 0x240], rax
+0001400C9447  mov     r12, qword ptr [rbp + 0x2d0]
+0001400C944E  mov     rax, qword ptr [rbp + 0x2d8]
+0001400C9455  mov     qword ptr [rbp + 0x458], rax
+0001400C945C  movups  xmm12, xmmword ptr [rbp + 0x2e0]
+0001400C9464  mov     rax, qword ptr [rbp + 0x2f0]
+0001400C946B  mov     qword ptr [rbp + 0x420], rax
+0001400C9472  movups  xmm13, xmmword ptr [rbp + 0x2f8]
+0001400C947A  mov     rax, qword ptr [rbp + 0x308]
+0001400C9481  mov     qword ptr [rbp + 0x448], rax
+0001400C9488  movups  xmm14, xmmword ptr [rbp + 0x310]
+0001400C9490  movups  xmm0, xmmword ptr [rbp + 0x320]
+0001400C9497  movaps  xmmword ptr [rbp + 0x220], xmm0
+0001400C949E  mov     rax, qword ptr [rbp + 0x330]
+0001400C94A5  mov     qword ptr [rbp + 0x468], rax
+0001400C94AC  movups  xmm15, xmmword ptr [rbp + 0x338]
+0001400C94B4  mov     rax, qword ptr [rbp + 0x348]
+0001400C94BB  mov     qword ptr [rbp + 0x460], rax
+0001400C94C2  movdqu  xmm8, xmmword ptr [rbp + 0x350]
+0001400C94CB  movsd   xmm0, qword ptr [rbp + 0x360]
+===

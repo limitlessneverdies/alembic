@@ -1,0 +1,19 @@
+  000140017B00  or        dh, byte ptr [rcx + rcx - 0x7d]
+  000140017B04  stc       
+  000140017B05  je        0x140017b0c
+  000140017B08  inc       cl
+  000140017B0A  mov       eax, ecx
+  000140017B0C  mov       rcx, qword ptr [rbp + 0x2580]
+  000140017B13  mov       byte ptr [rcx + 0x298f], al
+  000140017B19  mov       byte ptr [rcx + 0x29b0], 1
+  000140017B20  mov       rax, qword ptr [rbp + 0x2580]
+  000140017B27  cmp       byte ptr [rax + 0x297a], 0
+  000140017B2E  jne       0x140017cd6
+  000140017B34  xor       ecx, ecx
+  000140017B36  call      0x140177470
+  000140017B3B  test      al, al
+  000140017B3D  je        0x140017cd6
+  000140017B43  call      0x140092b70
+  000140017B48  movaps    xmm6, xmm0
+  000140017B4B  movaps    xmm7, xmm1
+  000140017B4E  mov       rax, qword ptr [rbp + 0x2580]

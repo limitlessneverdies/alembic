@@ -1,0 +1,83 @@
+
+################ calls to 0x00014008BDB0  (5 sites) ################
+---- site 0x000140107539 ----
+  0001401074F5  jmp      rax
+  0001401074F7  mov      rcx, qword ptr [rip + 0x53c912]      ; -> 0x000140643E10 "P`d@"
+  0001401074FE  call     0x140206870
+  000140107503  lea      r9, [rip + 0x53d316]      ; -> 0x000140644820 f32 0.0
+  00014010750A  mov      r11, qword ptr [rbp + 0xdc8]
+  000140107511  mov      r10, qword ptr [rbp + 0xdc0]
+  000140107518  mov      eax, eax
+  00014010751A  cvtsi2sd xmm0, rax
+  00014010751F  mulsd    xmm0, xmm6
+  000140107523  cvtsd2ss xmm0, xmm0
+  000140107527  ucomiss  xmm0, xmm7
+  00014010752A  ja       0x140107220
+  000140107530  movzx    ecx, byte ptr [rbp + 0xd80]
+  000140107537  mov      dl, 0x91
+  000140107539  call     0x14008bdb0  <== CALL
+---- site 0x000140107BB7 ----
+  000140107B6D  call     0x140206870
+  000140107B72  movzx    ecx, byte ptr [rbp + 0xd80]
+  000140107B79  lea      r10, [rip + 0x53cca0]      ; -> 0x000140644820 f32 0.0
+  000140107B80  mov      r9, qword ptr [rbp + 0xdc8]
+  000140107B87  mov      r8, qword ptr [rbp + 0xdc0]
+  000140107B8E  mov      eax, eax
+  000140107B90  cvtsi2sd xmm0, rax
+  000140107B95  mulsd    xmm0, xmm6
+  000140107B99  cvtsd2ss xmm0, xmm0
+  000140107B9D  lea      rax, [rip + 0x1ef20c]      ; -> 0x0001402F6DB0 f32 0.05999999865889549
+  000140107BA4  mov      rdx, qword ptr [rbp + 0xd60]
+  000140107BAB  ucomiss  xmm0, dword ptr [rax + rdx*4]
+  000140107BAF  ja       0x1401078f0
+  000140107BB5  mov      dl, 0x8f
+  000140107BB7  call     0x14008bdb0  <== CALL
+---- site 0x000140111CBC ----
+  000140111C7F  movaps   xmm0, xmm8
+  000140111C83  mulss    xmm0, xmm10
+  000140111C88  movss    xmm1, dword ptr [rip + 0x1cd3ec]      ; -> 0x0001402DF07C f32 0.5
+  000140111C90  mulss    xmm0, xmm1
+  000140111C94  minss    xmm0, xmm1
+  000140111C98  mov      eax, eax
+  000140111C9A  xorps    xmm1, xmm1
+  000140111C9D  cvtsi2sd xmm1, rax
+  000140111CA2  mulsd    xmm1, qword ptr [rip + 0x1e4b96]      ; -> 0x0001402F6840 f32 0.0
+  000140111CAA  cvtsd2ss xmm1, xmm1
+  000140111CAE  ucomiss  xmm1, xmm0
+  000140111CB1  ja       0x140111850
+  000140111CB7  mov      ecx, esi
+  000140111CB9  mov      edx, r13d
+  000140111CBC  call     0x14008bdb0  <== CALL
+---- site 0x0001401135B9 ----
+  000140113582  mov      rdx, r13
+  000140113585  mov      r13d, esi
+  000140113588  cmp      byte ptr [rbp + 0xd78], 0
+  00014011358F  je       0x1401135b5
+  000140113591  add      edx, -0x17
+  000140113594  cmp      edx, 0x3e
+  000140113597  ja       0x1401136a0
+  00014011359D  movabs   rax, 0x2000100000000101
+  0001401135A7  bt       rax, rdx
+  0001401135AB  jae      0x140113690
+  0001401135B1  mov      bl, 2
+  0001401135B3  jmp      0x1401135d0
+  0001401135B5  mov      ecx, ebx
+  0001401135B7  mov      dl, 0x8e
+  0001401135B9  call     0x14008bdb0  <== CALL
+---- site 0x0001401145D8 ----
+  000140114596  mov      rcx, qword ptr [rip + 0x52f873]      ; -> 0x000140643E10 "P`d@"
+  00014011459D  call     0x140206870
+  0001401145A2  mulss    xmm8, xmm10
+  0001401145A7  mulss    xmm8, xmm11
+  0001401145AC  minss    xmm8, xmm12
+  0001401145B1  mov      eax, eax
+  0001401145B3  xorps    xmm0, xmm0
+  0001401145B6  cvtsi2sd xmm0, rax
+  0001401145BB  mulsd    xmm0, xmm13
+  0001401145C0  cvtsd2ss xmm0, xmm0
+  0001401145C4  ucomiss  xmm0, xmm8
+  0001401145C8  ja       0x1401144c0
+  0001401145CE  movzx    ecx, byte ptr [rbp + 0xd20]
+  0001401145D5  mov      edx, r13d
+  0001401145D8  call     0x14008bdb0  <== CALL
+

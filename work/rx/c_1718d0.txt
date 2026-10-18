@@ -1,0 +1,22 @@
+# 3 call sites of 0x1401718D0
+--- call @ 000140015C4B
+   000140015C48  add al, byte ptr [rax]
+   000140015C49  add byte ptr [rax], al
+   000140015C4A  add al, ch
+   000140015C4B  call 0x1401718d0   <<<
+   000140015C4C  cmp byte ptr [rbp + rdx - 0x7a74b800], 0x80
+   000140015C50  mov rax, qword ptr [rbp + 0x2580]
+--- call @ 0001400A47A8
+   0001400A479B  je 0x1400a47a8
+   0001400A479D  mov qword ptr [r14], rbx
+   0001400A47A0  mov dword ptr [r14 + 8], 0
+   0001400A47A8  call 0x1401718d0   <<<
+   0001400A47AD  addss xmm0, dword ptr [r14 + 8]
+   0001400A47B3  movss dword ptr [r14 + 8], xmm0
+--- call @ 000140147A87
+   000140147A72  movaps xmmword ptr [rbp + 0xe0], xmm6
+   000140147A79  mov qword ptr [rbp + 0xd8], 0xfffffffffffffffe
+   000140147A84  mov r14, rcx
+   000140147A87  call 0x1401718d0   <<<
+   000140147A8C  minss xmm0, dword ptr [rip + 0x1975fc]
+   000140147A94  movss dword ptr [rbp + 0x5c], xmm0
