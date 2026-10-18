@@ -1,4 +1,4 @@
-decompiled/*.c
+﻿*.c
 *.o
 *.pdb
 *.exe
