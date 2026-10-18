@@ -1,0 +1,12 @@
+decompiled/*.c
+*.o
+*.pdb
+*.exe
+*.dll
+*.lock
+*.gpr
+*.rep
+ghidra-proj/
+*.json.bak
+*.tmp
+
