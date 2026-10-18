@@ -1,0 +1,19 @@
+// ==== FUNC FUN_1401c9f80 @ 1401c9f80 ====
+
+void FUN_1401c9f80(longlong *param_1,longlong param_2,longlong param_3)
+
+{
+  longlong lVar1;
+  ulonglong uVar2;
+  
+  uVar2 = ((ulonglong)(param_3 - param_2) >> 2) * -0x5555555555555555;
+  lVar1 = param_1[2];
+  if ((ulonglong)(*param_1 - lVar1) <= uVar2 && uVar2 - (*param_1 - lVar1) != 0) {
+    FUN_1402cc040(param_1,lVar1,uVar2,4,0xc);
+    lVar1 = param_1[2];
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_1402cb3f0(lVar1 * 0xc + param_1[1],param_2,param_3 - param_2);
+}
+
+

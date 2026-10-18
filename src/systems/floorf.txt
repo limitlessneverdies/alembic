@@ -1,0 +1,36 @@
+// ==== FUNC floorf @ 1402b85c8 ====
+
+/* Library Function - Single Match
+    floorf
+   
+   Library: Visual Studio 2015 Release */
+
+float __cdecl floorf(float _X)
+
+{
+  float fVar1;
+  float fVar2;
+  
+  fVar1 = ABS(_X);
+  fVar2 = _X;
+  if ((uint)fVar1 < 0x4b800000) {
+    if ((uint)fVar1 < 0x3f800000) {
+      if ((fVar1 != 0.0) && (fVar2 = DAT_1402df48c, _X == fVar1)) {
+        fVar2 = 0.0;
+      }
+    }
+    else {
+      fVar2 = (float)(~((1 << (0x96U - (char)((uint)_X >> 0x17) & 0x1f)) - 1U) & (uint)_X);
+      if ((_X != fVar1) && (_X != fVar2)) {
+        fVar2 = fVar2 - DAT_1402df008;
+      }
+    }
+  }
+  else if (0x7f800000 < (uint)fVar1) {
+    fVar2 = (float)_handle_nanf(_X);
+    return fVar2;
+  }
+  return fVar2;
+}
+
+

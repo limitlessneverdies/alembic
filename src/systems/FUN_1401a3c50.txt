@@ -1,0 +1,11 @@
+// ==== FUNC FUN_1401a3c50 @ 1401a3c50 ====
+
+longlong FUN_1401a3c50(void)
+
+{
+  longlong unaff_GS_OFFSET;
+  
+  return *(longlong *)(*(longlong *)(unaff_GS_OFFSET + 0x58) + (ulonglong)_tls_index * 8) + 0x40e8;
+}
+
+

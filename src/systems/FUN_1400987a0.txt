@@ -1,0 +1,48 @@
+// ==== FUNC FUN_1400987a0 @ 1400987a0 ====
+
+/* WARNING: Removing unreachable block (ram,0x0001400987ed) */
+
+undefined8 * FUN_1400987a0(undefined8 *param_1,ulonglong param_2,undefined8 param_3)
+
+{
+  longlong lVar1;
+  ulonglong uVar2;
+  undefined4 local_38;
+  undefined4 uStack_34;
+  undefined4 uStack_30;
+  undefined4 uStack_2c;
+  undefined8 local_28;
+  undefined8 local_20;
+  
+  local_20 = 0xfffffffffffffffe;
+  if (DAT_1406420f0 < 0xfffffffffffffff0 && (char)(((uint)DAT_1406420f0 & 8) >> 3) == '\0') {
+    DAT_1406420f0 = DAT_1406420f0 + 0x10;
+    LOCK();
+    UNLOCK();
+  }
+  else {
+    FUN_1402d1400(&DAT_1406420f0,0,param_3,1000000000);
+  }
+  if ((param_2 & 0xff) < DAT_140642108) {
+    FUN_1401b2f50(&local_38,(ulonglong)(uint)((int)(param_2 & 0xff) * 0x50) + DAT_140642100);
+    param_1[2] = local_28;
+    *(undefined4 *)param_1 = local_38;
+    *(undefined4 *)((longlong)param_1 + 4) = uStack_34;
+    *(undefined4 *)(param_1 + 1) = uStack_30;
+    *(undefined4 *)((longlong)param_1 + 0xc) = uStack_2c;
+  }
+  else {
+    *param_1 = 0x8000000000000000;
+  }
+  LOCK();
+  lVar1 = DAT_1406420f0 - 0x10;
+  UNLOCK();
+  uVar2 = DAT_1406420f0 & 0xfffffffffffffff2;
+  DAT_1406420f0 = lVar1;
+  if (uVar2 == 0x12) {
+    FUN_1402d1c80(&DAT_1406420f0);
+  }
+  return param_1;
+}
+
+

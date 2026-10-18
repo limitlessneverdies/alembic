@@ -1,0 +1,23 @@
+// ==== FUNC FUN_1400858e0 @ 1400858e0 ====
+
+void FUN_1400858e0(longlong param_1,undefined4 param_2)
+
+{
+  char cVar1;
+  
+  if (((((ushort)((ushort)param_2 - 1) < 2) || (DAT_140645b60 == '\0')) &&
+      (*(char *)(param_1 + 0x192) == '\0')) && (*(char *)(param_1 + 399) == '\0')) {
+    cVar1 = FUN_1401c3360(param_1 + 0xa8,param_2);
+    if (cVar1 == '\0') {
+      *(undefined1 *)(param_1 + 0x191) = 1;
+                    /* WARNING: Could not recover jumptable at 0x000140085974. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+      (*(code *)(&DAT_14036037c + *(int *)(&DAT_14036037c + (ulonglong)(ushort)param_2 * 4)))
+                (&DAT_14036037c + *(int *)(&DAT_14036037c + (ulonglong)(ushort)param_2 * 4));
+      return;
+    }
+  }
+  return;
+}
+
+

@@ -1,0 +1,54 @@
+// ==== FUNC FUN_1400945f0 @ 1400945f0 ====
+
+uint FUN_1400945f0(short *param_1)
+
+{
+  byte bVar1;
+  byte bVar2;
+  uint uVar3;
+  byte *pbVar4;
+  uint uVar5;
+  ulonglong uVar6;
+  
+  bVar1 = *(byte *)((longlong)param_1 + 0xd);
+  uVar6 = (ulonglong)bVar1;
+  bVar2 = *(byte *)(param_1 + 4);
+  uVar5 = 0xff0000;
+  uVar3 = 0;
+  if (((char)bVar1 < '~' || (bVar2 & 0x10) != 0) && (((bVar2 & 2) == 0 || (-1 < *param_1)))) {
+    if ((char)bVar2 < '\0') {
+      return 0;
+    }
+    if ((bVar1 != 0x29) && ((bVar2 & 0xc) == 0)) {
+      return (uint)(byte)(&DAT_14035b50b)[uVar6 * 4] << 0x18 |
+             (uint)(byte)(&DAT_14035b50a)[uVar6 * 4] << 0x10 |
+             (uint)(ushort)(&DAT_14035b508)[uVar6 * 2];
+    }
+    uVar3 = 0xf000000;
+    switch(bVar2 >> 2 & 3) {
+    case 1:
+      return 0xf000000;
+    case 2:
+      return 0x32640000;
+    case 3:
+      return 0xd2e6001e;
+    }
+    if (bVar1 == 0x29) {
+      if ((&DAT_140644820)[*(byte *)(param_1 + 3)] == 0) {
+        return 0xf190000;
+      }
+      pbVar4 = (byte *)((&DAT_140644820)[*(byte *)(param_1 + 3)] + 0x18);
+    }
+    else {
+      pbVar4 = &DAT_140358498 + uVar6 * 0xc;
+    }
+    bVar1 = *pbVar4;
+    if (((bVar2 & 0x20) == 0) || (uVar5 = 0x190000, bVar1 != 2)) {
+      return *(uint *)("" + (ulonglong)bVar1 * 4) | *(uint *)(&DAT_14035d080 + (ulonglong)bVar1 * 4)
+             | *(uint *)(&DAT_14035d09c + (ulonglong)bVar1 * 4);
+    }
+  }
+  return uVar3 | uVar5;
+}
+
+

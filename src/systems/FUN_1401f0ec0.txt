@@ -1,0 +1,56 @@
+// ==== FUNC FUN_1401f0ec0 @ 1401f0ec0 ====
+
+void FUN_1401f0ec0(undefined8 *param_1,ulonglong param_2,ulonglong param_3)
+
+{
+  undefined8 uVar1;
+  code *pcVar2;
+  sbyte sVar3;
+  sbyte sVar4;
+  uint uVar5;
+  undefined8 uVar6;
+  undefined8 *puVar7;
+  longlong lVar8;
+  longlong lVar9;
+  undefined8 *puVar10;
+  uint uVar11;
+  
+  if (param_2 <= param_3 - 1) {
+                    /* WARNING: Does not return */
+    pcVar2 = (code *)invalidInstructionException();
+    (*pcVar2)();
+  }
+  if (param_3 != param_2) {
+    puVar10 = param_1 + param_3;
+    lVar9 = param_3 << 3;
+    do {
+      uVar6 = puVar10[-1];
+      uVar1 = *puVar10;
+      uVar11 = (int)uVar1 * -0x61c8864f;
+      sVar3 = ((byte)uVar1 & 0xf) + 5;
+      uVar5 = (int)uVar6 * -0x61c8864f;
+      sVar4 = ((byte)uVar6 & 0xf) + 5;
+      uVar11 = (uVar11 << sVar3 | uVar11 >> 0x20 - sVar3) ^ (int)uVar1 * -0x7a143595;
+      lVar8 = lVar9;
+      if (uVar11 < ((uVar5 << sVar4 | uVar5 >> 0x20 - sVar4) ^ (int)uVar6 * -0x7a143595)) {
+        do {
+          *(undefined8 *)((longlong)param_1 + lVar8) = uVar6;
+          puVar7 = param_1;
+          if (lVar8 == 8) goto LAB_1401f0ef3;
+          uVar6 = *(undefined8 *)((longlong)param_1 + lVar8 + -0x10);
+          uVar5 = (int)uVar6 * -0x61c8864f;
+          sVar3 = ((byte)uVar6 & 0xf) + 5;
+          lVar8 = lVar8 + -8;
+        } while (uVar11 < ((uVar5 << sVar3 | uVar5 >> 0x20 - sVar3) ^ (int)uVar6 * -0x7a143595));
+        puVar7 = (undefined8 *)(lVar8 + (longlong)param_1);
+LAB_1401f0ef3:
+        *puVar7 = uVar1;
+      }
+      puVar10 = puVar10 + 1;
+      lVar9 = lVar9 + 8;
+    } while (puVar10 != param_1 + param_2);
+  }
+  return;
+}
+
+

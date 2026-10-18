@@ -1,0 +1,99 @@
+// ==== FUNC FUN_1401b1160 @ 1401b1160 ====
+
+ulonglong * FUN_1401b1160(ulonglong *param_1,byte *param_2,ulonglong param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  char cVar3;
+  ushort *puVar4;
+  byte *pbVar5;
+  ulonglong *puVar6;
+  ulonglong uVar7;
+  ulonglong uVar8;
+  undefined8 uVar9;
+  ulonglong local_58;
+  ulonglong uStack_50;
+  ulonglong local_48;
+  undefined1 local_39;
+  undefined8 local_38;
+  
+  local_38 = 0xfffffffffffffffe;
+  uVar7 = param_3;
+  if ((param_3 & 1) == 0) {
+    bVar1 = *param_2;
+    if (bVar1 != 0) {
+      bVar2 = 0;
+      uVar8 = 0;
+      pbVar5 = param_2;
+      do {
+        puVar4 = (ushort *)(pbVar5 + 1);
+        if ((char)bVar1 < '\0') {
+          uVar7 = (ulonglong)(byte)-bVar1;
+          if (SBORROW1('\0',bVar1)) {
+            uVar8 = uVar8 + *puVar4;
+            pbVar5 = (byte *)((longlong)puVar4 + (ulonglong)*puVar4 + 2);
+          }
+          else {
+            bVar2 = bVar2 | uVar8 == 0;
+            uVar7 = (ulonglong)((byte)((bVar1 & 2) << 5 | bVar1 << 7) >> 5);
+            pbVar5 = (byte *)((longlong)puVar4 +
+                             uVar7 + (ulonglong)(bVar1 >> 2 & 2) + (ulonglong)(bVar1 >> 1 & 2));
+          }
+        }
+        else {
+          uVar8 = uVar8 + bVar1;
+          pbVar5 = (byte *)((longlong)puVar4 + (ulonglong)bVar1);
+        }
+        bVar1 = *pbVar5;
+      } while (bVar1 != 0);
+      puVar6 = (ulonglong *)CONCAT71((int7)((ulonglong)pbVar5 >> 8),uVar8 < 0x10);
+      pbVar5 = (byte *)0x0;
+      if ((bool)(bVar2 & uVar8 < 0x10)) {
+        uVar8 = 0;
+      }
+      else {
+        uVar8 = uVar8 * 2;
+        if ((longlong)uVar8 < 0) {
+          uVar9 = 0;
+          goto LAB_1401b12ba;
+        }
+      }
+      goto LAB_1401b123d;
+    }
+  }
+  else {
+    uVar8 = param_3 >> 1;
+    puVar6 = param_1;
+    pbVar5 = param_2;
+LAB_1401b123d:
+    if (uVar8 != 0) {
+      FUN_140007ed0(puVar6,pbVar5,uVar7);
+      uVar9 = 1;
+      uStack_50 = thunk_FUN_1401912b0(uVar8,1);
+      if (uStack_50 == 0) {
+LAB_1401b12ba:
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4831(uVar9,uVar8);
+      }
+      goto LAB_1401b1269;
+    }
+  }
+  uStack_50 = 1;
+  uVar8 = 0;
+LAB_1401b1269:
+  local_48 = 0;
+  local_58 = uVar8;
+  cVar3 = FUN_1401b5410(&local_58,&PTR_LAB_1403f0cd8,param_2,param_3);
+  if (cVar3 != '\0') {
+                    /* WARNING: Subroutine does not return */
+    FUN_1402d4d40("a formatting trait implementation returned an error when the underlying stream did not"
+                  ,0x56,&local_39,&DAT_1403f0c68,&PTR_s_library_alloc_src_fmt_rs_1403f0d78);
+  }
+  param_1[2] = local_48;
+  *param_1 = local_58;
+  param_1[1] = uStack_50;
+  return param_1;
+}
+
+

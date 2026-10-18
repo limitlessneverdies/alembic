@@ -1,0 +1,61 @@
+// ==== FUNC FUN_140055960 @ 140055960 ====
+
+/* WARNING: Function: __chkstk replaced with injection: alloca_probe */
+
+void FUN_140055960(undefined8 param_1,ulonglong param_2,undefined8 param_3)
+
+{
+  ulonglong uVar1;
+  ulonglong uVar2;
+  undefined1 *puVar3;
+  undefined8 uVar4;
+  byte bVar5;
+  ulonglong uVar6;
+  undefined1 local_1060 [4096];
+  undefined1 *local_60;
+  ulonglong local_58;
+  byte local_49;
+  undefined8 local_48;
+  
+  local_48 = 0xfffffffffffffffe;
+  uVar2 = param_2 - (param_2 >> 1);
+  uVar6 = 1000000;
+  if (param_2 < 1000000) {
+    uVar6 = param_2;
+  }
+  if (uVar6 <= uVar2) {
+    uVar6 = uVar2;
+  }
+  local_58 = uVar6;
+  if (uVar6 < 0x201) {
+    puVar3 = local_1060;
+    bVar5 = 0;
+    uVar6 = 0x200;
+LAB_140055a40:
+    local_60 = puVar3;
+    local_49 = bVar5;
+    FUN_1401d9de0(param_1,param_2,puVar3,uVar6,param_2 < 0x41,param_3);
+    if ((local_58 != 0 & bVar5) != 0) {
+      thunk_FUN_140191310(puVar3,local_58 << 3,4);
+    }
+    return;
+  }
+  uVar1 = uVar6 * 8;
+  if (uVar1 < 0x7ffffffffffffffd && uVar2 >> 0x3d == 0) {
+    FUN_140007ed0();
+    uVar4 = 4;
+    puVar3 = (undefined1 *)thunk_FUN_1401912b0(uVar1,4);
+    if (puVar3 != (undefined1 *)0x0) {
+      bVar5 = 1;
+      goto LAB_140055a40;
+    }
+  }
+  else {
+    uVar4 = 0;
+  }
+  local_49 = 0;
+                    /* WARNING: Subroutine does not return */
+  FUN_1402d4831(uVar4,uVar1);
+}
+
+

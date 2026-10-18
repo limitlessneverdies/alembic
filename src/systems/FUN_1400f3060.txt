@@ -1,0 +1,160 @@
+// ==== FUNC FUN_1400f3060 @ 1400f3060 ====
+
+ulonglong FUN_1400f3060(longlong param_1,ulonglong *param_2,longlong param_3,longlong param_4)
+
+{
+  ulonglong *puVar1;
+  byte bVar2;
+  byte bVar3;
+  byte bVar4;
+  byte bVar5;
+  longlong lVar6;
+  char cVar7;
+  ulonglong uVar8;
+  longlong lVar9;
+  byte bVar10;
+  uint uVar11;
+  ulonglong uVar12;
+  byte local_5d;
+  ulonglong local_58;
+  ulonglong local_50;
+  ulonglong local_48;
+  
+  bVar2 = *(byte *)(param_4 + 6);
+  bVar3 = *(byte *)(param_4 + 7);
+  if (DAT_140642110 == 0) {
+    if (0x8c < bVar3) goto LAB_1400f30a5;
+LAB_1400f308d:
+    local_5d = (&DAT_140642114)[bVar3];
+    if (local_5d == 0x8d) goto LAB_1400f30a5;
+  }
+  else {
+    FUN_1402d12d2(&DAT_140642110);
+    if (bVar3 < 0x8d) goto LAB_1400f308d;
+LAB_1400f30a5:
+    local_5d = 2;
+  }
+  if (param_3 != 0) {
+    uVar11 = bVar2 >> 3 & 7;
+    puVar1 = param_2 + param_3;
+    lVar6 = *(longlong *)(param_1 + 0x40);
+    uVar12 = 0;
+    local_50 = 0;
+    local_58 = 0;
+    local_48 = 0;
+LAB_1400f310d:
+    do {
+      uVar8 = *param_2;
+      if (*(ulonglong *)(param_1 + 0x48) <= uVar8) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(uVar8,*(ulonglong *)(param_1 + 0x48),&PTR_s_src_lib_rs_1403552b8);
+      }
+      lVar9 = uVar8 * 0x10;
+      bVar3 = *(byte *)(lVar6 + 0xd + lVar9);
+      uVar8 = (ulonglong)bVar3;
+      if (uVar8 == 0) goto switchD_1400f31ec_caseD_1;
+      if (3 < uVar11 - 1) goto switchD_1400f31ec_caseD_2;
+      bVar4 = *(byte *)(lVar6 + 8 + lVar9);
+      bVar5 = *(byte *)(lVar6 + 6 + lVar9);
+      switch(uVar11) {
+      case 1:
+        if (1 < (bVar4 >> 2 & 3) - 2) {
+          if ((bVar4 >> 2 & 3) == 0) {
+            if (bVar3 == 0x29) {
+              if ((&DAT_140644820)[bVar5] == 0) {
+                cVar7 = '\x03';
+              }
+              else {
+                cVar7 = *(char *)((&DAT_140644820)[bVar5] + 0x18);
+              }
+            }
+            else {
+              cVar7 = (&DAT_140358498)[uVar8 * 0xc];
+            }
+            if (((bVar4 >> 5 & cVar7 == '\x02') == 0) && (2 < (byte)(cVar7 - 1U))) break;
+          }
+          goto switchD_1400f31ec_caseD_2;
+        }
+        break;
+      case 2:
+        switch(bVar4 >> 2 & 3) {
+        case 0:
+          if (bVar3 == 0x29) {
+            if ((&DAT_140644820)[bVar5] == 0) break;
+            cVar7 = *(char *)((&DAT_140644820)[bVar5] + 0x18);
+          }
+          else {
+            cVar7 = (&DAT_140358498)[uVar8 * 0xc];
+          }
+          if (cVar7 == '\x04') goto switchD_1400f31ec_caseD_2;
+          break;
+        case 2:
+          goto switchD_1400f31ec_caseD_2;
+        }
+        break;
+      case 3:
+        bVar10 = bVar4 >> 2 & 3;
+        if (1 < bVar10 - 1) {
+          if (bVar10 == 0) {
+            if (bVar3 == 0x29) {
+              if ((&DAT_140644820)[bVar5] == 0) {
+                cVar7 = '\x03';
+              }
+              else {
+                cVar7 = *(char *)((&DAT_140644820)[bVar5] + 0x18);
+              }
+            }
+            else {
+              cVar7 = (&DAT_140358498)[(ulonglong)bVar3 * 0xc];
+            }
+            if (((bVar4 >> 5 & cVar7 == '\x02') != 0) || (1 < (byte)(cVar7 - 5U))) break;
+          }
+          goto switchD_1400f31ec_caseD_2;
+        }
+        break;
+      case 4:
+        if (bVar3 == local_5d) goto switchD_1400f31ec_caseD_2;
+      }
+switchD_1400f31ec_caseD_1:
+      param_2 = param_2 + 1;
+    } while (param_2 != puVar1);
+    goto LAB_1400f32dd;
+  }
+  local_48 = 0;
+  local_58 = 0;
+  local_50 = 0;
+  uVar12 = 0;
+LAB_1400f32dd:
+  switch(bVar2 & 3) {
+  case 0:
+    goto switchD_1400f32f0_caseD_0;
+  case 1:
+    break;
+  case 2:
+    local_50 = local_58;
+    break;
+  case 3:
+    local_50 = local_48;
+  }
+  if ((longlong)uVar12 < 1) {
+    uVar12 = 0;
+  }
+  else if ((local_50 | uVar12) >> 0x20 == 0) {
+    uVar12 = (local_50 & 0xffffffff) / (uVar12 & 0xffffffff);
+  }
+  else {
+    uVar12 = (longlong)local_50 / (longlong)uVar12;
+  }
+switchD_1400f32f0_caseD_0:
+  return uVar12 & 0xffffffff;
+switchD_1400f31ec_caseD_2:
+  uVar12 = uVar12 + 1;
+  local_50 = local_50 + (longlong)*(short *)(lVar6 + 2 + lVar9);
+  local_58 = local_58 + (longlong)*(short *)(lVar6 + 4 + lVar9);
+  local_48 = local_48 + *(byte *)(lVar6 + 9 + lVar9);
+  param_2 = param_2 + 1;
+  if (param_2 == puVar1) goto LAB_1400f32dd;
+  goto LAB_1400f310d;
+}
+
+

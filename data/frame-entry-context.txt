@@ -1,0 +1,87 @@
+﻿========================================================================
+== frame driver: first call site @ 0x140017e60 (192 bytes)
+  000140017E60  and     al, byte ptr [rax]
+  000140017E62  add     bl, dh
+  000140017E64  movups  xmmword ptr [rbp + 0x22a4], xmm0
+  000140017E6B  movsd   xmm7, qword ptr [rip + 0x2c724d]
+  000140017E73  jmp     0x1400178b3
+  000140017E78  movss   xmm1, dword ptr [rax + 0x2740]
+  000140017E80  movss   xmm2, dword ptr [rax + 0x2744]
+  000140017E88  call    0x1400fdf00   <=== CALL sim mega-function
+  000140017E8D  mov     rax, qword ptr [rbp + 0x2580]
+  000140017E94  cmp     byte ptr [rax + 0x297a], 0
+  000140017E9B  jne     0x140017f42
+  000140017EA1  mov     cx, 0xffc5
+  000140017EA5  call    0x140176c20
+  000140017EAA  test    al, al
+  000140017EAC  je      0x140017f42
+  000140017EB2  call    0x1401550b0
+  000140017EB7  test    al, al
+  000140017EB9  je      0x140018242
+  000140017EBF  mov     rcx, qword ptr [rbp + 0x2580]
+  000140017EC6  mov     byte ptr [rcx + 0x29b1], al
+  000140017ECC  xor     ecx, ecx
+  000140017ECE  call    0x1401550d0
+  000140017ED3  lea     rdx, [rip + 0x2d062a]
+  000140017EDA  lea     rcx, [rbp + 0x380]
+  000140017EE1  mov     r8d, 0x11
+  000140017EE7  call    0x1400015a0
+  000140017EEC  mov     rax, qword ptr [rbp + 0x2580]
+  000140017EF3  lea     rsi, [rax + 0x27b0]
+  000140017EFA  mov     rdx, qword ptr [rax + 0x27b0]
+  000140017F01  test    rdx, rdx
+  000140017F04  je      0x140017f18
+  000140017F06  mov     rcx, qword ptr [rax + 0x27b8]
+  000140017F0D  mov     r8d, 1
+  000140017F13  call    0x1400549f0
+  000140017F18  mov     rax, qword ptr [rbp + 0x390]
+========================================================================
+== frame driver: exact call A bytes @ 0x140017e80 (32 bytes)
+  000140017E80  movss   xmm2, dword ptr [rax + 0x2744]
+  000140017E88  call    0x1400fdf00   <=== CALL sim mega-function
+  000140017E8D  mov     rax, qword ptr [rbp + 0x2580]
+  000140017E94  cmp     byte ptr [rax + 0x297a], 0
+========================================================================
+== frame driver: second call site @ 0x14001dab0 (192 bytes)
+  00014001DAB0  add     byte ptr [rax], al
+  00014001DAB2  cmp     byte ptr [rax + 0x297a], 1
+  00014001DAB9  je      0x14001dae1
+  00014001DABB  mov     rax, qword ptr [rbp + 0x2580]
+  00014001DAC2  movd    xmm1, dword ptr [rax + 0x2740]
+  00014001DACA  movss   xmm2, dword ptr [rax + 0x2744]
+  00014001DAD2  mov     r14b, 1
+  00014001DAD5  mov     rcx, qword ptr [rbp + 0x22e8]
+  00014001DADC  call    0x1400fdf00   <=== CALL sim mega-function
+  00014001DAE1  mov     rcx, qword ptr [rbp + 0x2580]
+  00014001DAE8  mov     eax, dword ptr [rcx + 0x28b8]
+  00014001DAEE  inc     eax
+  00014001DAF0  mov     dword ptr [rcx + 0x28b8], eax
+  00014001DAF6  cmp     eax, 0x707
+  00014001DAFB  jbe     0x14001dc71
+  00014001DB01  xor     eax, eax
+  00014001DB03  mov     rcx, qword ptr [rbp + 0x2580]
+  00014001DB0A  cmp     rax, qword ptr [rcx + 0x25a0]
+  00014001DB11  jo      0x14001dc67
+  00014001DB17  mov     rdx, qword ptr [rcx + 0x25a8]
+  00014001DB1E  mov     r8, qword ptr [rcx + 0x25b0]
+  00014001DB25  mov     r9, qword ptr [rcx + 0x25c0]
+  00014001DB2C  movups  xmm0, xmmword ptr [rcx + 0x25c8]
+  00014001DB33  movups  xmmword ptr [rsp + 0x20], xmm0
+  00014001DB38  mov     rcx, qword ptr [rbp + 0x22e8]
+  00014001DB3F  call    0x1400cf7f0
+  00014001DB44  test    rax, rax
+  00014001DB47  mov     rcx, qword ptr [rbp + 0x2580]
+  00014001DB4E  je      0x14001dc67
+  00014001DB54  mov     qword ptr [rbp + 0x2500], rax
+  00014001DB5B  lea     rax, [rbp + 0x2500]
+  00014001DB62  mov     qword ptr [rbp + 0x2470], rax
+  00014001DB69  lea     rax, [rip + 0x190700]
+========================================================================
+== frame driver: exact call B bytes @ 0x14001dad0 (32 bytes)
+  00014001DAD0  add     byte ptr [rax], al
+  00014001DAD2  mov     r14b, 1
+  00014001DAD5  mov     rcx, qword ptr [rbp + 0x22e8]
+  00014001DADC  call    0x1400fdf00   <=== CALL sim mega-function
+  00014001DAE1  mov     rcx, qword ptr [rbp + 0x2580]
+  00014001DAE8  mov     eax, dword ptr [rcx + 0x28b8]
+  00014001DAEE  inc     eax

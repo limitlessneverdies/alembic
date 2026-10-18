@@ -1,0 +1,36 @@
+// ==== FUNC FUN_140195710 @ 140195710 ====
+
+void FUN_140195710(undefined8 param_1,undefined8 param_2)
+
+{
+  char cVar1;
+  undefined *local_60;
+  undefined8 local_58;
+  undefined **local_50;
+  undefined1 *local_48;
+  longlong *local_40;
+  code *local_38;
+  undefined *local_30;
+  longlong local_28 [2];
+  
+  local_28[1] = 0xfffffffffffffffe;
+  local_60 = &DAT_1403ed45a;
+  local_58 = 6;
+  cVar1 = FUN_140195380();
+  if (cVar1 == '\0') {
+    local_30 = &DAT_140645fc8;
+    local_50 = &local_30;
+    local_28[0] = FUN_1401ae420(&local_50,param_1,param_2);
+    if (local_28[0] != 0) {
+      local_50 = &local_60;
+      local_48 = &LAB_14004f420;
+      local_40 = local_28;
+      local_38 = FUN_1401ae270;
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d50e0(&DAT_1403ed478,&local_50,&DAT_1403ed498);
+    }
+  }
+  return;
+}
+
+

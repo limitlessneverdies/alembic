@@ -1,0 +1,70 @@
+// ==== FUNC FUN_140056f60 @ 140056f60 ====
+
+void FUN_140056f60(longlong *param_1)
+
+{
+  undefined1 auVar1 [16];
+  longlong lVar2;
+  int iVar3;
+  uint uVar4;
+  longlong lVar5;
+  longlong lVar6;
+  longlong lVar7;
+  undefined1 (*pauVar8) [16];
+  uint uVar9;
+  
+  lVar7 = param_1[7];
+  if (lVar7 != 0) {
+    uVar9 = (uint)*(ushort *)(param_1 + 6);
+    lVar6 = param_1[3];
+    pauVar8 = (undefined1 (*) [16])param_1[4];
+    do {
+      if ((short)uVar9 == 0) {
+        do {
+          auVar1 = *pauVar8;
+          lVar6 = lVar6 + -0x200;
+          pauVar8 = pauVar8 + 1;
+          uVar9 = (uint)(ushort)((ushort)(SUB161(auVar1 >> 7,0) & 1) |
+                                 (ushort)(SUB161(auVar1 >> 0xf,0) & 1) << 1 |
+                                 (ushort)(SUB161(auVar1 >> 0x17,0) & 1) << 2 |
+                                 (ushort)(SUB161(auVar1 >> 0x1f,0) & 1) << 3 |
+                                 (ushort)(SUB161(auVar1 >> 0x27,0) & 1) << 4 |
+                                 (ushort)(SUB161(auVar1 >> 0x2f,0) & 1) << 5 |
+                                 (ushort)(SUB161(auVar1 >> 0x37,0) & 1) << 6 |
+                                 (ushort)(SUB161(auVar1 >> 0x3f,0) & 1) << 7 |
+                                 (ushort)(SUB161(auVar1 >> 0x47,0) & 1) << 8 |
+                                 (ushort)(SUB161(auVar1 >> 0x4f,0) & 1) << 9 |
+                                 (ushort)(SUB161(auVar1 >> 0x57,0) & 1) << 10 |
+                                 (ushort)(SUB161(auVar1 >> 0x5f,0) & 1) << 0xb |
+                                 (ushort)(SUB161(auVar1 >> 0x67,0) & 1) << 0xc |
+                                 (ushort)(SUB161(auVar1 >> 0x6f,0) & 1) << 0xd |
+                                 (ushort)(SUB161(auVar1 >> 0x77,0) & 1) << 0xe |
+                                (ushort)(byte)(auVar1[0xf] >> 7) << 0xf);
+        } while (uVar9 == 0xffff);
+        uVar9 = ~uVar9;
+        param_1[4] = (longlong)pauVar8;
+        param_1[3] = lVar6;
+      }
+      iVar3 = 0;
+      for (uVar4 = uVar9; (uVar4 & 1) == 0; uVar4 = uVar4 >> 1 | 0x80000000) {
+        iVar3 = iVar3 + 1;
+      }
+      uVar9 = uVar9 - 1 & uVar9;
+      *(short *)(param_1 + 6) = (short)uVar9;
+      lVar5 = lVar6 - (ulonglong)(uint)(iVar3 << 5);
+      lVar7 = lVar7 + -1;
+      param_1[7] = lVar7;
+      lVar2 = *(longlong *)(lVar5 + -0x18);
+      if (lVar2 != 0) {
+        thunk_FUN_140191310(*(undefined8 *)(lVar5 + -0x10),lVar2 << 3,8);
+      }
+    } while (lVar7 != 0);
+  }
+  if ((*param_1 != 0) && (param_1[1] != 0)) {
+    thunk_FUN_140191310(param_1[2]);
+    return;
+  }
+  return;
+}
+
+

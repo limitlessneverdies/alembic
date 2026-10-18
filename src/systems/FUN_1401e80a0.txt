@@ -1,0 +1,85 @@
+// ==== FUNC FUN_1401e80a0 @ 1401e80a0 ====
+
+void FUN_1401e80a0(longlong param_1,longlong param_2,undefined8 *param_3)
+
+{
+  longlong lVar1;
+  undefined4 *puVar2;
+  longlong lVar3;
+  undefined1 uVar4;
+  char cVar5;
+  ushort uVar6;
+  ulonglong uVar7;
+  ushort *puVar8;
+  char *pcVar9;
+  longlong lVar10;
+  longlong lVar11;
+  bool bVar12;
+  undefined4 local_68;
+  undefined4 uStack_64;
+  uint uStack_60;
+  undefined4 uStack_5c;
+  longlong local_50;
+  longlong *local_48;
+  
+  local_48 = (longlong *)*param_3;
+  local_50 = param_3[1];
+  if (param_1 != param_2) {
+    lVar1 = param_3[2] + local_50 * 2;
+    lVar10 = 0;
+    lVar11 = 0;
+    do {
+      puVar2 = (undefined4 *)(param_1 + lVar10 * 8);
+      local_68 = *puVar2;
+      uStack_60 = puVar2[2];
+      uStack_5c._1_1_ = (byte)((uint)puVar2[3] >> 8);
+      uVar7 = (ulonglong)uStack_5c._1_1_;
+      uVar4 = 0x8d;
+      if ((uVar7 != 0xd) || ((short)local_68 != 1)) {
+        if (uStack_5c._1_1_ == 0x29) {
+          uStack_64._2_1_ = (byte)((uint)puVar2[1] >> 0x10);
+          lVar3 = (&DAT_140644820)[uStack_64._2_1_];
+          if (lVar3 != 0) {
+            puVar8 = (ushort *)(lVar3 + 0x16);
+            pcVar9 = (char *)(lVar3 + 0x18);
+            goto LAB_1401e818a;
+          }
+          bVar12 = false;
+          uVar6 = 0;
+        }
+        else {
+          puVar8 = (ushort *)(&DAT_140358496 + uVar7 * 0xc);
+          pcVar9 = &DAT_140358498 + uVar7 * 0xc;
+LAB_1401e818a:
+          uVar6 = *puVar8;
+          bVar12 = *pcVar9 == '\x04';
+        }
+        switch(uStack_60 >> 2 & 3) {
+        case 0:
+          if (bVar12) goto joined_r0x0001401e81ce;
+          break;
+        case 2:
+          if (uVar6 == 0) {
+            uVar6 = 200;
+          }
+joined_r0x0001401e81ce:
+          if (((uStack_60 & 2) == 0) && (uVar6 < 0x65)) {
+            uStack_64 = puVar2[1];
+            uStack_5c = puVar2[3];
+            cVar5 = FUN_140092950(&local_68);
+            uVar4 = (undefined1)(0x8d250d02 >> (cVar5 * '\b' & 0x1fU));
+          }
+        }
+      }
+      *(undefined1 *)(lVar1 + lVar10) = uVar4;
+      *(undefined1 *)(lVar1 + 1 + lVar10) = 0;
+      lVar11 = lVar11 + -1;
+      lVar10 = lVar10 + 2;
+    } while (-lVar11 != (ulonglong)(param_2 - param_1) >> 4);
+    local_50 = local_50 - lVar11;
+  }
+  *local_48 = local_50;
+  return;
+}
+
+

@@ -1,0 +1,92 @@
+// ==== FUNC FUN_1400c57c0 @ 1400c57c0 ====
+
+void FUN_1400c57c0(uint *param_1,longlong param_2,int param_3,int param_4,int param_5,int param_6,
+                  longlong param_7)
+
+{
+  char cVar1;
+  undefined1 uVar2;
+  longlong lVar3;
+  char cVar4;
+  ulonglong uVar5;
+  longlong lVar6;
+  undefined1 uVar7;
+  uint uVar8;
+  uint uVar9;
+  int iVar10;
+  uint uVar11;
+  undefined1 unaff_R15B;
+  short local_5c;
+  undefined4 local_5a;
+  undefined1 local_56;
+  undefined1 local_55;
+  byte local_54;
+  undefined4 local_53;
+  char local_4f;
+  undefined2 local_4e;
+  int local_4c;
+  ulonglong local_48;
+  
+  if (2 < (byte)((*(byte *)(param_7 + 8) >> 2 & 3) - 1)) {
+    if ((ulonglong)*(byte *)(param_7 + 0xd) == 0x29) {
+      if ((&DAT_140644820)[*(byte *)(param_7 + 6)] == 0) goto LAB_1400c5835;
+      cVar1 = *(char *)((&DAT_140644820)[*(byte *)(param_7 + 6)] + 0x18);
+    }
+    else {
+      cVar1 = (&DAT_140358498)[(ulonglong)*(byte *)(param_7 + 0xd) * 0xc];
+    }
+    if (cVar1 == '\0') {
+      *(undefined1 *)(param_1 + 2) = 2;
+      return;
+    }
+  }
+LAB_1400c5835:
+  lVar3 = *(longlong *)(param_2 + 0x40);
+  local_48 = *(ulonglong *)(param_2 + 0x48);
+  uVar9 = param_4 + param_6;
+  uVar8 = param_3 + param_5;
+  uVar11 = uVar9 * 0x1c5 + uVar8;
+  local_4c = param_6 * 0x1c5 + param_5;
+  iVar10 = 0x1c5;
+  uVar7 = 0;
+  do {
+    if ((0x13a < uVar9) || (0x1c4 < uVar8)) break;
+    uVar5 = (ulonglong)uVar11;
+    if (local_48 <= uVar5) {
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d4f02(uVar5,local_48,&PTR_s_src_lib_rs_1403516d0);
+    }
+    lVar6 = uVar5 * 0x10;
+    local_5c = *(short *)(lVar3 + lVar6);
+    local_5a = *(undefined4 *)(lVar3 + 2 + lVar6);
+    uVar2 = *(undefined1 *)(lVar3 + 6 + lVar6);
+    local_55 = *(undefined1 *)(lVar3 + 7 + lVar6);
+    local_54 = *(byte *)(lVar3 + 8 + lVar6);
+    local_53 = *(undefined4 *)(lVar3 + 9 + lVar6);
+    cVar1 = *(char *)(lVar3 + 0xd + lVar6);
+    local_4e = *(undefined2 *)(lVar3 + 0xe + lVar6);
+    if ((cVar1 < '~' || (local_54 & 0x10) != 0) && ((-1 < local_5c || ((local_54 & 2) == 0)))) {
+      *param_1 = uVar8;
+      param_1[1] = uVar9;
+      *(undefined1 *)(param_1 + 2) = uVar7;
+      *(undefined1 *)((longlong)param_1 + 9) = unaff_R15B;
+      return;
+    }
+    local_56 = uVar2;
+    local_4f = cVar1;
+    cVar4 = FUN_1400cf490(&local_5c,param_7);
+    if (cVar4 == '\0') break;
+    if (cVar1 == '\x7f') {
+      uVar7 = 1;
+      unaff_R15B = uVar2;
+    }
+    uVar9 = uVar9 + param_6;
+    uVar11 = uVar11 + local_4c;
+    uVar8 = uVar8 + param_5;
+    iVar10 = iVar10 + -1;
+  } while (iVar10 != 0);
+  *(undefined1 *)(param_1 + 2) = 2;
+  return;
+}
+
+

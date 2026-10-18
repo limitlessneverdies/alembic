@@ -1,0 +1,110 @@
+// ==== FUNC FUN_1400cf5d0 @ 1400cf5d0 ====
+
+void FUN_1400cf5d0(float param_1,float param_2,uint param_3,int param_4,char param_5)
+
+{
+  char cVar1;
+  byte bVar2;
+  byte bVar3;
+  int iVar4;
+  ulonglong uVar5;
+  longlong in_RCX;
+  ulonglong in_RDX;
+  int iVar6;
+  int iVar7;
+  longlong lVar8;
+  longlong lVar9;
+  uint uVar10;
+  uint uVar11;
+  ulonglong uVar12;
+  int iVar13;
+  
+  uVar11 = param_4 + 1;
+  uVar12 = (ulonglong)uVar11;
+  uVar10 = 0x13b;
+  if (0x13b < uVar11) {
+    uVar10 = uVar11;
+  }
+  uVar5 = uVar12 * 0x1c5 + (ulonglong)param_3;
+  lVar8 = (ulonglong)param_3 * 0x10 + in_RCX + uVar12 * 0x1c50;
+  lVar9 = 6;
+  do {
+    uVar11 = uVar10;
+    if (0x13a < uVar12) break;
+    if (in_RDX <= uVar5) {
+LAB_1400cf7d1:
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d4f02(param_1,param_2,&PTR_s_src_lib_rs_1403568e8);
+    }
+    if ((*(char *)(lVar8 + 7 + lVar9) != '\x04') || (*(char *)(lVar8 + lVar9) != param_5)) {
+      uVar11 = (uint)uVar12;
+      break;
+    }
+    uVar12 = uVar12 + 1;
+    uVar5 = uVar5 + 0x1c5;
+    lVar9 = lVar9 + 0x1c50;
+    uVar11 = param_4 + 0x51;
+  } while ((int)lVar9 != 0x8d906);
+  param_1 = 0.0;
+  iVar7 = -2;
+  do {
+    iVar4 = iVar7 + 1;
+    if (iVar7 == 3) {
+      iVar4 = iVar7;
+    }
+    if (iVar7 + uVar11 < 0x13b) {
+      iVar13 = -6;
+      do {
+        iVar6 = iVar13 + 1;
+        if (iVar13 == 6) {
+          iVar6 = iVar13;
+        }
+        if (iVar13 + param_3 < 0x1c5) {
+          uVar12 = (ulonglong)((iVar7 + uVar11) * 0x1c5 + param_3 + iVar13);
+          param_2 = DAT_1402df008;
+          if (in_RDX <= uVar12) goto LAB_1400cf7d1;
+          lVar8 = uVar12 * 0x10;
+          cVar1 = *(char *)(in_RCX + 0xd + lVar8);
+          if (cVar1 == '\x02') {
+            param_1 = param_1 + DAT_1402df008;
+          }
+          else if (cVar1 == '\v') {
+            param_1 = param_1 + DAT_1402df31c;
+          }
+          else {
+            bVar2 = *(byte *)(in_RCX + 9 + lVar8);
+            if (cVar1 == ')') {
+              bVar3 = *(byte *)(in_RCX + lVar8 + 6);
+              if (((&DAT_140644820)[bVar3] == 0) ||
+                 (*(char *)((&DAT_140644820)[bVar3] + 0x21) != '\x01'))
+              goto switchD_1400cf748_caseD_1;
+              switch(*(byte *)(in_RCX + 8 + lVar8) >> 2 & 3) {
+              case 0:
+                if ((&DAT_140644820)[bVar3] == 0) goto switchD_1400cf748_caseD_1;
+                if (*(char *)((&DAT_140644820)[bVar3] + 0x18) == '\x04')
+                goto switchD_1400cf748_caseD_2;
+                break;
+              default:
+                goto switchD_1400cf748_caseD_1;
+              case 2:
+                goto switchD_1400cf748_caseD_2;
+              }
+            }
+            else {
+switchD_1400cf748_caseD_1:
+            }
+            if (0x28 < bVar2) {
+              param_1 = param_1 + (float)(byte)(bVar2 - 0x28) / DAT_1402df2c8;
+            }
+          }
+        }
+switchD_1400cf748_caseD_2:
+      } while ((iVar13 != 6) && (iVar13 = iVar6, iVar6 < 7));
+    }
+    if ((iVar7 == 3) || (iVar7 = iVar4, 3 < iVar4)) {
+      return;
+    }
+  } while( true );
+}
+
+

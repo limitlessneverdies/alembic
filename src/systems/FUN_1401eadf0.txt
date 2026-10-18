@@ -1,0 +1,80 @@
+// ==== FUNC FUN_1401eadf0 @ 1401eadf0 ====
+
+void FUN_1401eadf0(ulonglong *param_1,ulonglong param_2,longlong *param_3)
+
+{
+  ulonglong uVar1;
+  longlong lVar2;
+  ulonglong uVar3;
+  ulonglong uVar4;
+  ulonglong local_a8;
+  ulonglong local_a0;
+  ulonglong local_98 [2];
+  ulonglong *local_88;
+  ulonglong *local_80;
+  ulonglong *local_78;
+  longlong local_70;
+  longlong local_68;
+  longlong local_60;
+  undefined8 *local_58;
+  ulonglong *local_50;
+  ulonglong *local_48;
+  longlong local_40;
+  ulonglong local_38;
+  longlong local_30;
+  undefined8 *local_28;
+  
+  local_98[0] = FUN_1401e9300();
+  if (local_98[0] < (param_2 == 0xffffffffffffffff)) {
+    local_98[0] = (ulonglong)(param_2 == 0xffffffffffffffff);
+  }
+  local_98[1] = 1;
+  local_a8 = param_2;
+  if (local_98[0] == 0 || param_2 < 2) {
+    lVar2 = *param_3;
+    uVar1 = param_3[1];
+    uVar3 = param_3[2];
+    uVar4 = 0;
+    if (uVar3 <= uVar3 + uVar1) {
+      uVar4 = (uVar3 + uVar1) - uVar3;
+    }
+    if (uVar1 < uVar4) {
+      uVar4 = uVar1;
+    }
+    if (uVar4 != 0) {
+      local_88 = param_1;
+      do {
+        FUN_14006c3f0(&local_88,uVar3,lVar2);
+        lVar2 = lVar2 + 2;
+        uVar3 = uVar3 + 1;
+        uVar4 = uVar4 - 1;
+      } while (uVar4 != 0);
+    }
+  }
+  else {
+    local_a0 = param_2 >> 1;
+    local_98[0] = local_98[0] >> 1;
+    local_68 = param_3[1] - local_a0;
+    if ((ulonglong)param_3[1] < local_a0) {
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d50e0("mid > lenVertexFragment",0x13,&PTR_s__home_equious__cargo_registry_sr_140469280
+                   );
+    }
+    local_40 = *param_3;
+    local_30 = param_3[2];
+    local_70 = local_40 + local_a0 * 2;
+    local_60 = local_30 + local_a0;
+    local_88 = &local_a8;
+    local_80 = &local_a0;
+    local_78 = local_98;
+    local_58 = param_1;
+    local_50 = local_80;
+    local_48 = local_78;
+    local_38 = local_a0;
+    local_28 = param_1;
+    FUN_1401531b0(&local_88);
+  }
+  return;
+}
+
+

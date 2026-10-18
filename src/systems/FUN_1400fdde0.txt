@@ -1,0 +1,21 @@
+// ==== FUNC FUN_1400fdde0 @ 1400fdde0 ====
+
+void FUN_1400fdde0(longlong param_1,ulonglong param_2,uint param_3,uint param_4)
+
+{
+  byte *pbVar1;
+  ulonglong uVar2;
+  
+  if (param_3 < 0x1c5 && param_4 < 0x13b) {
+    uVar2 = (ulonglong)(param_4 * 0x1c5 + param_3);
+    if (param_2 <= uVar2) {
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d4f02(uVar2,param_2,&PTR_s_src_lib_rs_140356cd8);
+    }
+    pbVar1 = (byte *)(param_1 + 8 + uVar2 * 0x10);
+    *pbVar1 = *pbVar1 | 1;
+  }
+  return;
+}
+
+

@@ -14,28 +14,52 @@ This specification defines the data structures, hook points, and modding interfa
 
 ```rust
 #[repr(C)]
-pub struct Element {
-    // +0x00..+0x0F: 16 bytes flags (category, period, group, phase, etc.)
-    flags: [u8; 16],
-    // +0x10/+0x18: symbol (ptr, len) → packed symbol blob
+pub struct ElementStatic {   // .rdata @ VA 0x14034F350, 92 entries, stride 0x50
+    // +0x00..+0x0F: symbol: &str
     symbol_ptr: *const u8,
     symbol_len: usize,
-    // +0x20/+0x28: name (ptr, len) → handbook blob
+    // +0x10..+0x1F: name: &str
     name_ptr: *const u8,
     name_len: usize,
-    // +0x30/+0x38: desc (ptr, len) → handbook blob
+    // +0x20..+0x2F: desc: &str
     desc_ptr: *const u8,
     desc_len: usize,
-    // +0x40/+0x43: atomic mass (f32)
+    // +0x30: atomic mass (f32)
     atomic_mass: f32,
-    // +0x44/+0x47: density (f32)
+    // +0x34: density (f32)
     density: f32,
-    // +0x48/+0x4B: float_x (f32) — unknown property
-    float_x: f32,
-    // +0x4C/+0x4F: float_y (f32) — often 0.0
-    float_y: f32,
+    // +0x38: Pauling electronegativity (f32)
+    electronegativity: f32,
+    // +0x3C: f32 (always 0.0; meaning UNKNOWN)
+    f3c: f32,
+    // +0x40: melt point (i16, °C)
+    melt_c: i16,
+    // +0x42: boil point (i16, °C)
+    boil_c: i16,
+    // +0x44: radioactivity magnitude (u16; 0 = stable)
+    radioactivity: u16,
+    // +0x46: atomic number Z (u8)
+    z: u8,
+    // +0x47: period (u8)
+    period: u8,
+    // +0x48: group 1..18 (u8)
+    group: u8,
+    // +0x49: valence (u8)
+    valence: u8,
+    // +0x4A: decay marker (u8; 0 stable, nonzero for radioactive species)
+    decay_marker: u8,
+    // +0x4B: category 0..10 (see §3.2)
+    category: u8,
+    // +0x4C: STP phase (0=solid, 1=liquid (Br,Hg), 2=gas)
+    phase_stp: u8,
+    // +0x4D: validity flag (1 in all 92 entries)
+    valid: u8,
+    // +0x4E: reserved (u16, 0)
+    reserved: u16,
 }
 ```
+
+Full decode: `docs/ELEMENTS-INTERNALS.md`, `data/elements92.json`."""
 
 ### 3.2 Element Categories
 
@@ -81,12 +105,12 @@ pub enum PhysicsKind {
 - Populated by `FUN_1400bbf70(name_ptr, name_len, desc_ptr, desc_len, ...)`
 - Panic at 256 entries: "src/lib.rs" (capacity exceeded)
 
-### 3.6 Display Data
+### 3.6 Display Data (fully decoded)
 
-- Static .rdata table at 0x14034F350+ (64-byte entries)
-- Contains: symbol (ptr,len), name (ptr,len), desc (ptr,len), mass, density, float_x, float_y
-- 21 "special" elements with full data (H, He, C, N, O, F, Ne, Na, Mg, Al, Si, ..., Fe, Cu, Au, Hg, U)
-- Other 71 elements may use default properties or be in a different format
+- Static `.rdata` table at VA `0x14034F350` (raw `0x34E150`), 92 entries, stride `0x50` (80 bytes), elements H (Z=1) … U (Z=92). Every entry carries full data (mass, density, electronegativity, melt/boil, radioactivity, Z, period, group, valence, STP phase, category, validity).
+- The old "21 special entries + 71 defaults" wording is **SUPERSEDED** — it was an artifact of an incomplete early scan.
+- Full field-by-field decode (incl. tail bytes and the kind table) in `docs/ELEMENTS-INTERNALS.md` and `data/elements92.json`.
+- Consumer: `FUN_140094590` → `KIND_TABLE[Z-1]` (VA `0x14035D008`, 92 bytes) when `id < 0x5C && elem[+0x4D] != 0`, else `0x8D`."""
 
 ---
 
@@ -117,27 +141,25 @@ pub enum PhysicsKind {
 
 ## 5. Simulation Pipeline
 
-CPU-side Rust, 17 passes per frame:
+CPU-side Rust. The pipeline is a single mega-function `FUN_1400FDF00` (`0x1400FDF00`–`0x140137C10`, 236,816 bytes) running **62 named systems in fixed order**, each wrapped in QPC timing + a 24-byte profile-record Vec push. The old "17 passes" list is **SUPERSEDED**.
 
-1. `update` — orchestrator
-2. `compute_atmo_open` — atmospheric computation
-3. `flow_water_systems` — water system flow
-4. `flow_water_pressure` — water pressure flow
-5. `tick_airborne` — airborne particle tick (gas)
-6. `particle_movement` — falling sand physics
-7. `roof_mask` — roof masking
-8. `reactions` — general reactions
-9. `carbonic_degassing` — CO₂ degassing
-10. `diffuse_solvent` — solvent diffusion
-11. `dissolve` — dissolution
-12. `alloy_formation` — alloy formation
-13. `alloy_acid_leach` — alloy acid leaching
-14. `oxidising_attack` — oxidation
-15. `acid_displacement` — acid displacement
-16. `base_neutralization` — acid-base neutralization
-17. `flush_chem_blast` — chemical blast flushing
+Full map (addresses, call counts, name-pool offsets, frame-entry disassembly, gaps): `docs/SIM-PIPELINE.md`.
+
+Summary of the 62 systems (execution order):
+
+refresh_presence, compute_energized, joule_heating, tick_arcs, electrolysis, tick_nuclear_traces, radioactive_decay, tree_support_check, thermite, magnesium_burn, organic_maturation, glass_etching, fluorine_hydrolysis, anhydride_hydration, slaking, dry_carbonation, neat_acid_meets_water, nitrogen_oxide_chemistry, metal_hydrogen_absorption, cerium_sparks, spark_motion, neutron_motion, halogen_displacement, hg_amalgamation, flame_test_emission, color_fires, thermal, refining, resolve_hot_h_o_charges, chemical_reactions, flush_chem_blast, base_neutralization, acid_displacement, oxidising_attack, alloy_acid_leach, alloy_formation, dissolve, diffuse_solute, carbonic_degassing, reactions, roof_mask, particle_movement, tick_airborne, flow_water_pressure, flow_water_systems, compute_atmo_open, update_breach_release, spawners, conveyors, pipes, transmutations, radiate_plates, sensors, fans, filters, generators, pressure_sources, pressure, absorb_acoustics, tick_shockwaves, evaluate_challenges, snapshot.
+
+Frame entry: two direct call sites at `0x140017E88` and `0x14001DADC` (raw E8 rel32, verified) inside the uncarved region `0x140008370`–`0x14002F090`. Disassembly: `data/frame-entry-context.txt`.
 
 ### Physics Kinds
+
+| Kind | Value | Behavior |
+|------|-------|----------|
+| Solid | 1 | Doesn't move, blocks other cells |
+| Gravel | 2 | Falls, can be crushed |
+| Powder | 3 | Falls, flows like sand |
+| Liquid | 4 | Flows, pressure-based |
+| Gas | 5 | Rises, diffuses |
 
 | Kind | Value | Behavior |
 |------|-------|----------|
@@ -265,17 +287,18 @@ Original exe untouched. Loader DLL injects new logic at runtime.
 
 ---
 
-## 15. Open Items (for future deep-dive)
+## 15. Open Items (post-Phase 2)
 
-1. Sim update function — identified pipeline (17 passes), main `update()` not located
-2. Reaction table format — not extracted
-3. Save v6 byte-level layout — loader analyzed, full serialization not mapped
-4. Element consumer code — accessed via closure dispatch
-5. Compound struct layout — not extracted
-6. Tool implementations — 16 tools, logic not extracted
-7. Element flags full decode — partial
-8. +0x48 floats meaning — unknown
-9. Full 92-element data table — only 21 special entries found
+1. Sim mega-function `FUN_1400FDF00` pseudo-code — **UNKNOWN** (decompiler timeout); section map in `docs/SIM-PIPELINE.md` is the substitute.
+2. Reaction table format — **UNKNOWN** (not extracted).
+3. Save v6 byte-level layout — loader analyzed (`docs/SAVE-FORMAT.md`); per-cell stride + compound manifest entry layout **UNKNOWN** (needs a real save).
+4. Compound struct layout — **UNKNOWN**.
+5. Tool implementations — names + unlock rules in `docs/TOOLS-IMPL.md`; per-tool handler mapping **UNKNOWN**.
+6. Element `+0x3C` f32, `+0x44` u16 radioactivity unit, `+0x4A` low byte — **UNKNOWN** (see `docs/ELEMENTS-INTERNALS.md`).
+7. Frame driver region `0x140008370`–`0x14002F090` — uncarved in the 15.5 MB dump; call sites A/B documented in `docs/SIM-PIPELINE.md` §3.
+8. 15 decompile-dump holes (~640 KB) — see `data/dump-gaps.txt`.
+9. Section 62 snapshot call list truncated (cosmetic).
+10. 24-byte profile record layout — **UNKNOWN**.
 
 ---
 

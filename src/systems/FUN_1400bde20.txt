@@ -1,0 +1,68 @@
+// ==== FUNC FUN_1400bde20 @ 1400bde20 ====
+
+undefined8 FUN_1400bde20(undefined1 param_1)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = 0x78;
+  switch(param_1) {
+  case 3:
+    return 0x55;
+  case 9:
+    return 0x46;
+  case 0xe:
+    return 0x75;
+  case 0x10:
+    return 100;
+  case 0x1a:
+  case 0x30:
+  case 0x51:
+    return 0x6e;
+  case 0x1b:
+  case 0x24:
+  case 0x31:
+    return 0xa0;
+  case 0x22:
+  case 0x32:
+  case 0x3c:
+  case 0x3e:
+  case 0x4a:
+    return 0x1ae;
+  case 0x23:
+    return 0xbe;
+  case 0x2b:
+  case 0x87:
+    return 0x109;
+  case 0x2c:
+    return 0xd0;
+  case 0x33:
+    return 0x3e;
+  case 0x3a:
+    return 700;
+  case 0x3b:
+  case 0x48:
+  case 0x49:
+  case 0x67:
+    return 0x19a;
+  case 0x68:
+  case 0x69:
+  case 0x6a:
+  case 0x6b:
+  case 0x81:
+    return 300;
+  case 0x83:
+    return 900;
+  case 0x84:
+  case 0x85:
+    return 0x208;
+  case 0x86:
+  case 0x89:
+    return 0xb4;
+  case 0x88:
+    uVar1 = 0x1cc;
+  }
+  return uVar1;
+}
+
+

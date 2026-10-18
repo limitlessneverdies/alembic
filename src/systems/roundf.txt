@@ -1,0 +1,27 @@
+// ==== FUNC roundf @ 1402bba70 ====
+
+/* Library Function - Single Match
+    roundf
+   
+   Library: Visual Studio 2015 Release */
+
+float roundf(float param_1)
+
+{
+  short sVar1;
+  float local_res8 [8];
+  
+  local_res8[0] = param_1;
+  sVar1 = _fd_int(local_res8,1);
+  if ((1 < (int)sVar1 - 1U) && (sVar1 = _fd_int(local_res8,0), sVar1 != 0)) {
+    if (((uint)local_res8[0] & 0x80000000) == 0) {
+      local_res8[0] = local_res8[0] + DAT_1402df008;
+    }
+    else {
+      local_res8[0] = local_res8[0] + DAT_1402df48c;
+    }
+  }
+  return local_res8[0];
+}
+
+

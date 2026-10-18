@@ -1,0 +1,18 @@
+// ==== FUNC trunc @ 1402bce84 ====
+
+/* Library Function - Single Match
+    trunc
+   
+   Library: Visual Studio 2015 Release */
+
+undefined8 trunc(undefined8 param_1)
+
+{
+  undefined8 local_res8 [4];
+  
+  local_res8[0] = param_1;
+  _d_int(local_res8,0);
+  return local_res8[0];
+}
+
+

@@ -1,0 +1,104 @@
+// ==== FUNC FUN_1400f6360 @ 1400f6360 ====
+
+void FUN_1400f6360(longlong param_1,byte param_2,int param_3,int param_4,longlong param_5)
+
+{
+  ulonglong *puVar1;
+  ushort uVar2;
+  uint uVar3;
+  ushort *puVar4;
+  ulonglong uVar5;
+  ulonglong uVar6;
+  longlong lVar7;
+  ushort uVar8;
+  short sVar9;
+  uint uVar10;
+  ulonglong uVar11;
+  ulonglong uVar12;
+  
+  if (param_2 == 0) {
+    return;
+  }
+  if ((ulonglong)*(byte *)(param_5 + 0xd) == 0x29) {
+    if ((&DAT_140644820)[*(byte *)(param_5 + 6)] == 0) {
+      uVar3 = 0x14;
+      goto LAB_1400f63ad;
+    }
+    puVar4 = (ushort *)((&DAT_140644820)[*(byte *)(param_5 + 6)] + 0x14);
+  }
+  else {
+    puVar4 = (ushort *)(&DAT_140358494 + (ulonglong)*(byte *)(param_5 + 0xd) * 0xc);
+  }
+  uVar3 = (uint)*puVar4;
+LAB_1400f63ad:
+  uVar2 = (ushort)uVar3;
+  switch(*(byte *)(param_5 + 8) >> 2 & 3) {
+  case 1:
+    uVar8 = -uVar2;
+    if ((short)-uVar2 < 0) {
+      uVar8 = uVar2;
+    }
+    uVar2 = 1;
+    if (1 < (short)uVar8) {
+      uVar2 = uVar8;
+    }
+    break;
+  case 2:
+    uVar8 = -uVar2;
+    if ((short)-uVar2 < 0) {
+      uVar8 = uVar2;
+    }
+    uVar2 = 1;
+    if (1 < (short)uVar8) {
+      uVar2 = uVar8;
+    }
+    uVar2 = (short)(uVar2 * 9) / 10;
+    if ((short)uVar2 < 2) {
+      uVar2 = 1;
+    }
+    break;
+  case 3:
+    uVar10 = (uint)(ushort)-uVar2;
+    if ((short)-uVar2 < 0) {
+      uVar10 = uVar3;
+    }
+    uVar3 = 0;
+    if (1 < (short)uVar10) {
+      uVar3 = uVar10;
+    }
+    sVar9 = (short)(uVar3 >> 3);
+    uVar2 = -(ushort)(sVar9 == 0) - sVar9;
+  }
+  uVar8 = -uVar2;
+  if ((short)-uVar2 < 0) {
+    uVar8 = uVar2;
+  }
+  uVar2 = 1;
+  if (1 < (short)uVar8) {
+    uVar2 = uVar8;
+  }
+  uVar5 = (ulonglong)uVar2;
+  uVar11 = -uVar5;
+  if (0 < param_4) {
+    uVar11 = uVar5;
+  }
+  uVar6 = (ulonglong)param_2;
+  if (0 < param_3) {
+    uVar11 = uVar5;
+  }
+  lVar7 = *(longlong *)(param_1 + 0x9b0 + uVar6 * 8);
+  uVar12 = uVar11 + lVar7;
+  if (SCARRY8(uVar11,lVar7)) {
+    uVar12 = (longlong)(uVar11 + lVar7) >> 0x3f ^ 0x8000000000000000;
+  }
+  *(ulonglong *)(param_1 + 0x9b0 + uVar6 * 8) = uVar12;
+  puVar1 = (ulonglong *)(param_1 + 0x11b0 + uVar6 * 8);
+  lVar7 = -1;
+  if (!CARRY8(uVar5,*puVar1)) {
+    lVar7 = uVar5 + *puVar1;
+  }
+  *(longlong *)(param_1 + 0x11b0 + uVar6 * 8) = lVar7;
+  return;
+}
+
+

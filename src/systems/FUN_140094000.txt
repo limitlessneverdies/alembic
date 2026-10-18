@@ -1,0 +1,71 @@
+// ==== FUNC FUN_140094000 @ 140094000 ====
+
+/* WARNING: Removing unreachable block (ram,0x000140094053) */
+
+undefined8 FUN_140094000(uint param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  int *piVar1;
+  ulonglong uVar2;
+  undefined8 uVar3;
+  ulonglong uVar4;
+  ulonglong uVar5;
+  longlong lVar6;
+  undefined8 uVar7;
+  
+  if (DAT_1406420f0 < 0xfffffffffffffff0 && (char)(((uint)DAT_1406420f0 & 8) >> 3) == '\0') {
+    DAT_1406420f0 = DAT_1406420f0 + 0x10;
+    LOCK();
+    UNLOCK();
+  }
+  else {
+    FUN_1402d1400(&DAT_1406420f0,0,param_3,1000000000);
+  }
+  if (DAT_140642108 <= ((ulonglong)param_1 & 0xff)) {
+LAB_140094115:
+    LOCK();
+    lVar6 = DAT_1406420f0 - 0x10;
+    UNLOCK();
+    uVar5 = DAT_1406420f0 & 0xfffffffffffffff2;
+    DAT_1406420f0 = lVar6;
+    if (uVar5 == 0x12) {
+      FUN_1402d1c80(&DAT_1406420f0);
+    }
+    return 0;
+  }
+  uVar5 = (ulonglong)(uint)((int)((ulonglong)param_1 & 0xff) * 0x50);
+  piVar1 = *(int **)(DAT_140642100 + 8 + uVar5);
+  lVar6 = *(longlong *)(DAT_140642100 + 0x10 + uVar5);
+  if (lVar6 == 2) {
+    if (((short)*piVar1 != 0x4648) && ((short)*piVar1 != 0x4948)) goto LAB_140094115;
+  }
+  else if (lVar6 == 5) {
+    if ((char)piVar1[1] != 'S' || *piVar1 != -0x7d7d1db8) goto LAB_140094115;
+  }
+  else if ((lVar6 != 3) ||
+          ((*(char *)((longlong)piVar1 + 2) != 'l' || (short)*piVar1 != 0x4348 &&
+           (*(char *)((longlong)piVar1 + 2) != 'r' || (short)*piVar1 != 0x4248))))
+  goto LAB_140094115;
+  uVar2 = *(ulonglong *)(DAT_140642100 + uVar5 + 0x28);
+  uVar4 = uVar2 * 2;
+  if ((longlong)(uVar4 | uVar2) < 0) {
+    uVar7 = 0;
+LAB_140094179:
+                    /* WARNING: Subroutine does not return */
+    FUN_1402d4831(uVar7,uVar4);
+  }
+  uVar3 = *(undefined8 *)(DAT_140642100 + uVar5 + 0x20);
+  if (uVar4 == 0) {
+    lVar6 = 1;
+  }
+  else {
+    FUN_140007ed0();
+    uVar7 = 1;
+    lVar6 = thunk_FUN_1401912b0(uVar4,1);
+    if (lVar6 == 0) goto LAB_140094179;
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_1402cb3f0(lVar6,uVar3,uVar4);
+}
+
+

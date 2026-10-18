@@ -1,0 +1,58 @@
+// ==== FUNC FUN_1400a8230 @ 1400a8230 ====
+
+/* WARNING: Removing unreachable block (ram,0x0001400a827d) */
+
+undefined8 * FUN_1400a8230(undefined8 *param_1,ulonglong param_2,undefined8 param_3)
+
+{
+  longlong lVar1;
+  undefined1 *puVar2;
+  ulonglong uVar3;
+  undefined4 local_38;
+  undefined4 uStack_34;
+  undefined4 uStack_30;
+  undefined4 uStack_2c;
+  undefined8 local_28;
+  undefined8 local_20;
+  
+  local_20 = 0xfffffffffffffffe;
+  if (DAT_1406420f0 < 0xfffffffffffffff0 && (char)(((uint)DAT_1406420f0 & 8) >> 3) == '\0') {
+    DAT_1406420f0 = DAT_1406420f0 + 0x10;
+    LOCK();
+    UNLOCK();
+  }
+  else {
+    FUN_1402d1400(&DAT_1406420f0,0,param_3,1000000000);
+  }
+  if ((param_2 & 0xff) < DAT_140642108) {
+    FUN_1401b2f50(&local_38,(ulonglong)(uint)((int)(param_2 & 0xff) * 0x50) + DAT_140642100);
+    param_1[2] = local_28;
+    *(undefined4 *)param_1 = local_38;
+    *(undefined4 *)((longlong)param_1 + 4) = uStack_34;
+    *(undefined4 *)(param_1 + 1) = uStack_30;
+    *(undefined4 *)((longlong)param_1 + 0xc) = uStack_2c;
+  }
+  else {
+    FUN_140007ed0();
+    puVar2 = (undefined1 *)thunk_FUN_1401912b0(1,1);
+    if (puVar2 == (undefined1 *)0x0) {
+                    /* WARNING: Subroutine does not return */
+      FUN_1402d4831(1,1);
+    }
+    *puVar2 = 0x3f;
+    *param_1 = 1;
+    param_1[1] = puVar2;
+    param_1[2] = 1;
+  }
+  LOCK();
+  lVar1 = DAT_1406420f0 - 0x10;
+  UNLOCK();
+  uVar3 = DAT_1406420f0 & 0xfffffffffffffff2;
+  DAT_1406420f0 = lVar1;
+  if (uVar3 == 0x12) {
+    FUN_1402d1c80(&DAT_1406420f0);
+  }
+  return param_1;
+}
+
+

@@ -1,0 +1,47 @@
+// ==== FUNC FUN_14013cbf0 @ 14013cbf0 ====
+
+void FUN_14013cbf0(longlong param_1,ulonglong param_2,int param_3,uint param_4,uint param_5,
+                  uint param_6)
+
+{
+  undefined2 uVar1;
+  undefined2 uVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 uVar5;
+  ulonglong uVar6;
+  longlong lVar7;
+  ulonglong uVar8;
+  longlong lVar9;
+  
+  if (param_4 < 0x13b) {
+    if (param_6 < 0x13b && param_5 < 0x1c5) {
+      uVar6 = (ulonglong)(param_4 * 0x1c5 + param_3);
+      if (param_2 <= uVar6) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(uVar6,param_2,&PTR_s_src_lib_rs_140357140);
+      }
+      uVar8 = (ulonglong)(param_6 * 0x1c5 + param_5);
+      if (param_2 <= uVar8) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(uVar8,param_2,&PTR_s_src_lib_rs_140357158);
+      }
+      lVar7 = uVar6 * 0x10;
+      uVar1 = *(undefined2 *)(param_1 + 4 + lVar7);
+      lVar9 = uVar8 * 0x10;
+      uVar2 = *(undefined2 *)(param_1 + 4 + lVar9);
+      uVar3 = *(undefined8 *)(param_1 + lVar7);
+      uVar4 = ((undefined8 *)(param_1 + lVar7))[1];
+      uVar5 = ((undefined8 *)(param_1 + lVar9))[1];
+      *(undefined8 *)(param_1 + lVar7) = *(undefined8 *)(param_1 + lVar9);
+      ((undefined8 *)(param_1 + lVar7))[1] = uVar5;
+      *(undefined8 *)(param_1 + lVar9) = uVar3;
+      ((undefined8 *)(param_1 + lVar9))[1] = uVar4;
+      *(undefined2 *)(param_1 + 4 + lVar7) = uVar1;
+      *(undefined2 *)(param_1 + 4 + lVar9) = uVar2;
+    }
+  }
+  return;
+}
+
+

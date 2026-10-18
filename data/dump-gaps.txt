@@ -1,0 +1,24 @@
+# alembic_all_decompiled.c — decompile-dump holes
+# Regions of .text with NO function body in the 15.5 MB dump.
+# Format: start_va  end_va  size_bytes  (end is exclusive; next defined function)
+# These regions were not carved at export time (decompiler timeout or skipped batches).
+# Reproduce: re-run Ghidra headless / REA per-function on these ranges.
+
+0x140008370  0x14002F090  159008  (155.3 KiB)
+0x1400706C0  0x140073EB0  14320  (14.0 KiB)
+0x140075696  0x14007A5F0  20314  (19.8 KiB)
+0x140087A90  0x14008ADE0  13136  (12.8 KiB)
+0x14009D2A0  0x1400A17D0  17712  (17.3 KiB)
+0x1400A9FB0  0x1400AD2E0  13104  (12.8 KiB)
+0x1400B1610  0x1400B54E0  16080  (15.7 KiB)
+0x1400CB630  0x1400CF270  15424  (15.1 KiB)
+0x1400D7510  0x1400DBA40  17712  (17.3 KiB)
+0x1400E07B0  0x1400E5B30  21376  (20.9 KiB)
+0x1400E9D10  0x1400EE450  18240  (17.8 KiB)
+0x1400FDF00  0x140137C10  236816  (231.3 KiB)
+0x14013DA30  0x140145170  30528  (29.8 KiB)
+0x14019E6D0  0x1401A2300  15408  (15.0 KiB)
+0x1402A8C10  0x1402ABE80  12912  (12.6 KiB)
+
+# total hole bytes: 622090 (607.5 KiB)
+# defined functions in dump: 7722  (Ghidra reports 8415 total procedures)

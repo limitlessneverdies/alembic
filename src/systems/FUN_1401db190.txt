@@ -1,0 +1,131 @@
+// ==== FUNC FUN_1401db190 @ 1401db190 ====
+
+void FUN_1401db190(int *param_1,ulonglong param_2,undefined8 param_3)
+
+{
+  undefined1 auVar1 [16];
+  int iVar2;
+  undefined8 uVar3;
+  sbyte sVar4;
+  sbyte sVar5;
+  uint uVar6;
+  uint uVar7;
+  ulonglong uVar8;
+  ulonglong uVar9;
+  longlong lVar10;
+  int *piVar11;
+  uint uVar12;
+  uint uVar13;
+  undefined1 (*pauVar14) [16];
+  undefined8 uVar15;
+  undefined1 auVar16 [16];
+  undefined1 auVar17 [16];
+  undefined1 auVar18 [16];
+  undefined1 auVar19 [16];
+  
+  if (param_2 < 2) {
+    return;
+  }
+  uVar15 = *(undefined8 *)(param_1 + 2);
+  iVar2 = *param_1;
+  uVar12 = (int)uVar15 * -0x61c8864f;
+  sVar4 = ((byte)uVar15 & 0xf) + 5;
+  sVar5 = ((byte)iVar2 & 0xf) + 5;
+  uVar13 = (uVar12 << sVar4 | uVar12 >> 0x20 - sVar4) ^ (int)uVar15 * -0x7a143595;
+  uVar12 = (iVar2 * -0x61c8864f << sVar5 | (uint)(iVar2 * -0x61c8864f) >> 0x20 - sVar5) ^
+           iVar2 * -0x7a143595;
+  uVar8 = 2;
+  if (uVar13 < uVar12) {
+    if (param_2 != 2) {
+      do {
+        uVar3 = *(undefined8 *)(param_1 + uVar8 * 2);
+        uVar6 = (int)uVar3 * -0x61c8864f;
+        sVar4 = ((byte)uVar3 & 0xf) + 5;
+        uVar7 = (int)uVar15 * -0x61c8864f;
+        sVar5 = ((byte)uVar15 & 0xf) + 5;
+        if (((uVar7 << sVar5 | uVar7 >> 0x20 - sVar5) ^ (int)uVar15 * -0x7a143595) <=
+            ((uVar6 << sVar4 | uVar6 >> 0x20 - sVar4) ^ (int)uVar3 * -0x7a143595))
+        goto LAB_1401db257;
+        uVar8 = uVar8 + 1;
+        uVar15 = uVar3;
+      } while (param_2 != uVar8);
+      goto LAB_1401db2dc;
+    }
+  }
+  else if (param_2 != 2) {
+    do {
+      uVar3 = *(undefined8 *)(param_1 + uVar8 * 2);
+      uVar6 = (int)uVar3 * -0x61c8864f;
+      sVar4 = ((byte)uVar3 & 0xf) + 5;
+      uVar7 = (int)uVar15 * -0x61c8864f;
+      sVar5 = ((byte)uVar15 & 0xf) + 5;
+      if (((uVar6 << sVar4 | uVar6 >> 0x20 - sVar4) ^ (int)uVar3 * -0x7a143595) <
+          ((uVar7 << sVar5 | uVar7 >> 0x20 - sVar5) ^ (int)uVar15 * -0x7a143595))
+      goto LAB_1401db257;
+      uVar8 = uVar8 + 1;
+      uVar15 = uVar3;
+    } while (param_2 != uVar8);
+    goto LAB_1401db2dc;
+  }
+LAB_1401db257:
+  if (uVar8 != param_2) {
+    lVar10 = 0x3f;
+    if ((param_2 | 1) != 0) {
+      for (; (param_2 | 1) >> lVar10 == 0; lVar10 = lVar10 + -1) {
+      }
+    }
+    FUN_1401c2820(param_1,param_2,0,((uint)lVar10 ^ 0x3f) * 2 ^ 0x7e,param_3);
+    return;
+  }
+LAB_1401db2dc:
+  if (uVar13 < uVar12) {
+    uVar8 = param_2 >> 1;
+    if (param_2 < 8) {
+      uVar9 = 0;
+    }
+    else {
+      uVar9 = uVar8 & 0x7fffffffffffffc;
+      pauVar14 = (undefined1 (*) [16])(param_1 + 4);
+      lVar10 = 0;
+      do {
+        auVar17 = pauVar14[-1];
+        auVar1 = *pauVar14;
+        auVar16 = *(undefined1 (*) [16])(param_1 + param_2 * 2 + lVar10 * 2 + -8);
+        auVar18 = *(undefined1 (*) [16])(param_1 + param_2 * 2 + lVar10 * 2 + -4);
+        auVar19._0_8_ = auVar18._8_8_;
+        auVar19._8_4_ = auVar18._0_4_;
+        auVar19._12_4_ = auVar18._4_4_;
+        auVar18._0_8_ = auVar16._8_8_;
+        auVar18._8_4_ = auVar16._0_4_;
+        auVar18._12_4_ = auVar16._4_4_;
+        pauVar14[-1] = auVar19;
+        *pauVar14 = auVar18;
+        auVar16._0_8_ = auVar17._8_8_;
+        auVar16._8_4_ = auVar17._0_4_;
+        auVar16._12_4_ = auVar17._4_4_;
+        *(undefined1 (*) [16])(param_1 + param_2 * 2 + lVar10 * 2 + -4) = auVar16;
+        auVar17._0_8_ = auVar1._8_8_;
+        auVar17._8_4_ = auVar1._0_4_;
+        auVar17._12_4_ = auVar1._4_4_;
+        *(undefined1 (*) [16])(param_1 + param_2 * 2 + lVar10 * 2 + -8) = auVar17;
+        lVar10 = lVar10 + -4;
+        pauVar14 = pauVar14 + 2;
+      } while (-lVar10 != (uVar8 & 0xfffffffffffffffc));
+      if (uVar8 == uVar9) {
+        return;
+      }
+    }
+    piVar11 = param_1 + uVar9 * 2;
+    lVar10 = -uVar9;
+    do {
+      uVar15 = *(undefined8 *)piVar11;
+      *(undefined8 *)piVar11 = *(undefined8 *)(param_1 + param_2 * 2 + lVar10 * 2 + -2);
+      *(undefined8 *)(param_1 + param_2 * 2 + lVar10 * 2 + -2) = uVar15;
+      lVar10 = lVar10 + -1;
+      piVar11 = piVar11 + 2;
+    } while (-lVar10 != uVar8);
+  }
+  return;
+}
+
+

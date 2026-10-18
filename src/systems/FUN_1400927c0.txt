@@ -1,0 +1,59 @@
+// ==== FUNC FUN_1400927c0 @ 1400927c0 ====
+
+/* WARNING: Removing unreachable block (ram,0x000140092817) */
+
+ulonglong FUN_1400927c0(void *param_1,size_t param_2,undefined8 param_3)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  int iVar3;
+  longlong lVar4;
+  ulonglong uVar5;
+  ulonglong uVar6;
+  longlong lVar7;
+  
+  if (DAT_1406420f0 < 0xfffffffffffffff0 && (char)(((uint)DAT_1406420f0 & 8) >> 3) == '\0') {
+    DAT_1406420f0 = DAT_1406420f0 + 0x10;
+    LOCK();
+    UNLOCK();
+  }
+  else {
+    FUN_1402d1400(&DAT_1406420f0,0,param_3,1000000000,0xfffffffffffffffe);
+  }
+  lVar1 = DAT_140642100;
+  if (DAT_140642108 == 0) {
+    uVar6 = 0;
+  }
+  else {
+    lVar2 = DAT_140642108 * 0x50;
+    lVar7 = 0;
+    lVar4 = 0;
+    do {
+      if (lVar4 == 0x100) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(0x100,0x100,&PTR_s_src_lib_rs_14035b7b8);
+      }
+      if ((((&DAT_140645960)[lVar4] != '\0') && (*(size_t *)(lVar1 + 0x10 + lVar7) == param_2)) &&
+         (iVar3 = memcmp(*(void **)(lVar1 + 8 + lVar7),param_1,param_2), iVar3 == 0)) {
+        uVar6 = CONCAT71((int7)(param_2 >> 8),1);
+        goto LAB_140092897;
+      }
+      lVar4 = lVar4 + 1;
+      lVar7 = lVar7 + 0x50;
+    } while (lVar2 != lVar7);
+    uVar6 = 0;
+  }
+LAB_140092897:
+  LOCK();
+  lVar1 = DAT_1406420f0 - 0x10;
+  UNLOCK();
+  uVar5 = DAT_1406420f0 & 0xfffffffffffffff2;
+  DAT_1406420f0 = lVar1;
+  if (uVar5 == 0x12) {
+    FUN_1402d1c80(&DAT_1406420f0);
+  }
+  return uVar6 & 0xffffffff;
+}
+
+

@@ -1,0 +1,136 @@
+// ==== FUNC FUN_1400a7720 @ 1400a7720 ====
+
+byte FUN_1400a7720(longlong param_1,byte param_2)
+
+{
+  char cVar1;
+  byte bVar2;
+  bool bVar3;
+  byte bVar4;
+  ulonglong uVar5;
+  bool bVar6;
+  
+  if (*(char *)(param_1 + 0xd) != '\x02') {
+    if (*(char *)(param_1 + 0xd) != ')') {
+      return 0;
+    }
+    bVar4 = *(byte *)(param_1 + 6);
+    if ((&DAT_140644820)[bVar4] == 0) {
+      return 0;
+    }
+    if (*(char *)((&DAT_140644820)[bVar4] + 0x21) != '\x01') {
+      return 0;
+    }
+    switch(*(byte *)(param_1 + 8) >> 2 & 3) {
+    case 0:
+      goto switchD_1400a7825_caseD_0;
+    default:
+      return 0;
+    case 2:
+      goto switchD_1400a7825_caseD_2;
+    }
+  }
+  bVar4 = *(byte *)(param_1 + 6);
+  uVar5 = (ulonglong)bVar4;
+  cVar1 = *(char *)(param_1 + 10);
+  bVar2 = *(byte *)(param_1 + 0xc);
+  if (cVar1 == '\0' || uVar5 == 0) {
+    if (*(char *)(param_1 + 0xb) == '\0' || *(char *)(param_1 + 0xf) != ')') {
+      return 0;
+    }
+    if ((int *)(&DAT_140644820)[bVar2] == (int *)0x0) {
+      return 0;
+    }
+    if (*(int *)(&DAT_140644820)[bVar2] == 0) {
+      return 0;
+    }
+    if ((&DAT_140644820)[bVar2] == 0) {
+      return 0;
+    }
+    bVar4 = *(byte *)((&DAT_140644820)[bVar2] + 0x2a);
+    if (bVar4 == 0x92) {
+      return 0;
+    }
+  }
+  else if (*(char *)(param_1 + 0xb) == '\0') {
+    if (cVar1 == '\0') {
+      return 0;
+    }
+    if ((int *)(&DAT_140644820)[uVar5] == (int *)0x0) {
+      return 0;
+    }
+    if (*(int *)(&DAT_140644820)[uVar5] == 0) {
+      return 0;
+    }
+    if ((&DAT_140644820)[uVar5] == 0) {
+      return 0;
+    }
+    bVar4 = *(byte *)((&DAT_140644820)[uVar5] + 0x2a);
+    if (bVar4 == 0x92) {
+      return 0;
+    }
+  }
+  else {
+    if ((((*(char *)(param_1 + 0xf) == ')') && ((int *)(&DAT_140644820)[bVar2] != (int *)0x0)) &&
+        (*(int *)(&DAT_140644820)[bVar2] != 0)) &&
+       (((&DAT_140644820)[bVar2] != 0 &&
+        (bVar2 = *(byte *)((&DAT_140644820)[bVar2] + 0x2a), bVar2 != 0x92)))) {
+      bVar6 = bVar2 < 0x8d;
+      bVar3 = bVar2 == param_2 && !bVar6;
+      if (param_2 < 0x8d) {
+        bVar3 = bVar6;
+      }
+      if ((bVar2 == param_2 || !bVar6) && (bVar3)) {
+        return 1;
+      }
+    }
+    if (cVar1 == '\0') {
+      return 0;
+    }
+    if ((int *)(&DAT_140644820)[bVar4] == (int *)0x0) {
+      return 0;
+    }
+    if (*(int *)(&DAT_140644820)[bVar4] == 0) {
+      return 0;
+    }
+    if ((&DAT_140644820)[bVar4] == 0) {
+      return 0;
+    }
+    bVar4 = *(byte *)((&DAT_140644820)[bVar4] + 0x2a);
+    if (bVar4 == 0x92) {
+      return 0;
+    }
+  }
+  bVar6 = bVar4 < 0x8d;
+  bVar3 = bVar4 == param_2 && !bVar6;
+  if (param_2 < 0x8d) {
+    bVar3 = bVar6;
+  }
+  if ((bVar4 == param_2 || !bVar6) && (bVar3)) {
+    return 1;
+  }
+  return 0;
+switchD_1400a7825_caseD_0:
+  if ((&DAT_140644820)[bVar4] == 0) {
+    return 0;
+  }
+  if (*(char *)((&DAT_140644820)[bVar4] + 0x18) != '\x04') {
+    return 0;
+  }
+switchD_1400a7825_caseD_2:
+  if ((&DAT_140644820)[bVar4] == 0) {
+    return 0;
+  }
+  bVar4 = *(byte *)((&DAT_140644820)[bVar4] + 0x2a);
+  if (bVar4 != 0x92) {
+    bVar3 = bVar4 >= 0x8d;
+    bVar6 = bVar4 < 0x8d;
+    if (0x8c < param_2) {
+      bVar6 = bVar4 == param_2 && bVar3;
+    }
+    return (bVar4 == param_2 || bVar3) & bVar6;
+  }
+  return 0;
+}
+
+

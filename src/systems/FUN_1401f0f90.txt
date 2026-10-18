@@ -1,0 +1,48 @@
+// ==== FUNC FUN_1401f0f90 @ 1401f0f90 ====
+
+void FUN_1401f0f90(uint *param_1,ulonglong param_2,ulonglong param_3)
+
+{
+  float fVar1;
+  code *pcVar2;
+  uint uVar3;
+  longlong lVar4;
+  uint *puVar5;
+  longlong lVar6;
+  uint *puVar7;
+  longlong lVar8;
+  
+  if (param_2 <= param_3 - 1) {
+                    /* WARNING: Does not return */
+    pcVar2 = (code *)invalidInstructionException();
+    (*pcVar2)();
+  }
+  if (param_3 != param_2) {
+    puVar5 = param_1 + param_3 * 2;
+    lVar6 = param_3 << 3;
+    do {
+      fVar1 = (float)puVar5[1];
+      if (fVar1 < (float)puVar5[-1]) {
+        uVar3 = *puVar5;
+        lVar4 = lVar6;
+        do {
+          lVar8 = lVar4;
+          *(undefined8 *)((longlong)param_1 + lVar8) =
+               *(undefined8 *)((longlong)param_1 + lVar8 + -8);
+          puVar7 = param_1;
+          if (lVar8 == 8) goto LAB_1401f0fb3;
+          lVar4 = lVar8 + -8;
+        } while (fVar1 < *(float *)((longlong)param_1 + lVar8 + -0xc));
+        puVar7 = (uint *)(lVar8 + -8 + (longlong)param_1);
+LAB_1401f0fb3:
+        *puVar7 = (uint)(byte)uVar3;
+        *(float *)((longlong)param_1 + lVar8 + -4) = fVar1;
+      }
+      puVar5 = puVar5 + 2;
+      lVar6 = lVar6 + 8;
+    } while (puVar5 != param_1 + param_2 * 2);
+  }
+  return;
+}
+
+

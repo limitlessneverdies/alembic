@@ -1,0 +1,49 @@
+// ==== FUNC FUN_1401ebc90 @ 1401ebc90 ====
+
+void FUN_1401ebc90(ulonglong *param_1,ulonglong *param_2,longlong *param_3)
+
+{
+  ulonglong uVar1;
+  ulonglong uVar2;
+  longlong lVar3;
+  ulonglong uVar4;
+  ulonglong *puVar5;
+  
+  uVar1 = *param_2;
+  uVar2 = *(ulonglong *)(*param_3 + 0x10);
+  if (uVar2 <= uVar1) {
+                    /* WARNING: Subroutine does not return */
+    FUN_1402d4f02(uVar1,uVar2,&PTR_s_src_lib_rs_1405b5f20);
+  }
+  uVar4 = param_2[-1];
+  if (uVar2 <= uVar4) {
+                    /* WARNING: Subroutine does not return */
+    FUN_1402d4f02(uVar4,uVar2,&PTR_s_src_lib_rs_1405b5f20);
+  }
+  lVar3 = *(longlong *)(*param_3 + 8);
+  if (*(int *)(lVar3 + 8 + uVar1 * 0x14) < *(int *)(lVar3 + 8 + uVar4 * 0x14)) {
+    do {
+      puVar5 = param_2 + -1;
+      *param_2 = uVar4;
+      if (puVar5 == param_1) break;
+      uVar2 = *(ulonglong *)(*param_3 + 0x10);
+      if (uVar2 <= uVar1) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(uVar1,uVar2,&PTR_s_src_lib_rs_1405b5f20,uVar1 * 5,uVar1,puVar5,
+                      0xfffffffffffffffe);
+      }
+      uVar4 = param_2[-2];
+      if (uVar2 <= uVar4) {
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4f02(uVar4,uVar2,&PTR_s_src_lib_rs_1405b5f20,uVar1 * 5,uVar1,puVar5,
+                      0xfffffffffffffffe);
+      }
+      lVar3 = *(longlong *)(*param_3 + 8);
+      param_2 = puVar5;
+    } while (*(int *)(lVar3 + 8 + uVar1 * 0x14) < *(int *)(lVar3 + 8 + uVar4 * 0x14));
+    *puVar5 = uVar1;
+  }
+  return;
+}
+
+

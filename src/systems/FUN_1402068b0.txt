@@ -1,0 +1,78 @@
+// ==== FUNC FUN_1402068b0 @ 1402068b0 ====
+
+longlong FUN_1402068b0(undefined1 (*param_1) [16],ulonglong *param_2)
+
+{
+  ulonglong uVar1;
+  ulonglong uVar2;
+  ulonglong uVar3;
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  undefined1 auVar6 [16];
+  undefined1 auVar7 [16];
+  undefined1 auVar8 [16];
+  undefined1 auVar9 [16];
+  undefined1 auVar10 [16];
+  byte bVar11;
+  ulonglong uVar12;
+  ulonglong uVar13;
+  longlong lVar14;
+  ulonglong uVar15;
+  
+  uVar1 = *(ulonglong *)*param_1;
+  uVar15 = *(ulonglong *)(*param_1 + 8);
+  uVar2 = *param_2;
+  uVar3 = param_2[1];
+  if (uVar3 == 0) {
+    if (uVar15 < uVar2) {
+      auVar5._8_8_ = 0;
+      auVar5._0_8_ = uVar2;
+      lVar14 = SUB168(*param_1 / auVar5,0);
+    }
+    else {
+      if ((uVar15 | uVar2) >> 0x20 == 0) {
+        uVar15 = (uVar15 & 0xffffffff) % (uVar2 & 0xffffffff);
+      }
+      else {
+        uVar15 = uVar15 % uVar2;
+      }
+      auVar6._8_8_ = 0;
+      auVar6._0_8_ = uVar2;
+      auVar8._8_8_ = uVar15;
+      auVar8._0_8_ = uVar1;
+      lVar14 = SUB168(auVar8 / auVar6,0);
+    }
+  }
+  else {
+    lVar14 = 0x3f;
+    if (uVar3 != 0) {
+      for (; uVar3 >> lVar14 == 0; lVar14 = lVar14 + -1) {
+      }
+    }
+    bVar11 = 0x40 - ((byte)lVar14 ^ 0x3f);
+    uVar13 = uVar3 >> (bVar11 & 0x3f);
+    if ((bVar11 & 0x40) == 0) {
+      uVar13 = uVar2 >> (bVar11 & 0x3f) | uVar3 << 0x40 - (bVar11 & 0x3f);
+    }
+    auVar4._8_8_ = 0;
+    auVar4._0_8_ = uVar13;
+    auVar7._8_8_ = uVar15 >> 1;
+    auVar7._0_8_ = uVar15 << 0x3f | uVar1 >> 1;
+    uVar12 = SUB168(auVar7 / auVar4,0) >> ((byte)lVar14 & 0x3f);
+    uVar13 = uVar12 - 1;
+    if (uVar12 == 0) {
+      uVar13 = 0;
+    }
+    auVar9._8_8_ = 0;
+    auVar9._0_8_ = uVar2;
+    auVar10._8_8_ = 0;
+    auVar10._0_8_ = uVar13;
+    uVar12 = SUB168(auVar9 * auVar10,0);
+    uVar15 = (uVar15 - (SUB168(auVar9 * auVar10,8) + uVar3 * uVar13)) - (ulonglong)(uVar1 < uVar12);
+    lVar14 = (uVar13 + 1) -
+             (ulonglong)(uVar15 < uVar3 || uVar15 - uVar3 < (ulonglong)(uVar1 - uVar12 < uVar2));
+  }
+  return lVar14;
+}
+
+

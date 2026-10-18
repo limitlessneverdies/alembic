@@ -1,0 +1,126 @@
+// ==== FUNC FUN_140092950 @ 140092950 ====
+
+byte FUN_140092950(short *param_1)
+
+{
+  float fVar1;
+  ushort uVar2;
+  byte bVar3;
+  char *pcVar4;
+  longlong lVar5;
+  ulonglong uVar6;
+  byte bVar7;
+  byte bVar8;
+  ushort uVar9;
+  ushort *puVar10;
+  longlong lVar11;
+  bool bVar12;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  byte local_5a [58];
+  
+  local_5a[0] = *(byte *)((longlong)param_1 + 0xd);
+  uVar6 = (ulonglong)local_5a[0];
+  if (uVar6 == 0x29) {
+    lVar11 = (&DAT_140644820)[*(byte *)(param_1 + 3)];
+    if (lVar11 == 0) {
+      bVar12 = false;
+      uVar9 = 0;
+      goto LAB_1400929bb;
+    }
+    puVar10 = (ushort *)(lVar11 + 0x16);
+    pcVar4 = (char *)(lVar11 + 0x18);
+  }
+  else {
+    puVar10 = (ushort *)(&DAT_140358496 + uVar6 * 0xc);
+    pcVar4 = &DAT_140358498 + uVar6 * 0xc;
+  }
+  uVar9 = *puVar10;
+  bVar12 = *pcVar4 == '\x04';
+LAB_1400929bb:
+  switch(*(byte *)(param_1 + 4) >> 2 & 3) {
+  case 0:
+    uVar2 = uVar9;
+    if (!bVar12) {
+      return 3;
+    }
+    break;
+  default:
+    return 3;
+  case 2:
+    uVar2 = 200;
+    if (uVar9 != 0) {
+      uVar2 = uVar9;
+    }
+  }
+  if ((*(byte *)(param_1 + 4) & 2) != 0) {
+    return 3;
+  }
+  if (100 < uVar2) {
+    return 3;
+  }
+  if ((local_5a[0] == 0xd) && (*param_1 == 1)) {
+    return 3;
+  }
+  if (local_5a[0] < 0x29) {
+    if (local_5a[0] == 2) {
+      return 0;
+    }
+    if (local_5a[0] == 0xd) {
+      return 1;
+    }
+  }
+  else {
+    if (local_5a[0] == 0x8b) {
+      return 1;
+    }
+    if (local_5a[0] == 0x29) {
+      if ((&DAT_140644820)[*(byte *)(param_1 + 3)] != 0) {
+        return *(byte *)((&DAT_140644820)[*(byte *)(param_1 + 3)] + 0x22);
+      }
+      return 3;
+    }
+  }
+  local_5a[1] = 1;
+  bVar7 = 1;
+  bVar8 = 0;
+  lVar11 = 0;
+  fVar15 = DAT_1402f5c54;
+  fVar14 = DAT_1402f5c50;
+  while (lVar11 != 2) {
+    lVar5 = FUN_140098410(local_5a[lVar11]);
+    if (lVar5 == 0) {
+      lVar11 = lVar11 + 2;
+      bVar7 = 0;
+    }
+    else {
+      if (((*(char *)(lVar5 + 0x4d) != '\x01') || (10 < *(byte *)(lVar5 + 0x4b))) ||
+         ((0x61eU >> (*(byte *)(lVar5 + 0x4b) & 0x1f) & 1) == 0)) {
+        bVar7 = 0;
+      }
+      fVar1 = *(float *)(lVar5 + 0x38);
+      lVar11 = lVar11 + 2;
+      if (0.0 < fVar1) {
+        fVar13 = fVar1;
+        if (fVar14 <= fVar1) {
+          fVar13 = fVar14;
+        }
+        fVar14 = (float)(~-(uint)NAN(fVar14) & (uint)fVar13 | -(uint)NAN(fVar14) & (uint)fVar1);
+        fVar13 = fVar1;
+        if (fVar1 <= fVar15) {
+          fVar13 = fVar15;
+        }
+        fVar15 = (float)(~-(uint)NAN(fVar15) & (uint)fVar13 | -(uint)NAN(fVar15) & (uint)fVar1);
+        bVar8 = 1;
+      }
+    }
+  }
+  bVar3 = 2;
+  if (!(bool)(bVar7 & bVar8)) {
+    bVar3 = ~bVar8 | fVar15 - fVar14 < DAT_1402df270;
+  }
+  return bVar3;
+}
+
+

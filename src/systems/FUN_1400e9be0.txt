@@ -1,0 +1,39 @@
+// ==== FUNC FUN_1400e9be0 @ 1400e9be0 ====
+
+int FUN_1400e9be0(longlong param_1)
+
+{
+  return *(int *)(param_1 + 0x1ac0) + *(int *)(param_1 + 0x1b90) +
+         *(int *)(param_1 + 0x1ab8) + *(int *)(param_1 + 0x1abc) +
+         *(int *)(param_1 + 0x1a9c) + *(int *)(param_1 + 0x1aa4) +
+         *(int *)(param_1 + 0x1b4c) + *(int *)(param_1 + 0x1be0) +
+         *(int *)(param_1 + 0x1c0c) + *(int *)(param_1 + 0x1b6c) +
+         *(int *)(param_1 + 0x1bc0) + *(int *)(param_1 + 0x1b18) +
+         *(int *)(param_1 + 0x1ba0) + *(int *)(param_1 + 0x1ad0) +
+         *(int *)(param_1 + 0x1bd0) + *(int *)(param_1 + 0x1b28) + *(int *)(param_1 + 0x1b7c) +
+         *(int *)(param_1 + 0x1bf0) + *(int *)(param_1 + 0x1b5c) +
+         *(int *)(param_1 + 0x1bb0) + *(int *)(param_1 + 0x1b04) +
+         (int)((ulonglong)*(undefined8 *)(param_1 + 0x1b2c) >> 0x20) + *(int *)(param_1 + 0x1bd8) +
+         *(int *)(param_1 + 0x1c04) + *(int *)(param_1 + 0x1b64) +
+         *(int *)(param_1 + 0x1bb8) + *(int *)(&DAT_00001b10 + param_1) +
+         *(int *)(param_1 + 0x1b98) + *(int *)(param_1 + 0x1ac8) +
+         *(int *)(param_1 + 0x1bc8) + *(int *)(param_1 + 0x1b20) + *(int *)(param_1 + 0x1b74) +
+         *(int *)(param_1 + 0x1be8) + *(int *)(param_1 + 0x1b54) +
+         *(int *)(param_1 + 0x1ba8) + *(int *)(param_1 + 0x1afc) +
+         *(int *)(param_1 + 0x1b34) + *(int *)(param_1 + 0x1bdc) +
+         *(int *)(param_1 + 0x1c08) + *(int *)(param_1 + 0x1b68) +
+         *(int *)(param_1 + 0x1bbc) + *(int *)(param_1 + 0x1b14) +
+         *(int *)(param_1 + 0x1b9c) + *(int *)(param_1 + 0x1acc) +
+         *(int *)(param_1 + 0x1bcc) + *(int *)(param_1 + 0x1b24) + *(int *)(param_1 + 0x1b78) +
+         *(int *)(param_1 + 0x1bec) + *(int *)(param_1 + 7000) +
+         *(int *)(param_1 + 0x1bac) + *(int *)(&DAT_00001b00 + param_1) +
+         (int)*(undefined8 *)(param_1 + 0x1b2c) + *(int *)(param_1 + 0x1bd4) +
+         *(int *)(param_1 + 0x1c00) + *(int *)(param_1 + 0x1b60) +
+         *(int *)(param_1 + 0x1bb4) + *(int *)(param_1 + 0x1b0c) +
+         *(int *)(param_1 + 0x1b94) + *(int *)(param_1 + 0x1ac4) +
+         *(int *)(param_1 + 0x1bc4) + *(int *)(param_1 + 0x1b1c) + *(int *)(param_1 + 0x1b70) +
+         *(int *)(param_1 + 0x1be4) + *(int *)(param_1 + 0x1b50) +
+         *(int *)(param_1 + 0x1ba4) + *(int *)(param_1 + 0x1af8) + *(int *)(param_1 + 0x1aa0);
+}
+
+

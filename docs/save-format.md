@@ -1,48 +1,62 @@
-# Save Format (v6)
+# Alembic — Save Format (v6 loader analysis)
 
-## Header
+Source: `FUN_1400c8a80` (3,058 bytes, decompiled body in `rea-tools/extracted/FUN_1400c8a80_1400c8a80.txt`), plus SPEC.md §6 strings ("ALIN", "unknown save version", "cell count mismatch", "v6 save requires a compound manifest", "compound identities were not recorded; unrecognised compounds were remapped").
 
-| Offset | Field | Type | Notes |
-|--------|-------|------|-------|
-| 0 | Magic | u32 (LE) | "ALIN" (0x4E494C41) |
-| 4 | Version | u8 | Must be 8-22 (0x08-0x16), else "unknown save version" |
-| 5+ | Environment values | 2 × f32 | NaN/inf check (0x7f7fffff) |
-| ... | Thumbnail | W×H×3 bytes (RGB) | Width×Height×3, validated: (W & 0xffff) × (H & 0xffff) × 3 == thumbnail_length |
-| ... | Cell data | variable | Cell count validation ("cell count mismatch") |
-| ... | Compound manifest | variable | Required for v6 ("v6 save requires a compound manifest") |
-| ... | Discoveries | variable | Discovery log entries |
+## 1. High-level
 
-## Error Messages
+- File starts with magic `ALIN` (u32 LE `0x4E494C41`).
+- Version byte at offset 4. Loader accepts 8..255 (`(version-8) < 0xF9`); versions < 8 → "unknown save version".
+- Version gates feature sets: <2, <4, <5, <6, ≥6 (see §3).
+- v6 (and the modding target) requires a compound manifest; v<6 are "legacy" and trigger remapping of unrecognised compounds.
+- Save directory: `./alembic_saves/` if config base == `"."`, else `{base}/saves/`.
 
-- "unknown save version" — version byte < 8 or > 22
-- "invalid environment values" — NaN or inf in environment floats
-- "invalid thumbnail length" — thumbnail size mismatch
-- "cell count mismatch" — cell count doesn't match expected
-- "save is missing its compound manifest and discoveries" — v6 requires compound manifest
-- "Legacy save: compound identities were not recorded; unrecognised compounds were remapped." — migration from older format
+## 2. Header (CONFIRMED magic/version; INFERRED field widths from stream helpers)
 
-## Migration
+```
+offset  size  field
+0       4     magic: u32 LE = 0x4E494C41 ("ALIN")
+4       1     version: u8
+5       ?     (version-gated environment values begin here; see §3)
+```
 
-Legacy saves (pre-v6) don't have compound manifests. On load, the game:
-1. Detects missing compound manifest
-2. Remaps unrecognised compounds
-3. Reports "Legacy save: compound identities were not recorded; unrecognised compounds were remapped."
+Stream is read through helpers `FUN_14006f1f0/250/2d0/350/3d0/450/4c0` (exact widths not individually verified — marked INFERRED).
 
-## Save Directory
+## 3. Version-gated fields
 
-- If config base == ".": saves go to `./alembic_saves/`
-- Otherwise: saves go to `{base}/saves/`
+| Version | Behaviour |
+|---|---|
+| < 2 | Environment values default to `DAT_1402df008` / `DAT_1402f69a0`; `uVar9 = 1` (a flag). |
+| ≥ 2 | Read 2 × f32 environment values (temp/humidity-style); NaN/inf rejected ("invalid environment values"). |
+| < 4 | Skip an extra block (line 206-213). |
+| < 5 | `local_101 = 8` (default thumbnail dimension). |
+| ≥ 5 | Read thumbnail dimensions W, H (u16 each, masked `& 0xffff`) plus a u32 byte length; validate `(W & 0xffff) * (H & 0xffff) * 3 == length` ("invalid thumbnail length"); then read `length` bytes (RGB, W×H×3). |
+| < 6 | Legacy path: "save is missing its compound manifest … Legacy save: compound identities were not recorded; unrecognised compounds were remapped." |
+| ≥ 6 | Compound manifest required ("v6 save requires a compound manifest"); discoveries log read. |
 
-## Save Loader Function
+## 4. Body
 
-- `FUN_1400c8a80` (3,058 bytes) — closure-dispatched, never called by name
-- Reads magic, version, environment, thumbnail, cell data, compound manifest, discoveries
-- Validates all fields, returns 1 on error
+- Cell count validation: loader compares stream count against `*(ulonglong *)(param_1 + 0x48)` ("cell count mismatch").
+- Cell data: read per cell (element id + state). Exact per-cell stride **UNKNOWN** (the cell struct is not yet mapped byte-for-byte; candidate 4–16 bytes incl. element id, temperature, pressure, compound ref).
+- Compound manifest (v6): list of compound identities (count + entries). Entry layout **UNKNOWN** (see REACTIONS-COMPOUNDS.md).
+- Discoveries: discovery log entries (count + ids).
+- Thumbnail RGB blob (if version ≥ 5).
 
-## Open Questions
+## 5. Error strings (from binary, CONFIRMED)
 
-- Exact byte-level layout of cell data (element ID, temperature, pressure per cell)
-- Compound manifest binary format (entry count, entry size, fields)
-- Discovery log format
-- Thumbnail format (raw RGB, no compression?)
-- Compression (none detected — custom binary)
+- `"unknown save version"`
+- `"invalid environment values"`
+- `"invalid thumbnail length"`
+- `"cell count mismatch"`
+- `"save is missing its compound manifest and discoveries … Legacy save: compound identities were not recorded; unrecognised compounds were remapped. v6 save requires a compound manifest"`
+
+## 6. Open questions
+
+- Exact per-cell byte stride and field order — **UNKNOWN** (needs a real save file; none found in the Steam install — only assets).
+- Compound manifest entry layout — **UNKNOWN**.
+- Discoveries entry layout — **UNKNOWN**.
+- Thumbnail placement (before/after cells) — INFERRED: thumbnail read happens before cell count validation in the loader, so thumbnail precedes cells.
+- Whether saves are compressed/encrypted — not observed in loader (raw reads).
+
+## 7. Note on saves in the wild
+
+No save files were found anywhere in the Steam install (`C:\Users\limit\Downloads\Alembic\Alembic\Alembic\`) — only assets (16 ogg, 9 ttf, 6 png). Save directory is created at runtime by the game. To complete the byte map, run the game once and capture a minimal save, then diff against this loader.
