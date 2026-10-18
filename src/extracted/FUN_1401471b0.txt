@@ -1,0 +1,84 @@
+// ==== FUNC FUN_1401471b0 @ 1401471b0 ====
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 FUN_1401471b0(float param_1,float param_2)
+
+{
+  float fVar1;
+  float fVar2;
+  longlong lVar3;
+  longlong unaff_GS_OFFSET;
+  float fVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  
+  fVar4 = (float)FUN_140183be0();
+  lVar3 = *(longlong *)(*(longlong *)(unaff_GS_OFFSET + 0x58) + (ulonglong)_tls_index * 8);
+  fVar8 = *(float *)(lVar3 + 0x4070);
+  fVar5 = (float)FUN_140183be0();
+  fVar6 = (float)FUN_140183c90();
+  fVar2 = _DAT_1402f48f8;
+  fVar10 = DAT_1402f48f4;
+  fVar9 = DAT_1402df3b8;
+  fVar1 = DAT_1402df07c;
+  fVar5 = fVar5 / DAT_1402f48f4;
+  fVar7 = fVar5;
+  if (fVar8 <= fVar5) {
+    fVar7 = fVar8;
+  }
+  fVar7 = (float)(~-(uint)NAN(fVar8) & (uint)fVar7 | -(uint)NAN(fVar8) & (uint)fVar5);
+  fVar6 = fVar6 / _DAT_1402f48f8;
+  fVar8 = fVar6;
+  if (fVar7 <= fVar6) {
+    fVar8 = fVar7;
+  }
+  fVar8 = (float)(-(uint)NAN(fVar7) & (uint)fVar6 | ~-(uint)NAN(fVar7) & (uint)fVar8);
+  if (fVar8 <= DAT_1402df3b8) {
+    fVar8 = DAT_1402df3b8;
+  }
+  fVar6 = (fVar4 / fVar8 + _DAT_1402f5d00) * DAT_1402df07c;
+  fVar7 = (float)FUN_140183c90();
+  fVar8 = *(float *)(lVar3 + 0x4070);
+  fVar4 = (float)FUN_140183be0();
+  fVar5 = (float)FUN_140183c90();
+  fVar4 = fVar4 / fVar10;
+  fVar10 = fVar4;
+  if (fVar8 <= fVar4) {
+    fVar10 = fVar8;
+  }
+  fVar10 = (float)(~-(uint)NAN(fVar8) & (uint)fVar10 | -(uint)NAN(fVar8) & (uint)fVar4);
+  fVar5 = fVar5 / fVar2;
+  fVar8 = fVar5;
+  if (fVar10 <= fVar5) {
+    fVar8 = fVar10;
+  }
+  fVar8 = (float)(-(uint)NAN(fVar10) & (uint)fVar5 | ~-(uint)NAN(fVar10) & (uint)fVar8);
+  if (fVar8 <= fVar9) {
+    fVar8 = fVar9;
+  }
+  fVar8 = fVar7 / fVar8 + _DAT_1402f5d04 + _DAT_1402f5d08;
+  if (fVar8 <= DAT_1402dfa30) {
+    fVar8 = DAT_1402dfa30;
+  }
+  lVar3 = 0x48;
+  while ((((fVar9 = (float)(int)(*(byte *)((longlong)&PTR_s_H_14034f350 + lVar3) - 1) *
+                    DAT_1402f5d18 + fVar6, param_1 < fVar9 || (fVar9 + DAT_1402df854 <= param_1)) ||
+          (fVar9 = (float)(int)((uint)(byte)"Uraniumradioactive; decays over millennia releasing heat; fissile (U-235)"
+                                            [lVar3 + 0x4a] -
+                               (uint)((byte)"Uraniumradioactive; decays over millennia releasing heat; fissile (U-235)"
+                                            [lVar3 + 0x4a] < 8)) * DAT_1402f5d18 + fVar8 * fVar1,
+          param_2 < fVar9)) || (fVar9 + DAT_1402df854 <= param_2))) {
+    lVar3 = lVar3 + 0x50;
+    if (lVar3 == 0x1d08) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+

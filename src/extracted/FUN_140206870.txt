@@ -1,0 +1,17 @@
+// ==== FUNC FUN_140206870 @ 140206870 ====
+
+uint FUN_140206870(ulonglong *param_1)
+
+{
+  ulonglong uVar1;
+  byte bVar2;
+  uint uVar3;
+  
+  uVar1 = *param_1;
+  *param_1 = uVar1 * 0x5851f42d4c957f2d + 0x14057b7ef767814f;
+  uVar3 = (uint)(uVar1 >> 0x2d) ^ (uint)(uVar1 >> 0x1b);
+  bVar2 = (byte)(uVar1 >> 0x3b);
+  return uVar3 >> bVar2 | uVar3 << 0x20 - bVar2;
+}
+
+

@@ -1,0 +1,133 @@
+// ==== FUNC FUN_1400b1610 @ 1400b1610 ====
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_1400b1610(void)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  undefined8 uVar4;
+  longlong lVar5;
+  undefined8 *puVar6;
+  longlong unaff_GS_OFFSET;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  float fVar11;
+  undefined4 uVar12;
+  undefined1 auVar13 [16];
+  float fVar14;
+  undefined8 *puVar15;
+  undefined8 local_188;
+  undefined8 uStack_180;
+  undefined8 *local_120;
+  float local_f8;
+  undefined8 local_f0;
+  
+  local_f0 = 0xfffffffffffffffe;
+  FUN_140183be0();
+  lVar5 = *(longlong *)(*(longlong *)(unaff_GS_OFFSET + 0x58) + (ulonglong)_tls_index * 8);
+  FUN_140183be0();
+  FUN_140183c90();
+  fVar3 = _DAT_1402f48f8;
+  fVar14 = DAT_1402f48f4;
+  fVar2 = DAT_1402df3b8;
+  FUN_140183c90();
+  FUN_140183be0();
+  FUN_140183c90();
+  local_188 = _DAT_1402f6460;
+  uStack_180 = _UNK_1402f6468;
+  puVar6 = &local_188;
+  puVar15 = puVar6;
+  FUN_140180130(0);
+  uVar12 = (undefined4)((ulonglong)puVar15 >> 0x20);
+  fVar7 = (float)FUN_140183be0();
+  fVar11 = *(float *)(lVar5 + 0x4070);
+  fVar8 = (float)FUN_140183be0();
+  fVar9 = (float)FUN_140183c90();
+  fVar1 = DAT_1402df07c;
+  fVar8 = fVar8 / fVar14;
+  fVar10 = fVar8;
+  if (fVar11 <= fVar8) {
+    fVar10 = fVar11;
+  }
+  fVar10 = (float)(~-(uint)NAN(fVar11) & (uint)fVar10 | -(uint)NAN(fVar11) & (uint)fVar8);
+  fVar9 = fVar9 / fVar3;
+  fVar11 = fVar9;
+  if (fVar10 <= fVar9) {
+    fVar11 = fVar10;
+  }
+  fVar11 = (float)(-(uint)NAN(fVar10) & (uint)fVar9 | ~-(uint)NAN(fVar10) & (uint)fVar11);
+  if (fVar11 <= fVar2) {
+    fVar11 = fVar2;
+  }
+  fVar9 = (fVar7 / fVar11 + _DAT_1402f5d00) * DAT_1402df07c;
+  fVar10 = (float)FUN_140183c90();
+  fVar11 = *(float *)(lVar5 + 0x4070);
+  fVar7 = (float)FUN_140183be0();
+  fVar8 = (float)FUN_140183c90();
+  fVar7 = fVar7 / fVar14;
+  fVar14 = fVar7;
+  if (fVar11 <= fVar7) {
+    fVar14 = fVar11;
+  }
+  fVar14 = (float)(~-(uint)NAN(fVar11) & (uint)fVar14 | -(uint)NAN(fVar11) & (uint)fVar7);
+  fVar8 = fVar8 / fVar3;
+  fVar11 = fVar8;
+  if (fVar14 <= fVar8) {
+    fVar11 = fVar14;
+  }
+  fVar11 = (float)(-(uint)NAN(fVar14) & (uint)fVar8 | ~-(uint)NAN(fVar14) & (uint)fVar11);
+  if (fVar11 <= fVar2) {
+    fVar11 = fVar2;
+  }
+  fVar11 = fVar10 / fVar11 + _DAT_1402f5d04 + _DAT_1402f5d08;
+  if (fVar11 <= DAT_1402dfa30) {
+    fVar11 = DAT_1402dfa30;
+  }
+  FUN_14008d580("Periodic Table of Elements",0x1a,fVar9);
+  FUN_14008d580("Tab or Esc to close",0x13,DAT_1402f6470 + fVar9 + _DAT_1402f6474);
+  local_f8 = fVar9;
+  FUN_14008d580(&DAT_14034b404,0x44,fVar9,DAT_1402dfd24 + fVar11 * fVar1,CONCAT44(uVar12,0x41400000)
+                ,&DAT_14034b448);
+  lVar5 = (ulonglong)DAT_14034f39b * 4;
+  uVar12 = DAT_1402df008;
+  if (DAT_14034f39d == '\0') {
+    uVar12 = DAT_1402dfb80;
+  }
+  fVar11 = (float)(int)(DAT_14034f398 - 1) * DAT_1402f5d18 + local_f8;
+  auVar13._4_4_ = *(undefined4 *)(&DAT_14035d70c + lVar5);
+  auVar13._0_4_ = *(undefined4 *)(&DAT_14035d6e0 + lVar5);
+  auVar13._8_8_ = 0;
+  auVar13 = divps(auVar13,_DAT_1402df460);
+  local_188 = auVar13._0_8_;
+  uStack_180 = CONCAT44(uVar12,*(float *)(&DAT_14035d738 + lVar5) / DAT_1402df264);
+  FUN_140180130(fVar11,DAT_14034f398 - 1,DAT_1402df854);
+  local_188 = _DAT_1402f6480;
+  uStack_180 = _UNK_1402f6488;
+  FUN_140180a10(fVar11);
+  uVar4 = FUN_1401b39a0(DAT_14034f396,puVar6,3);
+  if (-1 < (longlong)puVar6) {
+    if (puVar6 == (undefined8 *)0x0) {
+      lVar5 = 1;
+    }
+    else {
+      FUN_140007ed0();
+      lVar5 = thunk_FUN_1401912b0(puVar6,1);
+      if (lVar5 == 0) {
+        local_120 = puVar6;
+                    /* WARNING: Subroutine does not return */
+        FUN_1402d4831(1,puVar6);
+      }
+    }
+                    /* WARNING: Subroutine does not return */
+    FUN_1402cb3f0(lVar5,uVar4,puVar6);
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_1402d4831(0,local_120);
+}
+
+

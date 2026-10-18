@@ -1,0 +1,26 @@
+// ==== FUNC FUN_1401a63e0 @ 1401a63e0 ====
+
+void FUN_1401a63e0(void)
+
+{
+  BOOL BVar1;
+  DWORD DVar2;
+  ulonglong local_20;
+  LARGE_INTEGER local_18;
+  undefined8 local_10;
+  
+  local_10 = 0xfffffffffffffffe;
+  local_18.QuadPart = 0;
+  BVar1 = QueryPerformanceCounter(&local_18);
+  if (BVar1 != 0) {
+    FUN_14019a600(local_18.QuadPart);
+    return;
+  }
+  DVar2 = GetLastError();
+  local_20 = (ulonglong)DVar2 << 0x20 | 2;
+                    /* WARNING: Subroutine does not return */
+  FUN_1402d4d40("called `Result::unwrap()` on an `Err` value",0x2b,&local_20,&PTR_FUN_1403eefa8,
+                &PTR_s_library_std_src_sys_pal_windows__1403edb80);
+}
+
+
