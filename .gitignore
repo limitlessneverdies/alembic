@@ -10,3 +10,5 @@ ghidra-proj/
 *.json.bak
 *.tmp
 
+
+work/

@@ -1,2 +1,0 @@
-0001400CFB04  mov     r13, qword ptr [rbp + 0x1e0]
-0001400D0344  mov     rax, qword ptr [rbp + 0x1e8]
